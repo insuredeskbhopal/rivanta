@@ -1,0 +1,8 @@
+async page => {
+ const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const fallback=await context.newPage();
+ const response=await fallback.goto('http://127.0.0.1:3002/proof/cbg');
+ const result={status:response.status(),motion:await fallback.locator('main').getAttribute('data-motion'),stageImages:await fallback.locator('[data-stage] img').count(),descriptions:[]};
+ for(const id of ['silicon','cbg','saf','energy'])result.descriptions.push({id,visible:await fallback.locator('#'+id+'-description').isVisible()});
+ if(result.status!==200||result.motion!==null||result.stageImages!==5||!result.descriptions.every(d=>d.visible))throw new Error(JSON.stringify(result));
+ await fallback.screenshot({path:'docs/phase-2/transition-proof/renewable-energy/no-js.png',fullPage:true});await context.close();return result;
+}

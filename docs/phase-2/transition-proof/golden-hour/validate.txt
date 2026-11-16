@@ -1,0 +1,63 @@
+async page => {
+  const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  const check=(test,message)=>{if(!test)throw new Error(message);};
+  const read=()=>{
+    const main=document.querySelector('main'),stage=document.querySelector('[data-stage]');
+    const master=document.querySelector('[data-master]'),detail=document.querySelector('[data-detail]');
+    const image=detail.querySelector('img'),matrix=new DOMMatrixReadOnly(getComputedStyle(detail).transform);
+    const mm=new DOMMatrixReadOnly(getComputedStyle(master).transform);
+    const active=Number(getComputedStyle(detail).opacity)>.999?detail:master;
+    const box=active.getBoundingClientRect(),concept=document.querySelector('[class*=concept]').getBoundingClientRect();
+    return {progress:Number(main.dataset.progress),shot:main.dataset.shot,masterOpacity:Number(getComputedStyle(master).opacity),detailOpacity:Number(getComputedStyle(detail).opacity),detailScale:matrix.a,detailSource:image.currentSrc,detailFilter:getComputedStyle(image).filter,copyOpacity:Number(getComputedStyle(document.querySelector('[data-copy]')).opacity),domeError:Math.hypot(mm.a*461+mm.e-matrix.a*554-matrix.e,mm.d*741+mm.f-matrix.d*380-matrix.f),masterTransform:[mm.a,mm.e,mm.f],detailTransform:[matrix.a,matrix.e,matrix.f],pins:document.querySelectorAll('.pin-spacer').length,stageTop:stage.getBoundingClientRect().top,covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,conceptVisible:concept.top>=0&&concept.bottom<=innerHeight,width:innerWidth,scrollWidth:document.documentElement.scrollWidth};
+  };
+  const sample=async p=>{
+    await page.evaluate(progress=>{
+      const stage=document.querySelector('[data-stage]'),spacer=stage.parentElement;
+      scrollTo({top:spacer.getBoundingClientRect().top+scrollY+(spacer.offsetHeight-stage.offsetHeight)*progress,behavior:'instant'});
+    },p);
+    await page.waitForFunction(progress=>Math.abs(Number(document.querySelector('main').dataset.progress)-progress)<.0006,p);
+    await page.waitForTimeout(500);
+    return page.evaluate(read);
+  };
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-motion="ready"]');
+  const desktop=[];
+  for(const p of [0,.2,.285,.30,.32,.34,.355,.5,.64,.82,.855,.89,.99]){
+    const state=await sample(p);desktop.push(state);
+    check(state.covered&&Math.abs(state.stageTop)<2,'Empty image edge or early stage release');
+    check(state.conceptVisible&&state.masterOpacity===1,'Missing concept label or opaque base');
+    if([.30,.32,.34,.855].includes(p))check(state.domeError<2,'Dome position jumps during blend: '+state.domeError);
+    if([.285,.32,.355,.64].includes(p))await page.screenshot({path:`docs/phase-2/transition-proof/golden-hour/desktop-${p}.png`});
+  }
+  const hold=desktop.find(s=>Math.abs(s.progress-.64)<.001);
+  check(hold.shot==='detail'&&hold.detailOpacity===1,'Reading hold is still using the enlarged master');
+  const decodedDetail=await page.locator('[data-detail] img').evaluate(async image=>{const response=await fetch(image.currentSrc);const bitmap=await createImageBitmap(await response.blob());const size={width:bitmap.width,height:bitmap.height};bitmap.close();return size;});
+  check(decodedDetail.width===1774&&decodedDetail.height===887&&hold.detailSource.includes('Golden-Hour'),'Wrong or undersized detail image');
+  check(hold.detailFilter==='none'&&hold.copyOpacity>.99,'Detail is blurred or information hidden');
+  const reverse=[];
+  for(const p of [.855,.64,.32,.2,0]){
+    const state=await sample(p);reverse.push(state);
+    const forward=desktop.find(s=>Math.abs(s.progress-p)<.001);
+    check(Math.abs(state.detailOpacity-forward.detailOpacity)<.002,'Reverse opacity differs');
+    check(state.masterTransform.every((v,i)=>Math.abs(v-forward.masterTransform[i])<.08),'Reverse transform differs');
+  }
+  const mobile=[];
+  for(const viewport of [{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:1920,height:1080}]){
+    await page.setViewportSize(viewport);await page.waitForTimeout(350);
+    const blend=await sample(.32);check(blend.domeError<2,'Responsive dome mismatch: '+blend.domeError);
+    const state=await sample(.64);mobile.push({...state,blendDomeError:blend.domeError});
+    check(state.shot==='detail'&&state.detailOpacity===1,'Responsive view uses the wrong source');
+    check(state.covered&&state.width===state.scrollWidth&&state.conceptVisible,'Responsive bounds/label failure');
+    check(state.detailScale<=Math.max(viewport.width/1774,viewport.height/887)*1.001,'Held close-up unnecessarily magnified');
+    if(viewport.width===390)await page.screenshot({path:'docs/phase-2/transition-proof/golden-hour/mobile-detail.png'});
+  }
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);
+  const reduced={pins:await page.locator('.pin-spacer').count(),detailVisible:await page.locator('[data-detail]').isVisible(),description:await page.locator('#cbg-description').isVisible()};
+  check(reduced.pins===0&&reduced.detailVisible&&reduced.description,'Reduced-motion close-up or content missing');
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.waitForSelector('main[data-motion="ready"]');
+  await page.getByRole('button',{name:'Inspect the detail',exact:true}).focus();await page.keyboard.press('Enter');
+  await page.waitForFunction(()=>Math.abs(Number(document.querySelector('main').dataset.progress)-.64)<.0006);
+  check((await page.evaluate(read)).shot==='detail','Keyboard detail action misses the second image');
+  check(errors.length===0,'Runtime exceptions: '+JSON.stringify(errors));
+  return {desktop,reverse,mobile,reduced,decodedDetail,keyboardDetail:true,errors,limitation:'Dome-aligned blend between concept images with remaining differences in scene geometry; not a verified continuous 3D camera move.'};
+}

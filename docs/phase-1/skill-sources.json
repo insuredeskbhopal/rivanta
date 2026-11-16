@@ -1,0 +1,46 @@
+[
+  {
+    "name": "impeccable",
+    "repository": "pbakaus/impeccable",
+    "path": ".agents/skills/impeccable",
+    "ref": "d41d9860b0094dcb68030657da63461212835aaa",
+    "local": ".agents/skills/impeccable"
+  },
+  {
+    "name": "design-taste-frontend",
+    "repository": "Leonxlnx/taste-skill",
+    "path": "skills/taste-skill",
+    "ref": "f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+    "local": ".agents/skills/design-taste-frontend"
+  },
+  {
+    "name": "hallmark",
+    "repository": "Nutlope/hallmark",
+    "path": "skills/hallmark",
+    "ref": "04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+    "local": ".agents/skills/hallmark"
+  },
+  {
+    "name": "vercel-react-best-practices",
+    "repository": "vercel-labs/agent-skills",
+    "path": "skills/react-best-practices",
+    "ref": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "local": ".agents/skills/vercel-react-best-practices"
+  },
+  {
+    "name": "web-design-guidelines",
+    "repository": "vercel-labs/agent-skills",
+    "path": "skills/web-design-guidelines",
+    "ref": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "local": ".agents/skills/web-design-guidelines"
+  },
+  {
+    "name": "playwright-cli",
+    "repository": "microsoft/playwright-cli",
+    "distribution": "@playwright/cli",
+    "version": "0.1.24",
+    "integrity": "sha512-AIO0AiPHh1ZB9e+i+ZiRwSTfqlkJtWcojgtPnW/BbBCgr96OojlL15dc1jWWclfbjdwPv5900qxuDyEHghjSqw==",
+    "local": ".agents/skills/playwright-cli",
+    "installed_by": "playwright-cli install --skills=agents"
+  }
+]

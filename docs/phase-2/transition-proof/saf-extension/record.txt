@@ -1,0 +1,24 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://127.0.0.1:3002/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(800,450);
+  await page.screencast.start({path:'docs/phase-2/transition-proof/saf-extension/cbg-to-saf-review.webm',size:{width:1440,height:900},fps:60});
+  await page.evaluate(()=>{
+    window.__safFrames=[];window.__safStop=false;
+    const tick=time=>{
+      const main=document.querySelector('main');window.__safFrames.push({time,state:main.dataset.playback,p:Number(main.dataset.progress),y:scrollY});
+      if(!window.__safStop)requestAnimationFrame(tick);
+    };requestAnimationFrame(tick);
+  });
+  await page.waitForTimeout(300);
+  await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="detail"]');await page.waitForTimeout(750);
+  await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="saf"]');await page.waitForTimeout(900);
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="detail"]');await page.waitForTimeout(700);
+  await page.mouse.wheel(0,12000);await page.waitForSelector('main[data-playback="saf"]');await page.waitForTimeout(700);
+  await page.mouse.wheel(0,600);await page.waitForTimeout(500);
+  const frames=await page.evaluate(()=>{window.__safStop=true;return window.__safFrames;});
+  await page.screencast.stop();
+  const intervals=frames.slice(1).map((frame,i)=>frame.time-frames[i].time).sort((a,b)=>a-b);
+  const changes=frames.filter((frame,i)=>!i||frame.state!==frames[i-1].state).map(frame=>({...frame,seconds:(frame.time-frames[0].time)/1000}));
+  if(frames.at(-1).y<100)throw new Error('Native departure failed in recording');
+  return {frames:frames.length,changes,medianFrameInterval:intervals[Math.floor(intervals.length*.5)],p95FrameInterval:intervals[Math.floor(intervals.length*.95)],over50ms:intervals.filter(n=>n>50).length,last:frames.at(-1),limitation:'Recorded local browser rAF scheduling, not physical-device FPS or field performance certification.'};
+}

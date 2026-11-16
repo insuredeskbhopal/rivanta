@@ -1,0 +1,18 @@
+[
+  {
+    "source": "image\\hero-facility.png",
+    "width": 1692,
+    "height": 930,
+    "bytes": 3020159,
+    "sha256": "67184aac9dcd793c79cdbbf65ce03f116d768f2c9cdce8769c0b5de4f2cc76e5",
+    "status": "User-supplied concept render; ownership and production usage rights not independently established; layout and equipment unverified."
+  },
+  {
+    "source": "image\\Golden-Hour Mountain Industrial Complex.png",
+    "width": 1774,
+    "height": 887,
+    "bytes": 2754127,
+    "sha256": "bee3fce0be7b4b21fa27ad6722008fdaff71a126f10df887060b953a961103ee",
+    "status": "User-supplied concept render; ownership and production usage rights not independently established; layout and equipment unverified."
+  }
+]

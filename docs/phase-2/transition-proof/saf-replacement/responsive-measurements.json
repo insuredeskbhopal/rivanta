@@ -1,0 +1,78 @@
+{
+  "results": [
+    {
+      "width": 390,
+      "height": 844,
+      "p": 1.64,
+      "covered": true,
+      "conceptVisible": true,
+      "label": "Proposed SAF \u00b7 Concept visualization",
+      "overflow": false,
+      "scale": 0.896918,
+      "copy": 1,
+      "y": 0
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "p": 1.64,
+      "covered": true,
+      "conceptVisible": true,
+      "label": "Proposed SAF \u00b7 Concept visualization",
+      "overflow": false,
+      "scale": 0.603613,
+      "copy": 1,
+      "y": 0
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "p": 1.64,
+      "covered": true,
+      "conceptVisible": true,
+      "label": "Proposed SAF \u00b7 Concept visualization",
+      "overflow": false,
+      "scale": 0.504785,
+      "copy": 1,
+      "y": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "p": 1.64,
+      "covered": true,
+      "conceptVisible": true,
+      "label": "Proposed SAF \u00b7 Concept visualization",
+      "overflow": false,
+      "scale": 1.14833,
+      "copy": 1,
+      "y": 0
+    }
+  ],
+  "reduced": {
+    "pins": 0,
+    "state": null,
+    "images": [
+      {
+        "visible": true,
+        "transform": "none",
+        "complete": true
+      },
+      {
+        "visible": true,
+        "transform": "none",
+        "complete": true
+      },
+      {
+        "visible": true,
+        "transform": "none",
+        "complete": true
+      }
+    ],
+    "descriptions": [
+      "Proposed compressed biogasThese supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+      "Proposed sustainable aviation fuelThe supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.<p><a href=\"/_next/static/media/Golden-Hour Sustainable Fuels Plant.0mmu9pyth96ry.png\">Open the proposed SAF concept image.</a></p>"
+    ]
+  },
+  "livePreferenceCleanup": true
+}

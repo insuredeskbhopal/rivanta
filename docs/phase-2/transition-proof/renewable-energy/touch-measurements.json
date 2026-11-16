@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "state": "silicon",
+      "p": 1,
+      "y": 0
+    },
+    {
+      "state": "cbg",
+      "p": 2,
+      "y": 0
+    },
+    {
+      "state": "saf",
+      "p": 3,
+      "y": 0
+    },
+    {
+      "state": "energy",
+      "p": 4,
+      "y": 0
+    }
+  ],
+  "nativeY": 235,
+  "limitation": "Chrome CDP touchscreen events in mobile emulation; not physical hardware."
+}

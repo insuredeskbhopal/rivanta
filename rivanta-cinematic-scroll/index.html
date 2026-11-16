@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11291f">
+  <meta name="description" content="A cinematic, scroll-guided exploration of Rivanta Green's proposed 400-acre integrated biorefinery campus.">
+  <title>Explore the Campus | Rivanta Green</title>
+  <link rel="preload" as="image" href="assets/campus-aerial.webp">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"><span id="page-progress"></span></div>
+  <header class="header" id="header">
+    <a href="#top" class="wordmark" aria-label="Rivanta Green — back to top">
+      <span class="wordmark-symbol" aria-hidden="true"><svg viewBox="0 0 46 42"><path d="M4 28 23 5l19 23-19-8L4 28Z M14 33l9-13 9 13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+      <span><strong>RIVANTA</strong><small>GREEN</small></span>
+    </a>
+    <nav class="header-nav" aria-label="Page navigation"><a href="#vision">The vision</a><a href="#journey">Campus experience</a><a href="#outlook">The future</a></nav>
+    <a href="#journey" class="header-action">EXPLORE THE CAMPUS <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/campus-aerial.webp" alt="Conceptual wide aerial visualization of Rivanta Green's integrated industrial campus in Indian farmland" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-inner shell">
+        <div class="hero-copy">
+          <div class="overline overline-light"><i></i> RIVANTA GREEN / CAMPUS VISION</div>
+          <h1 id="hero-title">400 acres.<br><em>One connected</em><br>vision.</h1>
+          <p>An integrated biorefinery where the potential of India's agricultural residues meets advanced materials, clean fuels and renewable energy.</p>
+          <a href="#journey" class="gold-button">ENTER THE EXPERIENCE <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-foot">
+          <span class="scroll-prompt"><i></i> SCROLL TO EXPLORE</span>
+          <span class="hero-foot-note">A PROPOSED INDUSTRIAL ECOSYSTEM / INDIA</span>
+        </div>
+      </div>
+      <span class="concept-tag">ILLUSTRATIVE VISUALIZATION — NOT A BUILT FACILITY</span>
+    </section>
+
+    <section id="vision" class="intro shell">
+      <div class="intro-index">01 / THE VISION <span></span></div>
+      <div>
+        <span class="overline"><i></i> BUILT AS ONE ECOSYSTEM</span>
+        <h2>The scale is in the system.<br><em>Not just the structures.</em></h2>
+        <p>From biomass reception to compressed biogas, captive power, bio-silica, green silicon and future fuel pathways — each facility contributes to a larger integrated industrial concept.</p>
+      </div>
+    </section>
+
+    <section class="experience" id="journey" aria-label="Interactive scroll-based plant exploration">
+      <div class="sticky-stage" id="stage">
+        <div class="stage-world" id="aerial-world">
+          <img id="aerial-image" src="assets/campus-aerial.webp" alt="" draggable="false">
+          <div class="world-pin" id="world-pin" aria-hidden="true"><span></span><b id="world-pin-label">CBG PLANT</b></div>
+        </div>
+        <div class="detail-photos" id="detail-photos" aria-hidden="true">
+          <img data-photo="cbg" src="assets/cbg.webp" alt="">
+          <img data-photo="biomass" src="assets/biomass.webp" alt="">
+          <img data-photo="power" src="assets/power.webp" alt="">
+          <img data-photo="silica" src="assets/silica.webp" alt="">
+          <img data-photo="silicon" src="assets/silicon.webp" alt="">
+          <img data-photo="saf" src="assets/saf.webp" alt="">
+          <img data-photo="solar" src="assets/solar.webp" alt="">
+          <img data-photo="wind" src="assets/wind.webp" alt="">
+        </div>
+        <div class="stage-overlay" id="stage-overlay" aria-hidden="true"></div>
+        <div class="stage-top">
+          <span class="stage-top-kicker"><span class="signal"></span> CAMPUS EXPLORER <span class="top-slash">/</span> 400 ACRE VISION</span>
+          <span class="stage-top-right">SCROLL-DRIVEN EXPERIENCE <b>↕</b></span>
+        </div>
+        <div class="stage-info" id="stage-info">
+          <div class="stage-number"><span id="current-number">01</span><span class="stage-number-slash">/</span>08</div>
+          <div class="stage-text"><span class="stage-category" id="current-kicker">BIOENERGY SYSTEMS</span><h2 id="current-title">Compressed<br><em>Biogas</em></h2><p id="current-copy">A proposed conversion pathway for suitable biomass streams — a connected component of Rivanta's integrated resource strategy.</p><div class="stage-meta" id="current-meta">BIOENERGY / CBG</div></div>
+        </div>
+        <div class="stage-bottom">
+          <div class="step-track"><span id="step-progress"></span></div>
+          <div class="stage-bottom-details"><span id="stage-caption">01 — COMPRESSED BIOGAS</span><span id="stage-phase">APPROACHING FACILITY</span></div>
+        </div>
+        <nav class="chapter-nav" aria-label="Jump to a facility">
+          <a href="#scene-cbg" class="is-active" data-link="cbg" title="Compressed biogas"><span>01</span><b>CBG</b></a>
+          <a href="#scene-biomass" data-link="biomass" title="Biomass reception"><span>02</span><b>BIOMASS</b></a>
+          <a href="#scene-power" data-link="power" title="Captive power"><span>03</span><b>POWER</b></a>
+          <a href="#scene-silica" data-link="silica" title="Bio-silica"><span>04</span><b>BIO-SILICA</b></a>
+          <a href="#scene-silicon" data-link="silicon" title="Green silicon"><span>05</span><b>SILICON</b></a>
+          <a href="#scene-saf" data-link="saf" title="Sustainable aviation fuel"><span>06</span><b>SAF</b></a>
+          <a href="#scene-solar" data-link="solar" title="Solar energy"><span>07</span><b>SOLAR</b></a>
+          <a href="#scene-wind" data-link="wind" title="Wind energy"><span>08</span><b>WIND</b></a>
+        </nav>
+        <div class="corner-disclaimer">CONCEPT STUDY · NOT TO SCALE</div>
+      </div>
+      <div class="scroll-chapters" id="chapters" aria-hidden="true">
+        <div class="scroll-chapter" id="scene-cbg"></div>
+        <div class="scroll-chapter" id="scene-biomass"></div>
+        <div class="scroll-chapter" id="scene-power"></div>
+        <div class="scroll-chapter" id="scene-silica"></div>
+        <div class="scroll-chapter" id="scene-silicon"></div>
+        <div class="scroll-chapter" id="scene-saf"></div>
+        <div class="scroll-chapter" id="scene-solar"></div>
+        <div class="scroll-chapter" id="scene-wind"></div>
+      </div>
+    </section>
+
+    <section class="outlook" id="outlook">
+      <img src="assets/ground-facilities.webp" loading="lazy" alt="Ground-level conceptual representation of the integrated industrial facility">
+      <div class="outlook-shade"></div>
+      <div class="shell outlook-copy">
+        <span class="overline overline-light"><i></i> CONNECTING AGRICULTURE AND INDUSTRY</span>
+        <h2>One landscape.<br><em>Many possibilities.</em></h2>
+        <p>Rivanta Green Innovative Venture Private Limited envisions a connected industrial platform where valuable agricultural resources support materials, energy and future-fuel pathways.</p>
+        <a class="gold-button" href="#journey">REPLAY THE CAMPUS JOURNEY <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><div><strong>RIVANTA <span>GREEN</span></strong><p>Rivanta Green Innovative Venture Private Limited</p></div><p class="footnote">Concept visualization only. Plant arrangement, engineering and facility representations require validation against the approved masterplan.</p><a href="#top">BACK TO TOP ↑</a></div></footer>
+</body>
+</html>

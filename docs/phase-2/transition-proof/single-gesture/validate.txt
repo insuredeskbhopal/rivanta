@@ -1,0 +1,64 @@
+async page => {
+  const url='http://localhost:3000/proof/cbg';
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  const check=(condition,message)=>{if(!condition)throw new Error(message);};
+  const read=()=>{
+    const main=document.querySelector('main'),stage=document.querySelector('[data-stage]');
+    const detail=document.querySelector('[data-detail]'),master=document.querySelector('[data-master]');
+    const active=Number(getComputedStyle(detail).opacity)===1?detail:master,box=active.getBoundingClientRect();
+    const concept=document.querySelector('[class*=concept]').getBoundingClientRect();
+    return {state:main.dataset.playback,p:Number(main.dataset.progress),y:scrollY,pins:document.querySelectorAll('.pin-spacer').length,opacity:Number(getComputedStyle(detail).opacity),copy:Number(getComputedStyle(document.querySelector('[data-copy]')).opacity),covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,conceptVisible:concept.top>=0&&concept.bottom<=innerHeight,overflow:document.documentElement.scrollWidth>innerWidth,stageTop:stage.getBoundingClientRect().top,willChange:getComputedStyle(detail).willChange};
+  };
+  const ready=async()=>{await page.goto(url);await page.waitForSelector('main[data-motion="ready"][data-playback="overview"]');await page.mouse.move(200,300);};
+  const hold=async()=>{await page.waitForSelector('main[data-playback="detail"]');return page.evaluate(read);};
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});await ready();
+  check((await page.evaluate(read)).pins===0,'Long scroll pin still exists');
+  const started=Date.now();
+  await page.mouse.wheel(0,100);
+  await page.waitForSelector('main[data-playback="playing"]');
+  const initial=await page.evaluate(read);await page.waitForTimeout(400);const moving=await page.evaluate(read);
+  check(moving.p>initial.p&&moving.p<.64&&moving.y===0,'One gesture did not start autonomous visible playback');
+  await page.waitForTimeout(750);await page.screenshot({path:'docs/phase-2/transition-proof/single-gesture/desktop-blend.png'});
+  const single=await hold(),elapsedMs=Date.now()-started;
+  check(single.y===0&&single.p===.64&&single.opacity===1&&single.copy===1&&single.covered&&single.conceptVisible,'Single gesture did not settle on sharp CBG');
+  check(elapsedMs>=2300&&elapsedMs<4000,'Unexpected approach duration: '+elapsedMs);
+  await page.waitForTimeout(450);check((await page.evaluate(read)).p===.64,'Animation did not stop at CBG');
+  await page.screenshot({path:'docs/phase-2/transition-proof/single-gesture/desktop-held.png'});
+  await page.mouse.wheel(0,500);await page.waitForTimeout(300);
+  check((await page.evaluate(read)).y>100,'Fresh next gesture cannot leave the scene');
+  await page.getByRole('button',{name:'Replay the approach',exact:true}).click();
+  await page.waitForSelector('main[data-playback="playing"]');await hold();
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="overview"]');
+  const reverse=await page.evaluate(read);check(reverse.y===0&&reverse.p===0,'Upward gesture did not reverse to campus');
+  await page.mouse.wheel(0,12000);await page.waitForSelector('main[data-playback="playing"]');
+  const fastStart=await page.evaluate(read);check(fastStart.y===0&&fastStart.p<.1,'Large flick skipped the animation');
+  for(let i=0;i<30;i++){await page.mouse.wheel(0,800);await page.waitForTimeout(100);check((await page.evaluate(read)).y===0,'Wheel burst escaped during playback or its momentum');}
+  const burst=await hold();await page.waitForTimeout(250);await page.mouse.wheel(0,500);await page.waitForTimeout(250);
+  check((await page.evaluate(read)).y>100,'Momentum guard did not release for a new gesture');
+  await ready();await page.locator('[data-stage]').focus();await page.keyboard.down('PageDown');await hold();
+  await page.keyboard.down('PageDown');check((await page.evaluate(read)).y===0,'Held keyboard repeat skipped the hold');
+  await page.keyboard.up('PageDown');await page.keyboard.press('PageDown');await page.waitForTimeout(250);
+  check((await page.evaluate(read)).y>100,'New keyboard press cannot continue');
+  await ready();await page.getByRole('button',{name:'View CBG',exact:true}).click();await page.waitForSelector('main[data-playback="playing"]');
+  await page.getByRole('button',{name:'Skip animation',exact:true}).click();check((await page.evaluate(read)).state==='detail','Visible skip failed');
+  await ready();await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="playing"]');await page.keyboard.press('Escape');
+  check((await page.evaluate(read)).state==='detail','Escape failed');
+  await ready();await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="playing"]');
+  await page.locator('a[href="#review"]').focus();await page.keyboard.press('Enter');await page.waitForTimeout(250);
+  check((await page.evaluate(read)).y>100,'Skip link was trapped');
+  const responsive=[];
+  for(const viewport of [{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:1920,height:1080}]){
+    await page.setViewportSize(viewport);await ready();await page.mouse.wheel(0,100);const state=await hold();
+    check(state.covered&&state.conceptVisible&&!state.overflow&&state.y===0&&state.opacity===1,'Responsive single-gesture failure');
+    responsive.push({...viewport,...state});
+    if(viewport.width===390)await page.screenshot({path:'docs/phase-2/transition-proof/single-gesture/mobile-held.png'});
+  }
+  await ready();await page.mouse.wheel(0,100);await page.waitForSelector('main[data-playback="playing"]');
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);
+  const reduced={pins:await page.locator('.pin-spacer').count(),state:await page.locator('main').getAttribute('data-playback'),detailVisible:await page.locator('[data-detail]').isVisible(),transform:await page.locator('[data-detail]').evaluate(el=>getComputedStyle(el).transform)};
+  check(reduced.pins===0&&reduced.state===null&&reduced.detailVisible&&reduced.transform==='none','Reduced-motion cleanup failed');
+  await page.evaluate(()=>scrollTo(0,0));await page.mouse.wheel(0,500);await page.waitForTimeout(250);check(await page.evaluate(()=>scrollY)>0,'Reduced motion is still intercepting scroll');
+  await page.emulateMedia({reducedMotion:'no-preference'});await ready();await page.mouse.wheel(0,100);await hold();
+  check(errors.length===0,'Runtime errors: '+JSON.stringify(errors));
+  return {single,elapsedMs,initial,moving,reverse,fastStart,burst,responsive,reduced,keyboard:true,skipButton:true,escape:true,skipLink:true,livePreferenceChange:true,errors};
+}

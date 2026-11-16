@@ -1,0 +1,44 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
+  const ready=async()=>{await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(800,400);};
+  const read=()=>{
+    const main=document.querySelector('main'),master=document.querySelector('[data-master]'),box=master.getBoundingClientRect(),matrix=new DOMMatrixReadOnly(getComputedStyle(master).transform);
+    const plates=[...document.querySelectorAll('[data-plant]')].map(el=>({id:el.dataset.plant,opacity:Number(getComputedStyle(el).opacity),transform:getComputedStyle(el).transform}));
+    return {state:main.dataset.playback,shot:main.dataset.shot,p:Number(main.dataset.progress),y:scrollY,intro:Number(getComputedStyle(document.querySelector('[data-intro]')).opacity),label:document.querySelector('[data-concept]').textContent,covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,matrix:[matrix.a,matrix.e,matrix.f],plates,pins:document.querySelectorAll('.pin-spacer').length};
+  };
+  await ready();const holds=[];
+  for(const [index,id] of ['silicon','cbg','saf'].entries()){
+    const started=Date.now();await page.mouse.wheel(0,12000);await page.waitForSelector('main[data-playback="playing"]');
+    const samples=await page.evaluate(async()=>new Promise(resolve=>{
+      const frames=[];
+      const tick=()=>{
+        const main=document.querySelector('main'),box=document.querySelector('[data-master]').getBoundingClientRect();
+        frames.push({p:Number(main.dataset.progress),y:scrollY,intro:Number(getComputedStyle(document.querySelector('[data-intro]')).opacity),covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1});
+        if(main.dataset.playback==='playing')requestAnimationFrame(tick);else resolve(frames);
+      };requestAnimationFrame(tick);
+    }));
+    await page.waitForSelector(`main[data-playback="${id}"]`);const state=await page.evaluate(read);holds.push({...state,samples,elapsedMs:Date.now()-started});
+    check(state.p===index+1&&state.plates.find(p=>p.id===id).opacity===1&&state.plates.filter(p=>p.id!==id).every(p=>p.opacity===0),'Wrong plant or order');
+    check(state.label.toLowerCase().includes(id)&&state.y===0&&state.pins===0,'Missing concept label, pin or page movement');
+    check(samples.length>90&&samples.every(s=>s.covered&&s.y===0),'Gesture skipped playback or exposed an edge');
+    if(index>0)check(samples.every(s=>s.intro===0),'Opening headline reappeared between plants');
+    await page.screenshot({path:`docs/phase-2/transition-proof/silicon-order/desktop-${id}.png`});await page.waitForTimeout(220);
+  }
+  const decoded=[];
+  for(const id of ['silicon','cbg','saf'])decoded.push(await page.locator(`[data-plant="${id}"] img`).evaluate(async(image,id)=>{const response=await fetch(image.currentSrc);const bitmap=await createImageBitmap(await response.blob());const result={id,width:bitmap.width,height:bitmap.height,source:image.currentSrc};bitmap.close();return result;},id));
+  check(decoded[0].width===1672&&decoded[0].height===941&&decoded[0].source.includes('Silicon'),'Wrong Silicon image or resolution');
+  const reverse=[];
+  for(const id of ['cbg','silicon','overview']){
+    await page.mouse.wheel(0,-120);await page.waitForSelector(`main[data-playback="${id}"]`);const state=await page.evaluate(read);reverse.push(state);
+    const forward=holds.find(h=>h.state===id);if(forward)check(state.matrix.every((n,i)=>Math.abs(n-forward.matrix[i])<.05),'Reverse framing changed');
+    await page.waitForTimeout(220);
+  }
+  await page.getByRole('button',{name:'View CBG',exact:true}).click();await page.waitForSelector('main[data-playback="playing"]');await page.keyboard.press('Escape');
+  check((await page.evaluate(read)).state==='cbg','Direct CBG navigation/Escape failed');
+  await page.locator('[data-stage]').focus();await page.keyboard.down('PageDown');await page.waitForSelector('main[data-playback="saf"]');await page.keyboard.down('PageDown');check(await page.evaluate(()=>scrollY)===0,'Held key skipped final hold');await page.keyboard.up('PageDown');
+  await page.keyboard.press('PageDown');await page.waitForTimeout(250);check(await page.evaluate(()=>scrollY)>100,'Native scroll failed after SAF');
+  await page.getByRole('button',{name:'Replay the approach',exact:true}).click();await page.waitForSelector('main[data-playback="playing"]');await page.getByRole('button',{name:'Skip animation',exact:true}).click();check((await page.evaluate(read)).state==='silicon','Replay did not start with Silicon');
+  await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="playing"]');await page.locator('a[href="#review"]').focus();await page.keyboard.press('Enter');await page.waitForTimeout(250);check(await page.evaluate(()=>scrollY)>100,'Skip link trapped');
+  check(errors.length===0,'Application errors: '+JSON.stringify(errors));return {holds,reverse,decoded,keyboard:true,replay:true,skip:true,escape:true,skipLink:true,errors};
+}

@@ -1,0 +1,120 @@
+{
+  "frames": 1806,
+  "changes": [
+    {
+      "time": 1229.2,
+      "state": "overview",
+      "p": 0,
+      "y": 0,
+      "seconds": 0
+    },
+    {
+      "time": 1562.4,
+      "state": "playing",
+      "p": 0,
+      "y": 0,
+      "seconds": 0.33320000000000005
+    },
+    {
+      "time": 4195.7,
+      "state": "silicon",
+      "p": 1,
+      "y": 0,
+      "seconds": 2.9665
+    },
+    {
+      "time": 5112.2,
+      "state": "playing",
+      "p": 1,
+      "y": 0,
+      "seconds": 3.883
+    },
+    {
+      "time": 8712,
+      "state": "cbg",
+      "p": 2,
+      "y": 0,
+      "seconds": 7.4828
+    },
+    {
+      "time": 9678.6,
+      "state": "playing",
+      "p": 2,
+      "y": 0,
+      "seconds": 8.449399999999999
+    },
+    {
+      "time": 13295.1,
+      "state": "saf",
+      "p": 3,
+      "y": 0,
+      "seconds": 12.0659
+    },
+    {
+      "time": 14228.4,
+      "state": "playing",
+      "p": 3,
+      "y": 0,
+      "seconds": 12.999199999999998
+    },
+    {
+      "time": 17245,
+      "state": "cbg",
+      "p": 2,
+      "y": 0,
+      "seconds": 16.0158
+    },
+    {
+      "time": 18128.1,
+      "state": "playing",
+      "p": 2,
+      "y": 0,
+      "seconds": 16.898899999999998
+    },
+    {
+      "time": 21127.9,
+      "state": "silicon",
+      "p": 1,
+      "y": 0,
+      "seconds": 19.8987
+    },
+    {
+      "time": 22027.9,
+      "state": "playing",
+      "p": 1,
+      "y": 0,
+      "seconds": 20.7987
+    },
+    {
+      "time": 25644.3,
+      "state": "cbg",
+      "p": 2,
+      "y": 0,
+      "seconds": 24.4151
+    },
+    {
+      "time": 26410.9,
+      "state": "playing",
+      "p": 2,
+      "y": 0,
+      "seconds": 25.1817
+    },
+    {
+      "time": 30044.1,
+      "state": "saf",
+      "p": 3,
+      "y": 0,
+      "seconds": 28.814899999999998
+    }
+  ],
+  "medianFrameInterval": 16.69999999999891,
+  "p95FrameInterval": 16.799999999999272,
+  "over50ms": 0,
+  "last": {
+    "time": 31310.7,
+    "state": "saf",
+    "p": 3,
+    "y": 600
+  },
+  "limitation": "Local browser rAF observations under recording overhead, not hardware FPS or field performance."
+}

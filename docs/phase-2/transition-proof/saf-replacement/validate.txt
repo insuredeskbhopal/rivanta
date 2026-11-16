@@ -1,0 +1,50 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
+  const ready=async()=>{await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(700,400);};
+  const state=()=>{
+    const main=document.querySelector('main'),master=document.querySelector('[data-master]'),saf=document.querySelector('[data-saf]');
+    const mm=new DOMMatrixReadOnly(getComputedStyle(master).transform),sm=new DOMMatrixReadOnly(getComputedStyle(saf).transform);
+    const box=master.getBoundingClientRect();
+    return {p:Number(main.dataset.progress),state:main.dataset.playback,shot:main.dataset.shot,y:scrollY,masterTransform:[mm.a,mm.e,mm.f],safTransform:[sm.a,sm.e,sm.f],safOpacity:Number(getComputedStyle(saf).opacity),cbgOpacity:Number(getComputedStyle(document.querySelector('[data-detail]')).opacity),safCopy:Number(getComputedStyle(document.querySelector('[data-saf-copy]')).opacity),cbgCopy:Number(getComputedStyle(document.querySelector('[data-copy]')).opacity),intro:Number(getComputedStyle(document.querySelector('[data-intro]')).opacity),concept:document.querySelector('[data-concept]').textContent,phase:document.querySelector('[data-phase]').textContent,covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,towerError:Math.hypot(mm.a*872+mm.e-sm.a*1099-sm.e,mm.d*684+mm.f-sm.d*400-sm.f),pins:document.querySelectorAll('.pin-spacer').length,overflow:document.documentElement.scrollWidth>innerWidth};
+  };
+  await ready();await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="detail"]');
+  const cbg=await page.evaluate(state);check(cbg.p===.64&&cbg.cbgOpacity===1&&cbg.safOpacity===0,'CBG approach changed');
+  await page.waitForTimeout(250);
+  await page.mouse.wheel(0,12000);await page.waitForSelector('main[data-playback="playing"]');
+  const samples=await page.evaluate(async()=>new Promise(resolve=>{
+    const samples=[];
+    const tick=()=>{
+      const main=document.querySelector('main'),master=document.querySelector('[data-master]'),saf=document.querySelector('[data-saf]');
+      const box=master.getBoundingClientRect(),mm=new DOMMatrixReadOnly(getComputedStyle(master).transform),sm=new DOMMatrixReadOnly(getComputedStyle(saf).transform);
+      samples.push({p:Number(main.dataset.progress),y:scrollY,intro:Number(getComputedStyle(document.querySelector('[data-intro]')).opacity),scale:mm.a,covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,towerError:Math.hypot(mm.a*872+mm.e-sm.a*1099-sm.e,mm.d*684+mm.f-sm.d*400-sm.f)});
+      if(main.dataset.playback==='playing')requestAnimationFrame(tick);else resolve(samples);
+    };requestAnimationFrame(tick);
+  }));
+  const saf=await page.evaluate(state);
+  check(samples.length>90&&samples.every(s=>s.y===0&&s.intro===0&&s.covered),'Bridge skipped, reset the intro or exposed an edge');
+  check(Math.min(...samples.map(s=>s.scale))<Math.min(cbg.masterTransform[0],saf.masterTransform[0])*.75,'No meaningful pullback');
+  check(samples.filter(s=>s.p>1.42&&s.p<1.5).every(s=>s.towerError<2),'SAF tower is not aligned during the handoff');
+  check(saf.state==='saf'&&saf.p===1.64&&saf.safOpacity===1&&saf.cbgOpacity===0&&saf.safCopy===1&&saf.cbgCopy===0&&saf.concept.includes('Proposed SAF'),'SAF reading hold failed');
+  await page.waitForTimeout(500);check((await page.evaluate(state)).p===1.64,'SAF did not stop');
+  await page.screenshot({path:'docs/phase-2/transition-proof/saf-replacement/desktop-saf.png'});
+  const bitmap=await page.locator('[data-saf] img').evaluate(async image=>{const response=await fetch(image.currentSrc);const bitmap=await createImageBitmap(await response.blob());const result={width:bitmap.width,height:bitmap.height,source:image.currentSrc};bitmap.close();return result;});
+  check(bitmap.width===1672&&bitmap.height===941&&bitmap.source.includes('Sustainable%20Fuels'),'Wrong or degraded SAF source');
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="detail"]');
+  const reverse=await page.evaluate(state);check(reverse.cbgOpacity===1&&reverse.safOpacity===0&&reverse.intro===0,'Reverse did not settle at CBG');
+  check(reverse.masterTransform.every((n,i)=>Math.abs(n-cbg.masterTransform[i])<.05),'CBG framing changed after reverse');
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="overview"]');
+  await page.getByRole('button',{name:'View SAF',exact:true}).focus();await page.keyboard.press('Enter');await page.waitForSelector('main[data-playback="playing"]');await page.keyboard.press('Escape');
+  check((await page.evaluate(state)).state==='saf','Direct SAF/Escape destination failed');
+  await page.mouse.wheel(0,600);await page.waitForTimeout(250);check(await page.evaluate(()=>scrollY)>100,'Native scrolling did not resume after SAF');
+  await page.getByRole('button',{name:'Replay the approach',exact:true}).click();await page.waitForSelector('main[data-playback="detail"]');
+  await page.locator('[data-stage]').focus();await page.keyboard.down('PageDown');await page.waitForSelector('main[data-playback="saf"]');
+  await page.keyboard.down('PageDown');check(await page.evaluate(()=>scrollY)===0,'Held key skipped SAF');await page.keyboard.up('PageDown');
+  await page.keyboard.press('PageDown');await page.waitForTimeout(250);check(await page.evaluate(()=>scrollY)>100,'Fresh keyboard press cannot leave SAF');
+  await page.getByRole('button',{name:'Inspect CBG',exact:true}).click();await page.waitForSelector('main[data-playback="detail"]');
+  await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="playing"]');await page.getByRole('button',{name:'Skip animation',exact:true}).click();check((await page.evaluate(state)).state==='saf','Visible skip did not finish SAF');
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="playing"]');await page.locator('a[href="#review"]').focus();await page.keyboard.press('Enter');await page.waitForTimeout(200);
+  check(await page.evaluate(()=>scrollY)>100,'Skip link was trapped');check(errors.length===0,'Runtime errors: '+JSON.stringify(errors));
+  return {cbg,saf,reverse,bitmap,samples,keyboard:true,escape:true,skip:true,skipLink:true,errors};
+}

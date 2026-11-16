@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --proof-ink: #f3f1e9;
+  --proof-ground: #12251e;
+  --proof-deep: #0b1813;
+  --proof-muted: #c4cdc2;
+  --proof-gold: #dfc092;
+  --proof-line: #ffffff2e;
+  --proof-serif: Georgia, "Times New Roman", serif;
+  --proof-sans: "Segoe UI", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { background: var(--proof-deep); color: var(--proof-ink); }
+body { margin: 0; font-family: var(--proof-sans); }
+button, input { font: inherit; }
+a { color: inherit; text-underline-offset: .25em; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--proof-gold); outline-offset: 5px; }
+::selection { color: var(--proof-deep); background: var(--proof-gold); }

@@ -1,0 +1,35 @@
+.overview { --overview-muted: color-mix(in srgb, var(--proof-deep) 74%, var(--proof-ink)); --overview-rule: color-mix(in srgb, var(--proof-deep) 22%, transparent); min-height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: clamp(64px, 7vw, 104px); padding: clamp(88px, 8vw, 128px) 7vw; background: var(--proof-ink); color: var(--proof-deep); scroll-margin-top: 88px; }
+.overview:focus-visible { outline: 2px solid var(--proof-deep); outline-offset: -8px; }
+.introduction { display: grid; grid-template-columns: 1.1fr .9fr; align-items: start; gap: clamp(48px, 7vw, 112px); }
+.introduction h2 { max-width: 650px; margin: 0; font-family: var(--proof-serif); font-weight: 400; font-size: clamp(40px, 4.5vw, 68px); line-height: 1.08; letter-spacing: -.035em; text-wrap: balance; }
+.copy { max-width: 520px; }
+.lead { margin: 0; font-size: clamp(19px, 1.4vw, 22px); line-height: 1.65; }
+.support { margin: 24px 0 0; color: var(--overview-muted); font-size: 16px; line-height: 1.8; }
+.profileLink { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 48px; margin-top: 32px; padding-block: 10px; border-bottom: 1px solid var(--overview-rule); color: inherit; font-size: 15px; text-decoration: none; }
+.profileLink:hover { border-color: currentColor; }
+.profileLink svg { flex: none; transition: transform 150ms ease-out; }
+.profileLink:hover svg { transform: translateX(3px); }
+.profileLink:focus-visible { outline-color: var(--proof-deep); }
+.priorities { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4.5vw, 72px); margin: 0; padding-top: 36px; border-top: 1px solid var(--overview-rule); }
+.priorities dt { font-size: 18px; font-weight: 600; line-height: 1.4; }
+.priorities dd { max-width: 35ch; margin: 14px 0 0; color: var(--overview-muted); font-size: 15px; line-height: 1.75; }
+@media (max-width: 900px) {
+  .overview { min-height: auto; padding-block: 96px; }
+  .introduction { grid-template-columns: 1fr; gap: 36px; }
+  .introduction h2 { font-size: clamp(40px, 6vw, 56px); }
+  .copy { max-width: 650px; }
+  .priorities { gap: 24px; }
+}
+@media (max-width: 600px) {
+  .overview { padding: 88px 24px 72px; gap: 48px; scroll-margin-top: 76px; }
+  .introduction { gap: 28px; }
+  .introduction h2 { font-size: clamp(36px, 8.5vw, 44px); }
+  .lead { font-size: 18px; }
+  .support { margin-top: 20px; }
+  .profileLink { margin-top: 24px; }
+  .priorities { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .priorities dd { max-width: 45ch; margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .profileLink svg, .profileLink:hover svg { transition: none; transform: none; }
+}

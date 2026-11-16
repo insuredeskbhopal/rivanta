@@ -1,0 +1,12 @@
+async page=>{
+ const check=(ok,message)=>{if(!ok)throw new Error(message);};const tablets=[];
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ for(const viewport of [{width:768,height:1024},{width:1024,height:768}]){
+  await page.setViewportSize(viewport);await page.goto('http://127.0.0.1:3002/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.getByRole('button',{name:'View Renewable Energy',exact:true}).click();await page.keyboard.press('Escape');await page.waitForSelector('main[data-playback="energy"]');
+  const result=await page.locator('[data-energy]').evaluate(el=>{const b=el.getBoundingClientRect(),c=document.querySelector('[data-energy-copy]').getBoundingClientRect(),label=document.querySelector('[data-concept]').getBoundingClientRect();return{width:innerWidth,height:innerHeight,covered:b.left<=1&&b.top<=1&&b.right>=innerWidth-1&&b.bottom>=innerHeight-1,overflow:document.documentElement.scrollWidth>innerWidth,captionGap:label.top-c.bottom,source:el.querySelector('img').currentSrc};});
+  check(result.covered&&!result.overflow&&result.captionGap>8,'Tablet failure '+JSON.stringify(result));await page.screenshot({path:`docs/phase-2/transition-proof/renewable-energy/tablet-${viewport.width}.png`});tablets.push(result);
+ }
+ await page.setViewportSize({width:320,height:568});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('http://127.0.0.1:3002/proof/cbg');await page.waitForSelector('main[data-tools="ready"]');
+ const reduced=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.querySelectorAll('[data-stage] img')].map(img=>({visible:getComputedStyle(img.parentElement).display!=='none',transform:getComputedStyle(img.parentElement).transform})),navRight:document.querySelector('header nav').getBoundingClientRect().right}));
+ check(!reduced.overflow&&reduced.images.length===5&&reduced.images.every(i=>i.visible&&i.transform==='none')&&reduced.navRight<=320,'Narrow reduced overflow '+JSON.stringify(reduced));await page.screenshot({path:'docs/phase-2/transition-proof/renewable-energy/reduced-320.png',fullPage:true});return{tablets,reduced};
+}

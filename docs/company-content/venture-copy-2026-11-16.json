@@ -1,0 +1,28 @@
+{
+  "checkedOn": "2026-11-16",
+  "access": "All four source URLs returned HTTP 200 through direct public HTTPS requests.",
+  "copy": {
+    "silicon": {
+      "heading": "Bio-silica & silicon.",
+      "description": "Developing biogenic silica from rice husk for rubber, concrete and industrial applications. We are evaluating green silicon pathways to support India\u2019s materials supply chains.",
+      "source": "https://www.rivantagreen.com/bio-silica"
+    },
+    "cbg": {
+      "heading": "Compressed biogas.",
+      "description": "Developing compressed biogas from agricultural residues for transport, industry and city gas networks. Planned digestate recovery adds a circular route for returning nutrients to farmland.",
+      "source": "https://www.rivantagreen.com/cbg"
+    },
+    "saf": {
+      "heading": "Sustainable aviation fuel.",
+      "description": "Evaluating aviation fuel pathways from non-food biomass. Feasibility studies, feedstock planning and potential technology collaboration guide this future development area.",
+      "source": "https://www.rivantagreen.com/saf"
+    },
+    "energy": {
+      "heading": "Renewable power.",
+      "description": "Planning solar and wind power to support future industrial energy needs. Our wider development approach also considers process efficiency and waste-heat recovery.",
+      "source": "https://www.rivantagreen.com/sustainability",
+      "visualContext": "Solar and wind concepts supplied by the user; not evidence of an approved design or operations."
+    }
+  },
+  "status": "Development intent only; no operating plants, capacities, certifications or secured partners asserted."
+}

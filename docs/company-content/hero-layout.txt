@@ -1,0 +1,9 @@
+async page=>{
+ const results=[];await page.emulateMedia({reducedMotion:'no-preference'});
+ for(const viewport of [{width:1440,height:900},{width:1920,height:1080},{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:768,height:1024},{width:720,height:450}]){
+  await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');
+  const state=await page.evaluate(()=>{const intro=document.querySelector('[data-intro]').getBoundingClientRect(),badge=document.querySelector('[data-concept]').getBoundingClientRect(),header=document.querySelector('header').getBoundingClientRect(),cta=document.querySelector('[data-intro] a').getBoundingClientRect();return{width:innerWidth,height:innerHeight,introTop:intro.top,introBottom:intro.bottom,headerBottom:header.bottom,badgeTop:badge.top,ctaBottom:cta.bottom,overflow:document.documentElement.scrollWidth>innerWidth,title:document.querySelector('h1').textContent,body:document.body.innerText,diagnostics:document.querySelectorAll('[data-diagnostic],#review,#alignment').length};});
+  if(state.overflow||state.introTop<state.headerBottom||state.ctaBottom+12>state.badgeTop||state.diagnostics!==0||/Review the approach|Awaiting visual approval|Replay the approach|Compare the supplied|Review-only proof|remaining plant imagery|Explore the transition|Static view|Study navigation/i.test(state.body))throw new Error('Hero layout/content failure: '+JSON.stringify(state));
+  delete state.body;results.push(state);await page.screenshot({path:`docs/company-content/hero-${viewport.width}-${viewport.height}.png`});
+ }return results;
+}

@@ -1,0 +1,29 @@
+async page => {
+  const runtimeErrors = [];
+  const failedResponses = [];
+  page.on('pageerror', error => runtimeErrors.push(error.message));
+  page.on('response', response => {
+    if (response.status() >= 400) failedResponses.push({ url: response.url(), status: response.status() });
+  });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('http://127.0.0.1:8765/');
+  await page.locator('.outlook').scrollIntoViewIfNeeded();
+  await page.waitForFunction(() => Array.from(document.images).every(image => image.complete && image.naturalWidth > 0));
+  const desktop = await page.evaluate(() => ({
+    title: document.title,
+    width: innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    imagesLoaded: Array.from(document.images).filter(image => image.complete && image.naturalWidth > 0).length,
+    chapters: document.querySelectorAll('.scroll-chapter').length,
+    reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches
+  }));
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('http://127.0.0.1:8765/');
+  const mobile = await page.evaluate(() => ({ width: innerWidth, scrollWidth: document.documentElement.scrollWidth }));
+  await page.screenshot({ path: 'docs/phase-1/prototype-mobile-smoke.png', scale: 'css' });
+  if (runtimeErrors.length) throw new Error(JSON.stringify(runtimeErrors));
+  if (desktop.imagesLoaded !== 11 || desktop.chapters !== 8 || !desktop.reducedMotion) throw new Error('Prototype smoke assertions failed');
+  if (desktop.width !== desktop.scrollWidth || mobile.width !== mobile.scrollWidth) throw new Error('Horizontal overflow detected');
+  return { desktop, mobile, runtimeErrors, failedResponses, scope: 'Existing prototype and browser tooling smoke only; no comprehensive accessibility or motion audit.' };
+}

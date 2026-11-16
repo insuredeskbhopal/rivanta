@@ -1,0 +1,100 @@
+.proof { background: var(--proof-ground); color: var(--proof-ink); }
+.skip { position: fixed; top: 12px; left: 16px; z-index: 40; padding: 14px; background: var(--proof-ink); color: var(--proof-deep); transform: translateY(-150%); }
+.skip:focus { transform: none; }
+.stage { position: relative; height: 100svh; overflow: hidden; background: var(--proof-deep); }
+.plate { position: relative; width: 100%; }
+.plate img { display: block; width: 100%; height: auto; }
+.fallbackLabel { position: absolute; bottom: 12px; left: 20px; padding: 10px; background: var(--proof-deep); font-size: 12px; }
+.proof[data-motion="ready"] .fallbackLabel { display: none; }
+.shade { position: absolute; inset: 0; background: linear-gradient(180deg, #0b181373 0 48%, #0b181300 72%), linear-gradient(0deg, #06150ee8, transparent 45%), linear-gradient(90deg, #081a137a, transparent 75%); pointer-events: none; }
+.intro { position: absolute; left: 7vw; top: 24%; width: min(1050px, 86vw); }
+.intro h1, .copy h2 { font-family: var(--proof-serif); font-weight: 400; letter-spacing: -.04em; text-wrap: balance; }
+.intro h1 { font-size: clamp(50px, 5.9vw, 86px); line-height: 1.02; margin: 0 0 26px; }
+.intro p { max-width: 540px; line-height: 1.75; font-size: 16px; margin: 0 0 30px; }
+.intro a { display: inline-flex; align-items: center; gap: 36px; min-height: 48px; border-bottom: 1px solid var(--proof-gold); text-decoration: none; font-size: 14px; }
+.intro a span { color: var(--proof-gold); font-size: 22px; }
+.copy { display: none; }
+.copy h2 { font-size: clamp(34px, 3.6vw, 52px); line-height: 1.1; margin: 0 0 16px; }
+.copy p { max-width: 340px; font-size: 14px; line-height: 1.75; }
+.status { position: absolute; inset: auto 5vw 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 12px; }
+.concept { background: var(--proof-deep); padding: 10px 13px; }
+.phase { color: var(--proof-ink); text-shadow: 0 1px 6px var(--proof-deep); }
+.motionControls { display: flex; align-items: center; gap: 20px; }
+.skipMotion { min-height: 44px; padding: 8px 12px; border: 1px solid var(--proof-line); background: var(--proof-deep); color: var(--proof-ink); cursor: pointer; font-size: 12px; }
+.proof[data-motion="ready"] .master, .proof[data-motion="ready"] .detail, .proof[data-motion="ready"] .saf { will-change: auto; }
+.proof[data-playback="playing"] .master { will-change: transform; }
+.proof[data-playback="playing"] .detail { will-change: transform, opacity; }
+.proof[data-playback="playing"] .saf { will-change: transform, opacity; }
+.track { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--proof-line); }
+.track span { display: block; height: 100%; background: var(--proof-gold); transform: scaleX(0); transform-origin: 0 50%; }
+.staticDescription { padding: 44px 7vw; max-width: 850px; line-height: 1.8; }
+.staticDescription h2 { font-size: 25px; font-weight: 500; margin: 0 0 12px; }
+.stage .master { position: absolute; inset: 0; height: 100%; }
+.stage .master img { width: 100%; height: 100%; object-fit: cover; }
+.stage .detail { display: none; }
+.stage .saf { display: none; }
+.stage .silicon { display: none; }
+.stage .energy { display: none; }
+.stage .fallbackLabel { display: none; }
+.proof[data-motion="ready"] .stage { display: block; height: 100svh; }
+.proof[data-motion="ready"] .intro { position: absolute; left: 7vw; top: 24%; padding: 0; width: min(1050px, 86vw); }
+.proof[data-motion="ready"] .plate { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.proof[data-motion="ready"] .master { inset: auto; top: 0; left: 0; width: 1692px; height: 930px; }
+.proof[data-motion="ready"] .detail { display: block; top: 0; left: 0; width: 1774px; height: 887px; opacity: 0; }
+.proof[data-motion="ready"] .saf { display: block; top: 0; left: 0; width: 1672px; height: 941px; opacity: 0; }
+.proof[data-motion="ready"] .silicon { display: block; top: 0; left: 0; width: 1672px; height: 941px; opacity: 0; }
+.proof[data-motion="ready"] .energy { display: block; top: 0; left: 0; width: 1672px; height: 941px; opacity: 0; }
+.proof[data-playback="playing"] .energy { will-change: transform, opacity; }
+.proof[data-playback="playing"] .silicon { will-change: transform, opacity; }
+.proof[data-motion="ready"] .copy { display: block; position: absolute; left: 7vw; bottom: 14vh; padding: 0; width: min(440px, 80vw); opacity: 0; }
+.proof[data-motion="ready"] .staticDescription { position: absolute; width: 1px; height: 1px; overflow: hidden; padding: 0; clip-path: inset(50%); }
+.footer { min-height: 160px; border-top: 1px solid var(--proof-line); padding: 48px 7vw; display: flex; align-items: center; justify-content: space-between; gap: 32px; color: var(--proof-muted); font-size: 14px; line-height: 1.7; }
+.footer p { max-width: 480px; margin: 0; }
+.footer nav { display: flex; flex-wrap: wrap; gap: 24px; }
+.footer a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+.footer a:hover { color: var(--proof-gold); text-decoration: underline; }
+.error { padding: 16px; background: var(--proof-deep); color: var(--proof-gold); }
+button:disabled { opacity: .45; cursor: default; }
+@media (max-width: 760px) {
+  .intro { top: 20%; left: 24px; width: calc(100% - 48px); }
+  .stage .master img { object-position: 28% 50%; }
+  .proof[data-motion="ready"] .master img { object-position: 50% 50%; }
+  .proof[data-motion="ready"] .intro { top: 20%; left: 24px; width: calc(100% - 48px); }
+  .intro h1 { font-size: clamp(36px, 9.5vw, 46px); margin-bottom: 20px; }
+  .intro p { max-width: 320px; font-size: 14px; margin-bottom: 24px; }
+  .proof[data-motion="ready"] .copy { left: 24px; bottom: max(16vh, 132px); width: calc(100% - 48px); }
+  .copy h2 { font-size: clamp(32px, 8.5vw, 40px); }
+  .copy p { font-size: 14px; max-width: 310px; }
+  .status { inset: auto 20px 24px; flex-wrap: wrap; font-size: 10px; }
+  .concept { padding: 9px; }
+  .phase { font-size: 11px; flex: 1; min-width: 0; }
+  .motionControls { width: 100%; gap: 8px; justify-content: space-between; }
+  .concept { max-width: 100%; }
+  .footer { align-items: flex-start; flex-direction: column; min-height: 180px; padding: 32px 24px; gap: 16px; }
+
+}
+@media (max-height: 560px) {
+  .proof[data-motion="ready"] .intro { top: 104px; }
+  .intro h1 { font-size: clamp(30px, 4.5vw, 42px); margin-bottom: 12px; }
+  .intro p { display: block; max-width: 500px; font-size: 13px; line-height: 1.6; margin-bottom: 16px; }
+  .proof[data-motion="ready"] .copy { bottom: 132px; }
+  .copy h2 { font-size: 35px; margin-bottom: 12px; }
+  .copy p { font-size: 13px; line-height: 1.6; margin-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .proof .stage { display: flex; flex-direction: column; height: auto; padding-top: 90px; }
+  .proof .stage .master { position: relative; width: 100%; height: auto; }
+  .proof .stage .master img { height: auto; }
+  .proof .stage .detail { display: block; width: 100%; height: auto; }
+  .proof .stage .saf { display: block; width: 100%; height: auto; }
+  .proof .stage .silicon { display: block; width: 100%; height: auto; }
+  .proof .stage .energy { display: block; width: 100%; height: auto; }
+  .proof .stage .fallbackLabel { display: block; }
+  .proof .intro { position: relative; order: -1; left: auto; top: auto; width: auto; padding: 32px 24px; }
+  .proof .copy { display: block; padding: 32px 24px 110px; }
+  .proof .shade { display: none; }
+}
+
+
+
+

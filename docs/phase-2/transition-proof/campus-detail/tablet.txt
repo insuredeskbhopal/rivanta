@@ -1,0 +1,13 @@
+async page => {
+  const results=[];await page.emulateMedia({reducedMotion:'no-preference'});
+  for(const viewport of [{width:768,height:1024},{width:1000,height:760}]){
+    await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(viewport.width/2,viewport.height/2);
+    for(const id of ['silicon','cbg','saf']){
+      await page.mouse.wheel(0,120);await page.waitForSelector(`main[data-playback="${id}"]`);
+      const state=await page.locator(`[data-plant="${id}"]`).evaluate((el,id)=>{const box=el.getBoundingClientRect(),matrix=new DOMMatrixReadOnly(getComputedStyle(el).transform);return {id,width:innerWidth,height:innerHeight,covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,columns:[240,370].map(x=>matrix.a*x+matrix.e),label:document.querySelector('[data-concept]').textContent,overflow:document.documentElement.scrollWidth>innerWidth,y:scrollY};},id);
+      if(!state.covered||state.overflow||state.y!==0||!state.label.toLowerCase().includes(id))throw new Error('Tablet framing failed');
+      if(id==='silicon'&&state.columns.some(x=>x<40||x>viewport.width-40))throw new Error('Silicon columns cropped on portrait/tablet viewport');
+      results.push(state);if(id==='silicon')await page.screenshot({path:`docs/phase-2/transition-proof/campus-detail/tablet-${viewport.width}.png`});await page.waitForTimeout(220);
+    }
+  }return results;
+}

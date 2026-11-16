@@ -1,0 +1,1 @@
+[{"wait": 1200}, {"click": "header button:nth-of-type(2)"}, {"wait": 2000}, {"wait": 2000}, {"wait": 2000}, {"wait": 500}, {"press": "Tab"}, {"wait": 300}]

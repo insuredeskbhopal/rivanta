@@ -1,0 +1,47 @@
+[
+  {
+    "source": "image\\hero-facility.png",
+    "width": 1692,
+    "height": 930,
+    "bytes": 3020159,
+    "sha256": "67184aac9dcd793c79cdbbf65ce03f116d768f2c9cdce8769c0b5de4f2cc76e5",
+    "status": "User-supplied concept render; ownership and production usage rights not independently established; layout and equipment unverified.",
+    "playback": "in use"
+  },
+  {
+    "source": "image\\Golden Hour Industrial Energy Complex.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2586054,
+    "sha256": "23db63cd2e4451a25bfe3746ee6648461235d8589cce6d84f9502d13b264cb54",
+    "status": "User-supplied closer campus concept. Denser plant detail, not a larger pixel file. Geometry, operations and production usage rights unverified.",
+    "playback": "removed; source preserved"
+  },
+  {
+    "source": "image\\Golden-Hour Silicon Plant Panorama.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2564679,
+    "sha256": "eb58016a1de0a1a8571da73f69e69e85a0fd90d22bee0056b70b09b354fa1e27",
+    "status": "User-designated proposed Silicon concept; process, equipment and position unverified. Production rights not independently established.",
+    "playback": "in use"
+  },
+  {
+    "source": "image\\Golden-Hour Mountain Industrial Complex.png",
+    "width": 1774,
+    "height": 887,
+    "bytes": 2754127,
+    "sha256": "bee3fce0be7b4b21fa27ad6722008fdaff71a126f10df887060b953a961103ee",
+    "status": "User-supplied concept render; ownership and production usage rights not independently established; layout and equipment unverified.",
+    "playback": "in use"
+  },
+  {
+    "source": "image\\Golden-Hour Sustainable Fuels Plant.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 2192751,
+    "sha256": "e51fda40f8b438eda4ba68ac79a6462349f70623ecb9a17ab1114b6543829188",
+    "status": "Latest user-designated proposed SAF concept. Process, equipment and layout unverified; production usage rights not independently established.",
+    "playback": "in use"
+  }
+]

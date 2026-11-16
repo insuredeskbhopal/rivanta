@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "titlePresent": true
+  },
+  {
+    "path": "/proof/cbg",
+    "status": 307,
+    "location": "/"
+  }
+]

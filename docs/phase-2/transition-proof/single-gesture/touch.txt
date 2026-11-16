@@ -1,0 +1,21 @@
+async page => {
+  const context=await page.context().browser().newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:2,reducedMotion:'no-preference'});
+  const phone=await context.newPage();
+  await phone.goto('http://localhost:3000/proof/cbg');await phone.waitForSelector('main[data-motion="ready"]');
+  const client=await context.newCDPSession(phone);
+  const touch=async(type,y)=>client.send('Input.dispatchTouchEvent',{type,touchPoints:type==='touchEnd'?[]:[{x:190,y,radiusX:1,radiusY:1}]});
+  await touch('touchStart',600);await touch('touchMove',570);await touch('touchMove',460);await touch('touchEnd');
+  await phone.waitForSelector('main[data-playback="playing"]');
+  const during=await phone.evaluate(()=>({p:Number(document.querySelector('main').dataset.progress),y:scrollY}));
+  await phone.waitForSelector('main[data-playback="detail"]');
+  const held=await phone.evaluate(()=>({p:Number(document.querySelector('main').dataset.progress),y:scrollY}));
+  if(held.p!==.64||held.y!==0||during.p>=.64)throw new Error('Single touchscreen swipe skipped or failed to play');
+  await phone.screenshot({path:'docs/phase-2/transition-proof/single-gesture/touch-held.png'});
+  await touch('touchStart',650);
+  for(const y of [610,550,480,400,300]){await touch('touchMove',y);await phone.waitForTimeout(40);}
+  await touch('touchEnd');await phone.waitForTimeout(400);
+  const nextY=await phone.evaluate(()=>scrollY);
+  if(nextY<100)throw new Error('Fresh swipe failed to resume native scrolling');
+  await client.detach();await context.close();
+  return {during,held,nextY,limitation:'Real Chrome touchscreen events via CDP in mobile emulation, not a physical handset test.'};
+}

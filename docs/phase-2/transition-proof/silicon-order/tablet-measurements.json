@@ -1,0 +1,80 @@
+[
+  {
+    "id": "silicon",
+    "width": 768,
+    "height": 1024,
+    "covered": true,
+    "columns": [
+      261.168,
+      402.634
+    ],
+    "label": "Proposed Silicon \u00b7 Concept visualization",
+    "overflow": false,
+    "y": 0
+  },
+  {
+    "id": "cbg",
+    "width": 768,
+    "height": 1024,
+    "covered": true,
+    "columns": [
+      -14.771999999999991,
+      135.30650000000003
+    ],
+    "label": "Proposed CBG \u00b7 Concept visualization",
+    "overflow": false,
+    "y": 0
+  },
+  {
+    "id": "saf",
+    "width": 768,
+    "height": 1024,
+    "covered": true,
+    "columns": [
+      -550.768,
+      -409.302
+    ],
+    "label": "Proposed SAF \u00b7 Concept visualization",
+    "overflow": false,
+    "y": 0
+  },
+  {
+    "id": "silicon",
+    "width": 1000,
+    "height": 760,
+    "covered": true,
+    "columns": [
+      193.83624,
+      298.83087
+    ],
+    "label": "Proposed Silicon \u00b7 Concept visualization",
+    "overflow": false,
+    "y": 0
+  },
+  {
+    "id": "cbg",
+    "width": 1000,
+    "height": 760,
+    "covered": true,
+    "columns": [
+      204.03704000000002,
+      315.42377
+    ],
+    "label": "Proposed CBG \u00b7 Concept visualization",
+    "overflow": false,
+    "y": 0
+  },
+  {
+    "id": "saf",
+    "width": 1000,
+    "height": 760,
+    "covered": true,
+    "columns": [
+      -156.55675999999997,
+      -51.56212999999997
+    ],
+    "label": "Proposed SAF \u00b7 Concept visualization",
+    "overflow": false,
+    "y": 0
+  }
+]

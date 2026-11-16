@@ -1,0 +1,105 @@
+async page => {
+  const errors=[];
+  page.on('pageerror',error=>errors.push(error.message));
+  const url='http://127.0.0.1:3001/proof/cbg';
+  const assert=(condition,message)=>{if(!condition)throw new Error(message);};
+  const read=()=>{
+    const root=document.querySelector('main');
+    const stage=document.querySelector('[data-stage]');
+    const box=stage.getBoundingClientRect();
+    const master=document.querySelector('[data-master]');
+    const image=master.getBoundingClientRect();
+    const badge=document.querySelector('[data-stage] [class*=concept]').getBoundingClientRect();
+    return {progress:Number(root.dataset.progress||0),motion:root.dataset.motion||'static',stageTop:box.top,stageBottom:box.bottom,stageHeight:box.height,masterTransform:master.style.transform,masterBounds:{left:image.left,right:image.right,top:image.top,bottom:image.bottom},detailOpacity:Number(getComputedStyle(document.querySelector('[data-detail]')).opacity),copyOpacity:Number(getComputedStyle(document.querySelector('[data-copy]')).opacity),conceptVisible:badge.width>0&&badge.top>=0&&badge.bottom<=innerHeight,width:innerWidth,scrollWidth:document.documentElement.scrollWidth,pins:document.querySelectorAll('.pin-spacer').length};
+  };
+  const settled=async()=>{await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));};
+  const sample=async p=>{
+    const target=await page.evaluate(progress=>{
+      const stage=document.querySelector('[data-stage]');
+      const spacer=stage.parentElement;
+      return spacer.getBoundingClientRect().top+scrollY+(spacer.offsetHeight-stage.offsetHeight)*progress;
+    },p);
+    await page.evaluate(top=>scrollTo({top,behavior:'instant'}),target);
+    await settled();
+    return await page.evaluate(read);
+  };
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto(url);
+  await page.waitForSelector('main[data-motion="ready"]');
+  const desktop=[];
+  for(const p of [0,.25,.42,.5,.64,.8,.99]){
+    const state=await sample(p);desktop.push(state);
+    assert(Math.abs(state.stageTop)<2,'Stage released before transition completed');
+    assert(state.conceptVisible,'Concept label missing in desktop scene');
+    assert(state.masterBounds.left<=1&&state.masterBounds.right>=1439&&state.masterBounds.top<=1&&state.masterBounds.bottom>=899,'Master exposed an empty edge');
+    if([0,.42,.64,.99].includes(p))await page.screenshot({path:`docs/phase-2/transition-proof/desktop-${p}.png`});
+  }
+  const reverse=await sample(.42);
+  assert(reverse.masterTransform===desktop[2].masterTransform,'Reverse scroll did not retrace the camera');
+  const hold=desktop[4];
+  assert(hold.copyOpacity>.99&&hold.detailOpacity>.99,'Reading hold is not fully visible');
+  await page.getByRole('button',{name:'View CBG',exact:true}).evaluate(button=>button.click());
+  await settled();
+  const direct=await page.evaluate(read);
+  assert(Math.abs(direct.progress-.64)<.002,'Direct CBG navigation did not reach its reading state: '+JSON.stringify(direct));
+  await page.getByRole('link',{name:'Check alignment',exact:true}).click();
+  const slider=page.getByRole('slider');
+  await slider.fill('0');
+  const blend0=await page.locator('[data-diagnostic-detail]').evaluate(e=>Number(getComputedStyle(e).opacity));
+  await slider.fill('100');
+  const blend1=await page.locator('[data-diagnostic-detail]').evaluate(e=>Number(getComputedStyle(e).opacity));
+  assert(blend0===0&&blend1===1,'Alignment control does not expose both original views');
+  await slider.fill('50');
+  await page.locator('[data-diagnostic]').screenshot({path:'docs/phase-2/transition-proof/alignment-50.png'});
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);
+  const reduced=await page.evaluate(read);
+  assert(reduced.pins===0,'Reduced motion left a pinned stage');
+  assert(await page.locator('#cbg-description').isVisible(),'Reduced-motion description is hidden');
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.waitForSelector('main[data-motion="ready"]');
+  assert((await page.evaluate(read)).pins===1,'Motion preference change created duplicate pins');
+  await page.setViewportSize({width:390,height:844});
+  await page.reload();
+  await page.waitForSelector('main[data-motion="ready"]');
+  const mobile=[];
+  for(const p of [0,.42,.64,.99]){
+    const state=await sample(p);mobile.push(state);
+    assert(state.width===state.scrollWidth,'Mobile horizontal overflow');
+    assert(Math.abs(state.stageTop)<2,'Mobile stage released early');
+    assert(state.conceptVisible,'Mobile concept label missing');
+    if([0,.64].includes(p))await page.screenshot({path:`docs/phase-2/transition-proof/mobile-${p}.png`});
+  }
+  const responsive=[];
+  for(const viewport of [{width:320,height:568},{width:844,height:390},{width:1920,height:1080}]){
+    await page.setViewportSize(viewport);
+    await page.waitForTimeout(300);
+    const state=await sample(.64);responsive.push(state);
+    assert(state.width===state.scrollWidth,'Responsive horizontal overflow');
+    assert(state.conceptVisible,'Concept label outside a short/narrow viewport');
+    assert(state.copyOpacity>.99,'Responsive reading state not visible');
+  }
+  await page.setViewportSize({width:390,height:844});
+  await page.waitForTimeout(300);
+  const buttons=await page.locator('main button').evaluateAll(elements=>elements.map(e=>({name:e.textContent,height:e.getBoundingClientRect().height})));
+  assert(buttons.every(button=>button.height>=44),'A button has a small hit target');
+  const ctx=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+  const fallback=await ctx.newPage();await fallback.goto(url);
+  const nojs={description:await fallback.locator('#cbg-description').isVisible(),disabledJump:await fallback.getByRole('button',{name:'View CBG',exact:true}).isDisabled(),images:await fallback.locator('[data-stage] img').count()};
+  assert(nojs.description&&nojs.disabledJump&&nojs.images===2,'No-JavaScript fallback is incomplete');
+  await ctx.close();
+  const failureContext=await page.context().browser().newContext({viewport:{width:390,height:844}});
+  const failure=await failureContext.newPage();
+  await failure.route('**/_next/image**',route=>route.abort());
+  await failure.goto(url);
+  await failure.locator('[data-error]').waitFor({state:'visible'});
+  const imageFailure={description:await failure.locator('#cbg-description').isVisible(),pins:await failure.locator('.pin-spacer').count()};
+  assert(imageFailure.description&&imageFailure.pins===0,'Image failure created a scroll trap');
+  await failureContext.close();
+  const resourceEvidence=await page.evaluate(()=>performance.getEntriesByType('resource').filter(e=>e.name.includes('/_next/image')).map(e=>({url:e.name,transferBytes:e.transferSize,decodedBytes:e.decodedBodySize,durationMs:Math.round(e.duration)})));
+  assert(errors.length===0,'JavaScript runtime exceptions: '+JSON.stringify(errors));
+  return {desktop,reverse,direct,mobile,responsive,reduced,buttons,nojs,imageFailure,blend:{blend0,blend1},resourceEvidence,errors,visualAcceptance:'Technical assertions only. Visual inspection is separate and required.'};
+}
+
+

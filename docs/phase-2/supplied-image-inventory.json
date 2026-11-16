@@ -1,0 +1,62 @@
+{
+  "inspected_on": "2026-11-16",
+  "total_bytes": 17883876,
+  "files": [
+    {
+      "file": "image/Industrial Complex with Distillation Towers-4.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2514767,
+      "sha256": "50af04b7f3a7157d5c5b1d6f1ac9699871f0c76b7006455f1ac69954274fc60c",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    },
+    {
+      "file": "image/Industrial Energy Complex at Sunrise.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2664774,
+      "sha256": "08c3b6ac8adbb58c5afc4c2feb6fa267f794cadc311a5cf0a326ff22494b0144",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    },
+    {
+      "file": "image/Industrial Facility with Black-Yellow Curbs-3.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2448613,
+      "sha256": "6a138ff2623afaea031abcf0beea3166f0ae4b9a50b1f8176bcd6c1f4d8785e8",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    },
+    {
+      "file": "image/Industrial Facility with Tanks and Piping.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2652771,
+      "sha256": "8b9d8d743927735164642894b6edd32b3257944139f3ab02d0c8feb2865844d1",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    },
+    {
+      "file": "image/Modern Industrial Processing Facility-1.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2581904,
+      "sha256": "830ff0c023c3d915912c93e6cf413932736bc7a377fa7b843d273261bed1455c",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    },
+    {
+      "file": "image/Modern Industrial Processing Plant-6.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2355566,
+      "sha256": "15ae117942b24ea9a725fcbd76d7645c97993649033ce831e6dedf2af4c57e77",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    },
+    {
+      "file": "image/Sunlit Industrial Piping Complex-5.png",
+      "width": 1672,
+      "height": 940,
+      "bytes": 2665481,
+      "sha256": "e4a204b6bb320b2b813a736549fd5e83d61b753466285b925bbd992e689c46f2",
+      "status": "Supplied reference; provenance and actual/conceptual status unverified"
+    }
+  ]
+}

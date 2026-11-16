@@ -1,0 +1,120 @@
+{
+  "initial": {
+    "title": "Rivanta Green | Sustainable Industrial Innovation",
+    "headline": "Building industrial value.\nFrom India\u2019s resources.",
+    "description": "Rivanta Green is developing industrial initiatives across advanced materials, renewable fuels and circular manufacturing in India. Facility visuals are conceptual.",
+    "stageImages": 5,
+    "diagnostics": 0,
+    "links": [
+      "https://www.rivantagreen.com/about",
+      "https://www.rivantagreen.com/contact"
+    ]
+  },
+  "holds": [
+    {
+      "id": "silicon",
+      "p": 1,
+      "y": 0,
+      "label": "Proposed Silicon \u00b7 Concept visualization",
+      "copyOpacity": 1,
+      "opacity": 1,
+      "frameCount": 155
+    },
+    {
+      "id": "cbg",
+      "p": 2,
+      "y": 0,
+      "label": "Proposed CBG \u00b7 Concept visualization",
+      "copyOpacity": 1,
+      "opacity": 1,
+      "frameCount": 216
+    },
+    {
+      "id": "saf",
+      "p": 3,
+      "y": 0,
+      "label": "Proposed SAF \u00b7 Concept visualization",
+      "copyOpacity": 1,
+      "opacity": 1,
+      "frameCount": 215
+    },
+    {
+      "id": "energy",
+      "p": 4,
+      "y": 0,
+      "label": "Proposed Renewable Power \u00b7 Concept visualization",
+      "copyOpacity": 1,
+      "opacity": 1,
+      "frameCount": 216
+    }
+  ],
+  "footer": {
+    "y": 160,
+    "top": 740,
+    "bottom": 900,
+    "text": "Rivanta Green Innovative Venture Private Limited\n\nAbout Rivanta\nContact us"
+  },
+  "reverse": true,
+  "skip": true,
+  "escape": true,
+  "keyboardSkip": true,
+  "reduced": {
+    "order": [
+      "silicon",
+      "cbg",
+      "saf",
+      "energy"
+    ],
+    "transforms": [
+      "none",
+      "none",
+      "none",
+      "none",
+      "none"
+    ],
+    "descriptions": [
+      {
+        "id": "silicon-description",
+        "height": 202.59375
+      },
+      {
+        "id": "cbg-description",
+        "height": 231.390625
+      },
+      {
+        "id": "saf-description",
+        "height": 202.59375
+      },
+      {
+        "id": "energy-description",
+        "height": 202.59375
+      }
+    ]
+  },
+  "fallback": {
+    "status": 200,
+    "descriptions": [
+      {
+        "id": "silicon",
+        "visible": true,
+        "link": 1
+      },
+      {
+        "id": "cbg",
+        "visible": true,
+        "link": 1
+      },
+      {
+        "id": "saf",
+        "visible": true,
+        "link": 1
+      },
+      {
+        "id": "energy",
+        "visible": true,
+        "link": 1
+      }
+    ]
+  },
+  "errors": []
+}

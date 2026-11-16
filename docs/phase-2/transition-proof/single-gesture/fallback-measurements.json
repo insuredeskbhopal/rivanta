@@ -1,0 +1,25 @@
+{
+  "productionStatus": 200,
+  "reduced": {
+    "pins": 0,
+    "motion": null,
+    "images": [
+      {
+        "complete": true,
+        "width": 1491,
+        "transform": "none"
+      },
+      {
+        "complete": true,
+        "width": 1639,
+        "transform": "none"
+      }
+    ],
+    "description": "Proposed compressed biogasThese supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility."
+  },
+  "noJavaScript": {
+    "description": true,
+    "disabledControls": 3,
+    "pins": 0
+  }
+}

@@ -1,0 +1,26 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};
+  const results=[];
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  for(const viewport of [{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:1920,height:1080}]){
+    await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');
+    await page.mouse.move(viewport.width/2,viewport.height/2);await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="detail"]');await page.waitForTimeout(200);
+    await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="saf"]');
+    const state=await page.evaluate(()=>{
+      const saf=document.querySelector('[data-saf]'),box=saf.getBoundingClientRect(),concept=document.querySelector('[data-concept]').getBoundingClientRect(),matrix=new DOMMatrixReadOnly(getComputedStyle(saf).transform);
+      return {width:innerWidth,height:innerHeight,p:Number(document.querySelector('main').dataset.progress),covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,conceptVisible:concept.top>=0&&concept.bottom<=innerHeight,label:document.querySelector('[data-concept]').textContent,overflow:document.documentElement.scrollWidth>innerWidth,scale:matrix.a,copy:Number(getComputedStyle(document.querySelector('[data-saf-copy]')).opacity),y:scrollY};
+    });
+    check(state.covered&&state.conceptVisible&&!state.overflow&&state.copy===1&&state.y===0&&state.label.includes('Proposed SAF'),'Responsive SAF failure: '+JSON.stringify(state));
+    check(Math.abs(state.scale-Math.max(viewport.width/1672,viewport.height/941))<.00002,'Held SAF is overmagnified');
+    results.push(state);
+    if(viewport.width===390)await page.screenshot({path:'docs/phase-2/transition-proof/saf-extension/mobile-saf.png'});
+  }
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="playing"]');
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);
+  const reduced=await page.evaluate(()=>({pins:document.querySelectorAll('.pin-spacer').length,state:document.querySelector('main').dataset.playback??null,images:[...document.querySelectorAll('[data-stage] img')].map(image=>({visible:getComputedStyle(image.parentElement).display!=='none',transform:getComputedStyle(image.parentElement).transform,complete:image.complete})),descriptions:[...document.querySelectorAll('[id$="-description"]')].map(el=>el.textContent)}));
+  check(reduced.pins===0&&reduced.state===null&&reduced.images.length===3&&reduced.images.every(i=>i.visible&&i.complete&&i.transform==='none'),'Reduced motion lost imagery or cleanup');
+  await page.setViewportSize({width:390,height:844});await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:'docs/phase-2/transition-proof/saf-extension/reduced-full-page.png',fullPage:true});
+  await page.mouse.wheel(0,500);await page.waitForTimeout(250);check(await page.evaluate(()=>scrollY)>0,'Reduced motion scroll intercepted');
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');
+  return {results,reduced,livePreferenceCleanup:true};
+}

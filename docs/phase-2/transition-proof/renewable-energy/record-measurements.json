@@ -1,0 +1,368 @@
+{
+  "sources": [
+    "http://127.0.0.1:3002/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-facility.0m2f8g9hevsj6.png&w=1920&q=90",
+    "http://127.0.0.1:3002/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGolden-Hour%20Silicon%20Plant%20Panorama.0is78r-fiaesq.png&w=1920&q=90",
+    "http://127.0.0.1:3002/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGolden-Hour%20Mountain%20Industrial%20Complex.12bqa0ow8j3t2.png&w=1920&q=90",
+    "http://127.0.0.1:3002/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGolden-Hour%20Sustainable%20Fuels%20Plant.0mmu9pyth96ry.png&w=1920&q=90",
+    "http://127.0.0.1:3002/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGolden-Hour%20Renewable%20Energy%20Campus.16hmylnsraoz6.png&w=1920&q=90"
+  ],
+  "bridges": [
+    {
+      "chapter": 1,
+      "start": 5.06908,
+      "min": 1.69355,
+      "end": 3.0947,
+      "pan": 196.24088
+    },
+    {
+      "chapter": 2,
+      "start": 3.0947,
+      "min": 1.69355,
+      "end": 2.678,
+      "pan": 665.4739999999999
+    },
+    {
+      "chapter": 3,
+      "start": 2.678,
+      "min": 1.69355,
+      "end": 3.44315,
+      "pan": 301.1579999999999
+    }
+  ],
+  "frames": 2572,
+  "changes": [
+    {
+      "time": 542.4,
+      "state": "overview",
+      "p": 0,
+      "y": 0,
+      "masterScale": 0.967742,
+      "masterX": -98.7097,
+      "plantOpacity": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "seconds": 0
+    },
+    {
+      "time": 859,
+      "state": "playing",
+      "p": 0,
+      "y": 0,
+      "masterScale": 0.967742,
+      "masterX": -98.7097,
+      "plantOpacity": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "seconds": 0.31660000000000005
+    },
+    {
+      "time": 3459,
+      "state": "silicon",
+      "p": 1,
+      "y": 0,
+      "masterScale": 5.06908,
+      "masterX": -1472.14,
+      "plantOpacity": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "seconds": 2.9166
+    },
+    {
+      "time": 4392.3,
+      "state": "playing",
+      "p": 1,
+      "y": 0,
+      "masterScale": 5.06908,
+      "masterX": -1472.14,
+      "plantOpacity": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "seconds": 3.8499
+    },
+    {
+      "time": 7975.3,
+      "state": "cbg",
+      "p": 2,
+      "y": 0,
+      "masterScale": 3.0947,
+      "masterX": -1044.54,
+      "plantOpacity": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "seconds": 7.432900000000001
+    },
+    {
+      "time": 8941.8,
+      "state": "playing",
+      "p": 2,
+      "y": 0,
+      "masterScale": 3.0947,
+      "masterX": -1044.54,
+      "plantOpacity": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "seconds": 8.3994
+    },
+    {
+      "time": 12558.4,
+      "state": "saf",
+      "p": 3,
+      "y": 0,
+      "masterScale": 2.678,
+      "masterX": -1363.68,
+      "plantOpacity": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "seconds": 12.016
+    },
+    {
+      "time": 13491.7,
+      "state": "playing",
+      "p": 3,
+      "y": 0,
+      "masterScale": 2.678,
+      "masterX": -1363.68,
+      "plantOpacity": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "seconds": 12.949300000000001
+    },
+    {
+      "time": 17124.7,
+      "state": "energy",
+      "p": 4,
+      "y": 0,
+      "masterScale": 3.44315,
+      "masterX": -3119.87,
+      "plantOpacity": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "seconds": 16.5823
+    },
+    {
+      "time": 18024.8,
+      "state": "playing",
+      "p": 4,
+      "y": 0,
+      "masterScale": 3.44315,
+      "masterX": -3119.87,
+      "plantOpacity": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "seconds": 17.4824
+    },
+    {
+      "time": 21041.1,
+      "state": "saf",
+      "p": 3,
+      "y": 0,
+      "masterScale": 2.678,
+      "masterX": -1363.68,
+      "plantOpacity": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "seconds": 20.498699999999996
+    },
+    {
+      "time": 21924.5,
+      "state": "playing",
+      "p": 3,
+      "y": 0,
+      "masterScale": 2.678,
+      "masterX": -1363.68,
+      "plantOpacity": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "seconds": 21.382099999999998
+    },
+    {
+      "time": 24924.3,
+      "state": "cbg",
+      "p": 2,
+      "y": 0,
+      "masterScale": 3.0947,
+      "masterX": -1044.54,
+      "plantOpacity": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "seconds": 24.381899999999998
+    },
+    {
+      "time": 25840.9,
+      "state": "playing",
+      "p": 2,
+      "y": 0,
+      "masterScale": 3.0947,
+      "masterX": -1044.54,
+      "plantOpacity": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "seconds": 25.2985
+    },
+    {
+      "time": 28840.6,
+      "state": "silicon",
+      "p": 1,
+      "y": 0,
+      "masterScale": 5.06908,
+      "masterX": -1472.14,
+      "plantOpacity": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "seconds": 28.298199999999998
+    },
+    {
+      "time": 29707.3,
+      "state": "playing",
+      "p": 1,
+      "y": 0,
+      "masterScale": 5.06908,
+      "masterX": -1472.14,
+      "plantOpacity": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "seconds": 29.1649
+    },
+    {
+      "time": 33323.9,
+      "state": "cbg",
+      "p": 2,
+      "y": 0,
+      "masterScale": 3.0947,
+      "masterX": -1044.54,
+      "plantOpacity": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "seconds": 32.7815
+    },
+    {
+      "time": 34090.5,
+      "state": "playing",
+      "p": 2,
+      "y": 0,
+      "masterScale": 3.0947,
+      "masterX": -1044.54,
+      "plantOpacity": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "seconds": 33.5481
+    },
+    {
+      "time": 37723.5,
+      "state": "saf",
+      "p": 3,
+      "y": 0,
+      "masterScale": 2.678,
+      "masterX": -1363.68,
+      "plantOpacity": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "seconds": 37.1811
+    },
+    {
+      "time": 38490.3,
+      "state": "playing",
+      "p": 3,
+      "y": 0,
+      "masterScale": 2.678,
+      "masterX": -1363.68,
+      "plantOpacity": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "seconds": 37.947900000000004
+    },
+    {
+      "time": 42123.2,
+      "state": "energy",
+      "p": 4,
+      "y": 0,
+      "masterScale": 3.44315,
+      "masterX": -3119.87,
+      "plantOpacity": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "seconds": 41.580799999999996
+    }
+  ],
+  "medianFrameInterval": 16.69999999999709,
+  "p95FrameInterval": 16.800000000000182,
+  "over50ms": 0,
+  "last": {
+    "time": 43390,
+    "state": "energy",
+    "p": 4,
+    "y": 600,
+    "masterScale": 3.44315,
+    "masterX": -3119.87,
+    "plantOpacity": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "limitation": "Local browser rAF observations under recording overhead, not hardware FPS or field performance."
+}

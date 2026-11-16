@@ -1,0 +1,46 @@
+{
+  "status": 200,
+  "reduced": {
+    "order": [
+      "silicon",
+      "cbg",
+      "saf"
+    ],
+    "images": [
+      {
+        "complete": true,
+        "transform": "none"
+      },
+      {
+        "complete": true,
+        "transform": "none"
+      },
+      {
+        "complete": true,
+        "transform": "none"
+      },
+      {
+        "complete": true,
+        "transform": "none"
+      },
+      {
+        "complete": true,
+        "transform": "none"
+      }
+    ],
+    "descriptions": [
+      "silicon-description",
+      "cbg-description",
+      "saf-description"
+    ]
+  },
+  "noJavaScript": {
+    "silicon": true,
+    "sourceLink": 1,
+    "disabled": 7
+  },
+  "imageFailure": {
+    "motion": null,
+    "description": true
+  }
+}

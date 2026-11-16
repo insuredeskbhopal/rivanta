@@ -1,0 +1,7 @@
+async page=>{
+ await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:320,height:568});await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');
+ await page.getByRole('link',{name:'Rivanta Green home',exact:true}).focus();await page.keyboard.press('Tab');const focused=await page.evaluate(()=>document.activeElement.getAttribute('aria-label'));
+ await page.getByRole('button',{name:'View Renewable Power',exact:true}).click();await page.keyboard.press('Escape');await page.waitForSelector('main[data-playback="energy"]');
+ const result=await page.evaluate(async()=>{const img=document.querySelector('header img'),response=await fetch(img.currentSrc),hash=await crypto.subtle.digest('SHA-256',await response.arrayBuffer());return{status:response.status,deliveredLogoSha256:[...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join(''),state:document.querySelector('main').dataset.playback,overflow:document.documentElement.scrollWidth>innerWidth};});
+ if(focused!=='View Silicon'||result.overflow||result.deliveredLogoSha256!=='f8484039d7d2d45ec170bb84ec350ae272bb7e6c85182377e771d07fc3d975d6')throw new Error('Logo delivery or keyboard failure');return{...result,keyboard:true};
+}

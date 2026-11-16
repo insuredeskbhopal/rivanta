@@ -1,0 +1,18 @@
+async page => {
+  const url='http://127.0.0.1:3002/proof/cbg';
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:'reduce'});
+  const response=await page.goto(url);
+  await page.waitForSelector('main[data-tools="ready"]');
+  const reduced=await page.evaluate(()=>({pins:document.querySelectorAll('.pin-spacer').length,motion:document.querySelector('main').dataset.motion??null,images:[...document.querySelectorAll('[data-stage] img')].map(image=>({complete:image.complete,width:image.naturalWidth,transform:getComputedStyle(image.parentElement).transform})),description:document.querySelector('#cbg-description').textContent}));
+  if(reduced.pins||reduced.motion||reduced.images.some(image=>!image.complete||!image.width||image.transform!=='none'))throw new Error('Reduced-motion static imagery failure');
+  await page.screenshot({path:'docs/phase-2/transition-proof/golden-hour/reduced-full-page.png',fullPage:true});
+  const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+  const fallback=await context.newPage();
+  await fallback.goto(url);
+  const noJavaScript={description:await fallback.locator('#cbg-description').isVisible(),disabledControls:await fallback.locator('button[data-jump]:disabled').count(),pins:await fallback.locator('.pin-spacer').count()};
+  if(!noJavaScript.description||noJavaScript.disabledControls!==3||noJavaScript.pins)throw new Error('No-JavaScript fallback failure');
+  await fallback.screenshot({path:'docs/phase-2/transition-proof/golden-hour/no-js.png',fullPage:true});
+  await context.close();
+  return {productionStatus:response.status(),reduced,noJavaScript};
+}

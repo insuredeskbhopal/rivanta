@@ -1,0 +1,60 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://127.0.0.1:8766/');
+  await page.locator('#aerial-image').evaluate(image => image.decode());
+  const measure = () => {
+    const journey=document.querySelector('#journey');
+    const stage=document.querySelector('#stage');
+    const chapters=Array.from(document.querySelectorAll('.scroll-chapter'));
+    const box=stage.getBoundingClientRect();
+    return {y:scrollY,journeyStart:journey.offsetTop,journeyHeight:journey.offsetHeight,stageHeight:stage.offsetHeight,stageTop:box.top,stageBottom:box.bottom,length:chapters.reduce((sum,c)=>sum+c.offsetHeight,0),chapterHeights:chapters.map(c=>c.offsetHeight),chapter:document.querySelector('[aria-current="location"]')?.dataset.link,title:document.querySelector('#current-title').textContent,world:getComputedStyle(document.querySelector('#aerial-world')).transform,infoOpacity:Number(getComputedStyle(document.querySelector('#stage-info')).opacity),detailOpacity:Math.max(...Array.from(document.querySelectorAll('[data-photo]')).map(i=>Number(getComputedStyle(i).opacity))),disclaimerDisplay:getComputedStyle(document.querySelector('.corner-disclaimer')).display};
+  };
+  const settle = async top => {
+    await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),top);
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  };
+  const base=await page.evaluate(measure);
+  const desktop=[];
+  for (const local of [0,.15,.36,.58,.75,.90,.99]) {
+    await settle(base.journeyStart+base.length/8*local);
+    desktop.push({local,...await page.evaluate(measure)});
+    if ([.15,.36,.58].includes(local)) await page.screenshot({path:`docs/animation-review/desktop-cbg-${local}.png`});
+  }
+  const wind=[];
+  for (const local of [0,.36,.58,.78,.99]) {
+    await settle(base.journeyStart+base.length/8*(7+local));
+    wind.push({local,...await page.evaluate(measure)});
+    if (local===.58) await page.screenshot({path:'docs/animation-review/desktop-wind-hold.png'});
+  }
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.reload();
+  await settle(base.journeyStart+base.length/8*.58);
+  const reduced=await page.evaluate(measure);
+  await page.setViewportSize({width:390,height:844});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.reload();
+  const mobileBase=await page.evaluate(measure);
+  await settle(mobileBase.journeyStart+mobileBase.length/8*.58);
+  const mobile=await page.evaluate(measure);
+  await page.screenshot({path:'docs/animation-review/mobile-cbg-hold.png'});
+  await settle(mobileBase.journeyStart+mobileBase.length/8*5.58);
+  await page.screenshot({path:'docs/animation-review/mobile-saf-hold.png'});
+  const nav=[];
+  for (const name of ['cbg','biomass','wind']) {
+    await page.locator(`.chapter-nav [data-link="${name}"]`).click();
+    await page.waitForFunction(id=>location.hash===`#scene-${id}`,name);
+    // Allow native anchor smooth scrolling to finish before measuring the destination.
+    await page.waitForTimeout(1400);
+    nav.push({clicked:name,...await page.evaluate(measure)});
+  }
+  const resources=await page.evaluate(()=>Array.from(document.images).map(image=>({src:image.getAttribute('src'),width:image.naturalWidth,height:image.naturalHeight,loading:image.loading})));
+  const targets=await page.locator('.chapter-nav a').evaluateAll(links=>links.map(link=>({id:link.dataset.link,width:link.getBoundingClientRect().width,height:link.getBoundingClientRect().height,name:link.getAttribute('aria-label'),title:link.title})));
+  const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:1440,height:900}});
+  const nojsPage=await context.newPage();
+  await nojsPage.goto('http://127.0.0.1:8766/');
+  const nojs=await nojsPage.locator('#stage-info').evaluate(info=>({opacity:getComputedStyle(info).opacity,chapterSections:document.querySelectorAll('.scroll-chapter').length,titleCount:document.querySelectorAll('#current-title').length}));
+  await context.close();
+  return {desktop,wind,reduced,mobile,nav,resources,targets,nojs,scope:'Browser sampling and source review; no physical-device GPU or field-performance benchmark.'};
+}
+

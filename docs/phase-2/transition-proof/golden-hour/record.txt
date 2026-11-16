@@ -1,0 +1,32 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://127.0.0.1:3002/proof/cbg');
+  await page.waitForSelector('main[data-motion="ready"]');
+  await page.screencast.start({path:'docs/phase-2/transition-proof/golden-hour/scroll-review.webm',size:{width:1440,height:900},fps:60});
+  const timing=await page.evaluate(async()=>{
+    const stage=document.querySelector('[data-stage]'),spacer=stage.parentElement;
+    const start=spacer.getBoundingClientRect().top+scrollY,distance=spacer.offsetHeight-stage.offsetHeight;
+    const frames=[];
+    const move=(from,to,duration)=>new Promise(resolve=>{
+      let initial,previous;
+      const tick=time=>{
+        initial??=time;
+        if(previous)frames.push(time-previous);previous=time;
+        const p=Math.min(1,(time-initial)/duration);
+        scrollTo({top:start+distance*(from+(to-from)*p),behavior:'instant'});
+        if(p<1)requestAnimationFrame(tick);else resolve();
+      };requestAnimationFrame(tick);
+    });
+    await move(0,.64,6400);
+    await new Promise(resolve=>setTimeout(resolve,1400));
+    await move(.64,1,3600);
+    await new Promise(resolve=>setTimeout(resolve,1000));
+    await move(1,0,6500);
+    await new Promise(resolve=>setTimeout(resolve,800));
+    const sorted=frames.slice().sort((a,b)=>a-b);
+    return {frames:frames.length,medianFrameInterval:sorted[Math.floor(sorted.length*.5)],p95FrameInterval:sorted[Math.floor(sorted.length*.95)],over50ms:frames.filter(n=>n>50).length,limitation:'Browser rAF intervals during a recorded scripted scroll, not device FPS or field performance certification.'};
+  });
+  await page.screencast.stop();
+  return timing;
+}

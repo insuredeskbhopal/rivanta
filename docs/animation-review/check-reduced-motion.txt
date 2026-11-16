@@ -1,0 +1,18 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.goto('http://127.0.0.1:8766/');
+  await page.waitForFunction(()=>document.querySelector('#aerial-image').naturalWidth>0);
+  const result=[];
+  for (const local of [0,.58]) {
+    await page.evaluate(t=>{
+      const section=document.querySelector('#journey');
+      const length=Array.from(document.querySelectorAll('.scroll-chapter')).reduce((sum,c)=>sum+c.offsetHeight,0);
+      scrollTo({top:section.offsetTop+length/8*t,behavior:'instant'});
+      dispatchEvent(new Event('scroll'));
+    },local);
+    await page.waitForTimeout(100);
+    result.push(await page.evaluate(()=>({reduced:matchMedia('(prefers-reduced-motion: reduce)').matches,transform:getComputedStyle(document.querySelector('#aerial-world')).transform,opacity:getComputedStyle(document.querySelector('#stage-info')).opacity})));
+  }
+  return result;
+}

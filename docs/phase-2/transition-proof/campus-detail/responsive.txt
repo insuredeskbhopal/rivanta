@@ -1,0 +1,22 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};const results=[];
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  for(const viewport of [{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:1920,height:1080}]){
+    await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(viewport.width/2,viewport.height/2);
+    for(const id of ['silicon','cbg','saf']){
+      await page.mouse.wheel(0,120);await page.waitForSelector(`main[data-playback="${id}"]`);
+      const state=await page.locator(`[data-plant="${id}"]`).evaluate((el,id)=>{
+        const box=el.getBoundingClientRect(),concept=document.querySelector('[data-concept]').getBoundingClientRect(),matrix=new DOMMatrixReadOnly(getComputedStyle(el).transform);
+        return {id,width:innerWidth,height:innerHeight,p:Number(document.querySelector('main').dataset.progress),covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,labelVisible:concept.top>=0&&concept.bottom<=innerHeight,label:document.querySelector('[data-concept]').textContent,overflow:document.documentElement.scrollWidth>innerWidth,scale:matrix.a,copy:Number(getComputedStyle(document.querySelector(`[data-plant-copy="${id}"]`)).opacity),y:scrollY};
+      },id);
+      check(state.covered&&state.labelVisible&&!state.overflow&&state.copy===1&&state.y===0&&state.label.toLowerCase().includes(id),'Responsive failure: '+JSON.stringify(state));
+      check(Math.abs(state.scale-Math.max(viewport.width/(id==='cbg'?1774:1672),viewport.height/(id==='cbg'?887:941)))<.00002,'Reading image overmagnified');results.push(state);
+      if(viewport.width===390)await page.screenshot({path:`docs/phase-2/transition-proof/campus-detail/mobile-${id}.png`});await page.waitForTimeout(220);
+    }
+  }
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="playing"]');await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);
+  const reduced=await page.evaluate(()=>({state:document.querySelector('main').dataset.playback??null,pins:document.querySelectorAll('.pin-spacer').length,order:[...document.querySelectorAll('[data-plant]')].map(el=>el.dataset.plant),images:[...document.querySelectorAll('[data-stage] img')].map(img=>({complete:img.complete,transform:getComputedStyle(img.parentElement).transform,visible:getComputedStyle(img.parentElement).display!=='none'}))}));
+  check(reduced.state===null&&reduced.pins===0&&reduced.order.join(',')==='silicon,cbg,saf'&&reduced.images.length===5&&reduced.images.every(i=>i.complete&&i.visible&&i.transform==='none'),'Reduced static order/cleanup failed');
+  await page.setViewportSize({width:390,height:844});await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:'docs/phase-2/transition-proof/campus-detail/reduced-full-page.png',fullPage:true});await page.mouse.wheel(0,500);await page.waitForTimeout(200);check(await page.evaluate(()=>scrollY)>0,'Reduced scroll blocked');
+  await page.emulateMedia({reducedMotion:'no-preference'});return {results,reduced,livePreferenceCleanup:true};
+}

@@ -1,0 +1,78 @@
+{
+  "frames": 1077,
+  "changes": [
+    {
+      "time": 666.5,
+      "state": "overview",
+      "p": 0,
+      "y": 0,
+      "seconds": 0
+    },
+    {
+      "time": 983.1,
+      "state": "playing",
+      "p": 0.0044,
+      "y": 0,
+      "seconds": 0.31660000000000005
+    },
+    {
+      "time": 3566.3,
+      "state": "detail",
+      "p": 0.64,
+      "y": 0,
+      "seconds": 2.8998000000000004
+    },
+    {
+      "time": 4599.5,
+      "state": "playing",
+      "p": 0.6447,
+      "y": 0,
+      "seconds": 3.933
+    },
+    {
+      "time": 8182.7,
+      "state": "saf",
+      "p": 1.64,
+      "y": 0,
+      "seconds": 7.5161999999999995
+    },
+    {
+      "time": 9399.3,
+      "state": "playing",
+      "p": 1.64,
+      "y": 0,
+      "seconds": 8.7328
+    },
+    {
+      "time": 12415.7,
+      "state": "detail",
+      "p": 0.64,
+      "y": 0,
+      "seconds": 11.7492
+    },
+    {
+      "time": 13482.4,
+      "state": "playing",
+      "p": 0.64,
+      "y": 0,
+      "seconds": 12.8159
+    },
+    {
+      "time": 17098.8,
+      "state": "saf",
+      "p": 1.64,
+      "y": 0,
+      "seconds": 16.432299999999998
+    }
+  ],
+  "medianFrameInterval": 16.69999999999891,
+  "p95FrameInterval": 16.799999999999272,
+  "over50ms": 0,
+  "last": {
+    "time": 18598.7,
+    "state": "saf",
+    "p": 1.64,
+    "y": 600
+  },
+  "limitation": "Recorded local browser rAF scheduling, not physical-device FPS or field performance certification."
+}

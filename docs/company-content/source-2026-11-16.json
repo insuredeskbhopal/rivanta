@@ -1,0 +1,30 @@
+{
+  "checkedOn": "2026-11-16",
+  "requestedAddress": "https://rivanatagreen.com",
+  "workingCompanyAddress": "https://www.rivantagreen.com/",
+  "accessMethod": "Public HTTPS through local browser and direct HTTP requests; web-fetch service could not retrieve the page.",
+  "homepage": {
+    "status": 200,
+    "title": "Rivanta Green | Sustainable Industrial Innovation",
+    "originalHeroHeading": "Building Industrial Value From India's Resources.",
+    "companyIdentity": "Rivanta Green Innovative Venture Private Limited",
+    "summary": "Company-owned site describes development of industrial initiatives in advanced materials, renewable fuels, resource utilization and circular manufacturing."
+  },
+  "linksVerified": [
+    {
+      "url": "https://www.rivantagreen.com/about",
+      "status": 200
+    },
+    {
+      "url": "https://www.rivantagreen.com/contact",
+      "status": 200
+    }
+  ],
+  "editorialChoices": {
+    "hero": "Building industrial value. From India\u2019s resources.",
+    "supportingCopy": "Developing integrated industrial initiatives across advanced materials, renewable fuels and circular manufacturing in India.",
+    "projectStatus": "Retain proposed headings and conceptual image labels.",
+    "omit": "Acreage, achieved capacities, operating-plant claims, investments, certifications and unsourced achievements.",
+    "scope": "Clean the existing local page; no full-site build or publication."
+  }
+}

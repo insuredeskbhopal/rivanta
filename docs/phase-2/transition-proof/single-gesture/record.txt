@@ -1,0 +1,31 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://127.0.0.1:3002/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');
+  await page.mouse.move(800,450);
+  await page.screencast.start({path:'docs/phase-2/transition-proof/single-gesture/one-scroll-review.webm',size:{width:1440,height:900},fps:60});
+  await page.evaluate(()=>{
+    window.__journeyProbe=[];
+    const tick=time=>{
+      const main=document.querySelector('main');
+      window.__journeyProbe.push({time,state:main.dataset.playback,p:Number(main.dataset.progress),y:scrollY});
+      if(!window.__stopJourneyProbe)requestAnimationFrame(tick);
+    };requestAnimationFrame(tick);
+  });
+  await page.waitForTimeout(300);
+  await page.mouse.wheel(0,120);
+  await page.waitForSelector('main[data-playback="playing"]');
+  await page.waitForSelector('main[data-playback="detail"]');
+  await page.waitForTimeout(900);
+  await page.mouse.wheel(0,-120);await page.waitForSelector('main[data-playback="overview"]');
+  await page.waitForTimeout(500);
+  await page.mouse.wheel(0,12000);await page.waitForSelector('main[data-playback="detail"]');
+  await page.waitForTimeout(900);
+  await page.mouse.wheel(0,600);await page.waitForTimeout(600);
+  const frames=await page.evaluate(()=>{window.__stopJourneyProbe=true;return window.__journeyProbe;});
+  await page.screencast.stop();
+  const intervals=frames.slice(1).map((frame,i)=>frame.time-frames[i].time).sort((a,b)=>a-b);
+  const changes=frames.filter((frame,i)=>!i||frame.state!==frames[i-1].state).map(frame=>({...frame,seconds:(frame.time-frames[0].time)/1000}));
+  const stopped=frames.find(frame=>frame.state==='detail');
+  if(!stopped||stopped.y!==0||frames.at(-1).y<100)throw new Error('Recorded playback/continuation failed');
+  return {frames:frames.length,changes,medianFrameInterval:intervals[Math.floor(intervals.length*.5)],p95FrameInterval:intervals[Math.floor(intervals.length*.95)],over50ms:intervals.filter(n=>n>50).length,last:frames.at(-1),limitation:'Local recorded browser rAF observations, not physical-device FPS or field performance certification.'};
+}

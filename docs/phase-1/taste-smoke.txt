@@ -1,0 +1,87 @@
+  geist              Geist  (neo-grotesk; display 400, tracking -4.5% at hero size, axis wght; precise, technical, calm)
+      suits: developer tools, AI, infrastructure, fintech: exact, plain and fast
+      https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap
+  host               Host Grotesk  (neo-grotesk; display 400, tracking -4% at hero size, axis wght; calm, precise)
+      suits: software, studios and agencies that want a quiet, exact page
+      https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&display=swap
+  instrument         Instrument Sans  (neo-grotesk; display 400, tracking -3.6% at hero size, axis wght; precise, friendly, calm)
+      suits: design and productivity software, studios, modern agencies
+      https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap
+  hanken             Hanken Grotesk  (neo-grotesk; display 400, tracking -3.8% at hero size, axis wght; calm, trusted)
+      suits: clinics, law, advice, agencies: friendly and trusted without a trace of tech
+      https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&display=swap
+  schibsted          Schibsted Grotesk  (neo-grotesk; display 400, tracking -4.2% at hero size, axis wght; bold, trusted)
+      suits: media, agencies, services that want a sturdy editorial voice
+      https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..700&display=swap
+  onest              Onest  (neo-grotesk; display 400, tracking -4% at hero size, axis wght; calm, trusted)
+      suits: software and services that want an even, open and readable page
+      https://fonts.googleapis.com/css2?family=Onest:wght@400..700&display=swap
+  funnel             Funnel Display / Funnel Sans  (neo-grotesk; display 400, tracking -4% at hero size, axis wght; friendly, bold)
+      suits: consumer apps and products with a friendly, bright voice
+      https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..700&family=Funnel+Sans:wght@400..600&display=swap
+  manrope            Manrope  (geometric; display 400, tracking -4.5% at hero size, axis wght; precise, friendly)
+      suits: fintech, data and AI products: clean geometric forms, open numbers
+      https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&display=swap
+  plex               IBM Plex Sans  (neo-grotesk; display 400, tracking -3.5% at hero size, axis wght; technical, trusted)
+      suits: developer tools, security, data infrastructure: engineered and sober
+      https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wdth,wght@85..100,400..700&display=swap
+  archivo            Archivo  (wide; display 400, tracking -3.5% at hero size, axis wdth; bold, technical)
+      suits: hardware, vehicles, equipment and games: a broad, firm face
+      https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..600&display=swap
+  bricolage          Bricolage Grotesque / Figtree  (grotesk-soft; display 400, tracking -4% at hero size, axis wght; friendly, playful, warm)
+      suits: consumer products and brands with character, studios, kitchens that sell online
+      https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&display=swap
+  red-hat            Red Hat Display / Red Hat Text  (neo-grotesk; display 400, tracking -3.5% at hero size, axis wght; trusted, friendly)
+      suits: trades, finance advice, health and schools: steady and approachable
+      https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400..700&family=Red+Hat+Text:wght@400..600&display=swap
+  gabarito           Gabarito / Figtree  (geometric; display 400, tracking -4% at hero size, axis wght; friendly, playful)
+      suits: consumer apps and casual games: round and friendly
+      https://fonts.googleapis.com/css2?family=Gabarito:wght@400..700&family=Figtree:wght@400..600&display=swap
+  outfit             Outfit  (geometric; display 400, tracking -4% at hero size, axis wght; friendly, precise)
+      suits: apps and consumer brands: clean geometric forms
+      https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&display=swap
+  albert             Albert Sans  (neo-grotesk; display 400, tracking -3.5% at hero size, axis wght; calm, refined)
+      suits: shops, studios and small services: one quiet sans in two weights
+      https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400..700&display=swap
+  figtree            Figtree  (geometric; display 400, tracking -3.5% at hero size, axis wght; friendly, calm)
+      suits: friendly shops, studios and services
+      https://fonts.googleapis.com/css2?family=Figtree:wght@400..700&display=swap
+  work-sans          Work Sans  (neo-grotesk; display 400, tracking -3.5% at hero size, axis wght; calm, trusted)
+      suits: bike shops, studios, trades: sturdy and plain
+      https://fonts.googleapis.com/css2?family=Work+Sans:wght@400..700&display=swap
+  rethink            Rethink Sans  (neo-grotesk; display 400, tracking -3.5% at hero size, axis wght; calm, friendly)
+      suits: florists, studios, small shops: soft and readable
+      https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400..700&display=swap
+  instrument-serif   Instrument Serif / Instrument Sans  (serif; display 400, tracking -1.6% at hero size, static; refined, calm, classic)
+      suits: brands, studios and firms that want a refined, editorial voice
+      https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wdth,wght@75..100,400..600&display=swap
+  fraunces           Fraunces / Figtree  (serif; display 400, tracking -2.8% at hero size, axis wght; warm, friendly, classic)
+      suits: bakeries, roasters, food and homeware brands: a soft, warm serif
+      https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Figtree:wght@400..600&display=swap
+  newsreader         Newsreader / Hanken Grotesk  (serif; display 400, tracking -2.5% at hero size, axis wght; trusted, refined, calm)
+      suits: bookshops, guesthouses, advisers, schools: a calm text serif
+      https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Hanken+Grotesk:wght@400..600&display=swap
+  source-serif       Source Serif 4 / Libre Franklin  (serif; display 400, tracking -2.6% at hero size, axis wght; trusted, classic)
+      suits: law, finance, health, schools, bookshops: sober and readable
+      https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&family=Libre+Franklin:wght@400..600&display=swap
+  garamond           EB Garamond / Jost  (serif; display 400, tracking -1.8% at hero size, axis wght; classic, refined, calm)
+      suits: wine rooms, bookshops, old guesthouses, patisseries: classical and quiet
+      https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..700&family=Jost:wght@400..600&display=swap
+  literata           Literata / Figtree  (serif; display 400, tracking -2.6% at hero size, axis wght; trusted, warm, calm)
+      suits: bookshops, libraries, cafes with a reading corner: made for reading
+      https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..700&family=Figtree:wght@400..600&display=swap
+  lora               Lora / Nunito Sans  (serif; display 400, tracking -2% at hero size, axis wght; warm, classic)
+      suits: roasters, bakeries and delis: warm, brushed serif forms
+      https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Nunito+Sans:wght@400..600&display=swap
+  besley             Besley / Albert Sans  (serif; display 400, tracking -2.6% at hero size, axis wght; warm, bold, classic)
+      suits: cafes, bakeries and bars: a warm, slightly slab serif
+      https://fonts.googleapis.com/css2?family=Besley:wght@400..700&family=Albert+Sans:wght@400..600&display=swap
+  vollkorn           Vollkorn / Work Sans  (serif; display 400, tracking -2% at hero size, axis wght; warm, classic)
+      suits: bakeries, delis and bookshops: dark, sturdy, bread-like serif
+      https://fonts.googleapis.com/css2?family=Vollkorn:wght@400..700&family=Work+Sans:wght@400..600&display=swap
+  zilla              Zilla Slab / Rethink Sans  (slab; display 400, tracking -2.4% at hero size, static; warm, trusted, bold)
+      suits: workshops, bike shops, outfitters and trades: a friendly slab
+      https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&family=Rethink+Sans:wght@400..600&display=swap
+  nunito             Nunito  (soft; display 400, tracking -3% at hero size, axis wght; friendly, warm)
+      suits: cafes, bakeries, kids and wellbeing: rounded and easy
+      https://fonts.googleapis.com/css2?family=Nunito:wght@400..700&display=swap

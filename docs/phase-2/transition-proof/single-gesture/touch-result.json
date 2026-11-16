@@ -1,0 +1,3 @@
+{
+  "result": "{\"during\":{\"p\":0.0263,\"y\":0},\"held\":{\"p\":0.64,\"y\":0},\"nextY\":335,\"limitation\":\"Real Chrome touchscreen events via CDP in mobile emulation, not a physical handset test.\"}"
+}

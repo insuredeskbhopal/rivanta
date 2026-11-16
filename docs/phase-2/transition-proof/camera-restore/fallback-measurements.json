@@ -1,0 +1,19 @@
+{
+  "status": 200,
+  "motion": null,
+  "stageImages": 4,
+  "descriptions": [
+    {
+      "id": "silicon",
+      "visible": true
+    },
+    {
+      "id": "cbg",
+      "visible": true
+    },
+    {
+      "id": "saf",
+      "visible": true
+    }
+  ]
+}

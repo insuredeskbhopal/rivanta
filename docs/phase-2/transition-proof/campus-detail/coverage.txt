@@ -1,0 +1,17 @@
+async page => {
+  const results=[];await page.emulateMedia({reducedMotion:'no-preference'});
+  for(const viewport of [{width:1440,height:900},{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:1920,height:1080},{width:768,height:1024},{width:1000,height:760}]){
+    await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(viewport.width/2,viewport.height/2);await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="playing"]');
+    const samples=await page.evaluate(async()=>new Promise(resolve=>{
+      const frames=[];const tick=()=>{
+        const main=document.querySelector('main'),image=document.querySelector('[data-campus-detail]'),box=image.getBoundingClientRect();
+        frames.push({opacity:Number(getComputedStyle(image).opacity),silicon:Number(getComputedStyle(document.querySelector('[data-silicon]')).opacity),covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,scale:new DOMMatrixReadOnly(getComputedStyle(document.querySelector('[data-master]')).transform).a});
+        if(main.dataset.playback==='playing')requestAnimationFrame(tick);else resolve(frames);
+      };requestAnimationFrame(tick);
+    }));
+    const active=samples.filter(s=>s.opacity>.99&&s.silicon<.05);
+    if(active.length<3||samples.some(s=>s.opacity>.001&&!s.covered))throw new Error('Detail tier missing or uncovered at '+JSON.stringify(viewport));
+    results.push({...viewport,fullyVisibleMiddleFrames:active.length,maxUnreplacedOriginalScale:Math.max(...samples.filter(s=>s.opacity<.99&&s.silicon<.99).map(s=>s.scale))});
+    if(viewport.width===390)await page.screenshot({path:'docs/phase-2/transition-proof/campus-detail/mobile-reading-hold.png'});
+  }return results;
+}

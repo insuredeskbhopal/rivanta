@@ -1,0 +1,11 @@
+async page => {
+  await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});
+  const response=await page.goto('http://127.0.0.1:3002/proof/cbg');await page.waitForSelector('main[data-tools="ready"]');
+  const reduced=await page.evaluate(()=>({pins:document.querySelectorAll('.pin-spacer').length,images:[...document.querySelectorAll('[data-stage] img')].map(image=>({complete:image.complete,transform:getComputedStyle(image.parentElement).transform})),safDescription:document.querySelector('#saf-description').textContent}));
+  if(reduced.pins||reduced.images.length!==3||reduced.images.some(i=>!i.complete||i.transform!=='none'))throw new Error('Reduced production fallback failed');
+  await page.screenshot({path:'docs/phase-2/transition-proof/saf-extension/production-reduced.png',fullPage:true});
+  const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const fallback=await context.newPage();await fallback.goto('http://127.0.0.1:3002/proof/cbg');
+  const noJavaScript={safDescription:await fallback.locator('#saf-description').isVisible(),safLink:await fallback.getByRole('link',{name:'Open the proposed SAF concept image.'}).count(),disabled:await fallback.locator('button[data-jump]:disabled').count()};
+  if(!noJavaScript.safDescription||noJavaScript.safLink!==1||noJavaScript.disabled!==5)throw new Error('No-JavaScript SAF fallback failed');
+  await context.close();return {status:response.status(),reduced,noJavaScript};
+}

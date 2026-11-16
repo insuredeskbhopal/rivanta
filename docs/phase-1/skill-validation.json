@@ -1,0 +1,47 @@
+[
+  {
+    "skill": "design-taste-frontend",
+    "frontmatter": true,
+    "files": 1631,
+    "missing_markdown_links": [],
+    "skill_sha256": "0c7a5852a5217be79cab422c6d58329b776f0c25bd6da8a7a01707ce75be6206"
+  },
+  {
+    "skill": "hallmark",
+    "frontmatter": true,
+    "files": 187,
+    "missing_markdown_links": [],
+    "skill_sha256": "25a1ff92d925b2389e8409f42fb8ad7e033fceca8b5d1f07ed4ca4c28da53dc3"
+  },
+  {
+    "skill": "impeccable",
+    "frontmatter": true,
+    "files": 69,
+    "missing_markdown_links": [],
+    "skill_sha256": "12d15997482e6d0734c5f2dcc4f62cea7bcba19953940214cffa5c6a7758aa93"
+  },
+  {
+    "skill": "playwright-cli",
+    "frontmatter": true,
+    "files": 11,
+    "skill_sha256": "b07a6cbe4e5b638046fe0b9df0e84783cb9899f0aed3db1eef915601c3260a64",
+    "example_output_links": [
+      ".playwright-cli/page-2026-02-14T19-22-42-679Z.yml"
+    ],
+    "missing_markdown_links": []
+  },
+  {
+    "skill": "vercel-react-best-practices",
+    "frontmatter": true,
+    "files": 76,
+    "missing_markdown_links": [],
+    "skill_sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355"
+  },
+  {
+    "skill": "web-design-guidelines",
+    "frontmatter": true,
+    "files": 1,
+    "missing_markdown_links": [],
+    "skill_sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+  }
+]

@@ -1,0 +1,22 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://127.0.0.1:3001/proof/cbg');
+  await page.waitForSelector('main[data-motion="ready"]');
+  await page.evaluate(()=>scrollTo(0,0));
+  await page.waitForTimeout(700);
+  await page.evaluate(()=>new Promise(resolve=>{
+    const start=performance.now();
+    const stage=document.querySelector('[data-stage]');
+    const spacer=stage.parentElement;
+    const distance=spacer.offsetHeight-stage.offsetHeight;
+    const tick=now=>{
+      const progress=Math.min(1,(now-start)/8000);
+      scrollTo({top:distance*progress,behavior:'instant'});
+      if(progress<1)requestAnimationFrame(tick);else resolve();
+    };
+    requestAnimationFrame(tick);
+  }));
+  await page.waitForTimeout(700);
+  return {recorded:'Actual browser scroll through the complete CBG study; not a frame-rate benchmark.'};
+}

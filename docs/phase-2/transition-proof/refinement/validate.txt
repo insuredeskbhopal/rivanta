@@ -1,0 +1,64 @@
+async page => {
+  const failures=[];
+  page.on('pageerror',error=>failures.push(error.message));
+  const url='http://127.0.0.1:3002/proof/cbg';
+  const check=(condition,message)=>{if(!condition)throw new Error(message);};
+  const read=()=>{
+    const main=document.querySelector('main');
+    const stage=document.querySelector('[data-stage]');
+    const rect=stage.getBoundingClientRect();
+    const master=document.querySelector('[data-master]');
+    const image=master.getBoundingClientRect();
+    const concept=document.querySelector('[class*=concept]').getBoundingClientRect();
+    return {progress:Number(main.dataset.progress||0),motion:main.dataset.motion||'static',stageTop:rect.top,stageBottom:rect.bottom,transform:master.style.transform,copyOpacity:Number(getComputedStyle(document.querySelector('[data-copy]')).opacity),imagesInStage:stage.querySelectorAll('img').length,width:innerWidth,scrollWidth:document.documentElement.scrollWidth,pins:document.querySelectorAll('.pin-spacer').length,covered:image.left<=1&&image.right>=innerWidth-1&&image.top<=1&&image.bottom>=innerHeight-1,conceptVisible:concept.top>=0&&concept.bottom<=innerHeight};
+  };
+  const sample=async progress=>{
+    await page.evaluate(p=>{
+      const stage=document.querySelector('[data-stage]');const spacer=stage.parentElement;
+      scrollTo({top:spacer.getBoundingClientRect().top+scrollY+(spacer.offsetHeight-stage.offsetHeight)*p,behavior:'instant'});
+    },progress);
+    await page.waitForFunction(p=>Math.abs(Number(document.querySelector('main').dataset.progress)-p)<.0006,progress);
+    await page.waitForTimeout(500);
+    return await page.evaluate(read);
+  };
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto(url);await page.waitForSelector('main[data-motion="ready"]');
+  const desktop=[];
+  for(const p of [0,.15,.3,.48,.64,.8,.99]){
+    const state=await sample(p);desktop.push(state);
+    check(state.covered,'Uncovered image edge');check(Math.abs(state.stageTop)<2,'Premature stage release');
+    check(state.imagesInStage===1,'A second image is being blended in the main journey');
+    check(state.conceptVisible,'Missing conceptual label');
+    if([0,.3,.48,.64].includes(p))await page.screenshot({path:`docs/phase-2/transition-proof/refinement/desktop-${p}.png`});
+  }
+  const reverse=await sample(.3);
+  const matrix = value => value.match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/gi).map(Number);
+  const forwardMatrix=matrix(desktop[2].transform), reverseMatrix=matrix(reverse.transform);
+  check(forwardMatrix.every((value,index)=>Math.abs(value-reverseMatrix[index])<.05),'Reverse camera path differs');
+  await page.locator('header button').evaluate(button=>button.click());
+  await page.waitForFunction(()=>Math.abs(Number(document.querySelector('main').dataset.progress)-.64)<.0006);
+  check((await page.evaluate(read)).copyOpacity>.99,'CBG direct jump misses the reading hold');
+  await page.getByRole('link',{name:'Compare images',exact:true}).click();
+  check(await page.locator('#alignment').getAttribute('open')!==null,'Comparison is not open');
+  const slider=page.getByRole('slider');await slider.fill('50');await slider.press('ArrowRight');
+  check(await slider.inputValue()==='51','Keyboard comparison control failed');
+  const mobile=[];
+  for(const viewport of [{width:390,height:844},{width:320,height:568},{width:844,height:390},{width:1920,height:1080}]){
+    await page.setViewportSize(viewport);await page.waitForTimeout(400);
+    const state=await sample(.64);mobile.push(state);
+    check(state.covered&&state.width===state.scrollWidth,'Responsive bounds failure');
+    check(state.conceptVisible&&state.copyOpacity>.99,'Responsive description or label missing');
+    if(viewport.width===390)await page.screenshot({path:'docs/phase-2/transition-proof/refinement/mobile-detail.png'});
+  }
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);
+  const reduced=await page.evaluate(read);check(reduced.pins===0&&reduced.transform==='','Reduced motion still moves the camera');
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.waitForSelector('main[data-motion="ready"]');
+  check((await page.evaluate(read)).pins===1,'Duplicate motion instances');
+  const context=await page.context().browser().newContext({javaScriptEnabled:false});
+  const fallback=await context.newPage();await fallback.goto(url);
+  const nojs=await fallback.locator('#cbg-description').isVisible();check(nojs,'Missing static content');await context.close();
+  check(failures.length===0,'Runtime exceptions: '+JSON.stringify(failures));
+  return {desktop,reverse,mobile,reduced,nojs,runtimeErrors:failures,scope:'Functional and screenshot checks on desktop Chromium; no physical-device or field-performance certification.'};
+}

@@ -1,0 +1,31 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};const errors=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(800,400);
+  await page.evaluate(()=>{
+    window.__handoff=[];window.__endHandoff=false;
+    const tick=time=>{
+      const main=document.querySelector('main'),context=document.querySelector('[data-campus-detail]'),master=document.querySelector('[data-master]'),box=context.getBoundingClientRect(),matrix=new DOMMatrixReadOnly(getComputedStyle(context).transform);
+      window.__handoff.push({time,p:Number(main.dataset.progress),state:main.dataset.playback,contextOpacity:Number(getComputedStyle(context).opacity),masterScale:new DOMMatrixReadOnly(getComputedStyle(master).transform).a,contextScale:matrix.a,maxPlantOpacity:Math.max(...[...document.querySelectorAll('[data-plant]')].map(el=>Number(getComputedStyle(el).opacity))),covered:box.left<=1&&box.top<=1&&box.right>=innerWidth-1&&box.bottom>=innerHeight-1,y:scrollY});
+      if(!window.__endHandoff)requestAnimationFrame(tick);
+    };requestAnimationFrame(tick);
+  });
+  for(const id of ['silicon','cbg','saf']){
+    await page.mouse.wheel(0,120);
+    if(id==='silicon'){
+      await page.waitForFunction(()=>Number(document.querySelector('main').dataset.contextOpacity)>.99&&Number(document.querySelector('main').dataset.progress)<.56);
+      await page.screenshot({path:'docs/phase-2/transition-proof/campus-detail/closer-campus-active.png'});
+    }
+    await page.waitForSelector(`main[data-playback="${id}"]`);await page.waitForTimeout(250);
+  }
+  for(const id of ['cbg','silicon']){await page.mouse.wheel(0,-120);await page.waitForSelector(`main[data-playback="${id}"]`);await page.waitForTimeout(250);}
+  const samples=await page.evaluate(()=>{window.__endHandoff=true;return window.__handoff;});
+  check(samples.filter(s=>s.contextOpacity>.99&&s.maxPlantOpacity<.05).length>10,'Closer campus source was never the visible middle zoom source');
+  check(samples.filter(s=>s.contextOpacity>.001).every(s=>s.covered),'Intermediate image exposed an edge');
+  check(samples.every(s=>s.y===0),'Handoff changed page position');
+  const bitmap=await page.locator('[data-campus-detail] img').evaluate(async img=>{const response=await fetch(img.currentSrc);const bitmap=await createImageBitmap(await response.blob());const result={width:bitmap.width,height:bitmap.height,source:img.currentSrc};bitmap.close();return result;});
+  check(bitmap.width===1672&&bitmap.height===941&&bitmap.source.includes('Industrial%20Energy'),'Wrong closer-campus bitmap');
+  const visible=samples.filter(s=>s.contextOpacity>.99&&s.maxPlantOpacity<.05);
+  check(visible.every(s=>s.contextScale<s.masterScale/2),'Closer source does not reduce effective enlargement');
+  check(errors.length===0,'Runtime exceptions: '+JSON.stringify(errors));
+  return {samples,bitmap,visibleMiddleSamples:visible.length,maxOriginalScaleWithoutOpaqueReplacement:Math.max(...samples.filter(s=>s.contextOpacity<.99&&s.maxPlantOpacity<.99).map(s=>s.masterScale)),maxMiddleScale:Math.max(...visible.map(s=>s.contextScale)),errors,limitation:'Source-density improvement and geometric coverage measured in Chrome. This does not prove identical scene geometry or guarantee an imperceptible switch.'};
+}

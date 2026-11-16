@@ -1,0 +1,8 @@
+async page => {
+  const context=await page.context().browser().newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:2,reducedMotion:'no-preference'});const phone=await context.newPage();
+  await phone.goto('http://localhost:3000/proof/cbg');await phone.waitForSelector('main[data-playback="overview"]');const client=await context.newCDPSession(phone);
+  const touch=(type,y)=>client.send('Input.dispatchTouchEvent',{type,touchPoints:type==='touchEnd'?[]:[{x:190,y,radiusX:1,radiusY:1}]});
+  const swipe=async()=>{await touch('touchStart',650);for(const y of [610,550,480,400]){await touch('touchMove',y);await phone.waitForTimeout(40);}await touch('touchEnd');};const results=[];
+  for(const id of ['silicon','cbg','saf']){await swipe();await phone.waitForSelector(`main[data-playback="${id}"]`);const state=await phone.evaluate(()=>({state:document.querySelector('main').dataset.playback,p:Number(document.querySelector('main').dataset.progress),y:scrollY}));if(state.y!==0)throw new Error('Swipe skipped chapter');results.push(state);}
+  await swipe();await phone.waitForTimeout(300);const nativeY=await phone.evaluate(()=>scrollY);if(nativeY<100)throw new Error('Fourth swipe did not continue');await client.detach();await context.close();return {results,nativeY,limitation:'Chrome CDP touchscreen events in mobile emulation; not physical hardware.'};
+}

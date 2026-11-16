@@ -1,0 +1,86 @@
+[
+  {
+    "seconds": 0,
+    "image": "video-00.png"
+  },
+  {
+    "seconds": 0.9,
+    "image": "video-01.png"
+  },
+  {
+    "seconds": 1.8,
+    "image": "video-02.png"
+  },
+  {
+    "seconds": 3.4,
+    "image": "video-03.png"
+  },
+  {
+    "seconds": 4.6,
+    "image": "video-04.png"
+  },
+  {
+    "seconds": 5.2,
+    "image": "video-05.png"
+  },
+  {
+    "seconds": 5.9,
+    "image": "video-06.png"
+  },
+  {
+    "seconds": 6.5,
+    "image": "video-07.png"
+  },
+  {
+    "seconds": 7.2,
+    "image": "video-08.png"
+  },
+  {
+    "seconds": 7.8,
+    "image": "video-09.png"
+  },
+  {
+    "seconds": 8.5,
+    "image": "video-10.png"
+  },
+  {
+    "seconds": 9.6,
+    "image": "video-11.png"
+  },
+  {
+    "seconds": 10.5,
+    "image": "video-12.png"
+  },
+  {
+    "seconds": 11.3,
+    "image": "video-13.png"
+  },
+  {
+    "seconds": 12.2,
+    "image": "video-14.png"
+  },
+  {
+    "seconds": 13.2,
+    "image": "video-15.png"
+  },
+  {
+    "seconds": 14.4,
+    "image": "video-16.png"
+  },
+  {
+    "seconds": 15.4,
+    "image": "video-17.png"
+  },
+  {
+    "seconds": 16.3,
+    "image": "video-18.png"
+  },
+  {
+    "seconds": 19.066666666666666,
+    "image": "video-19.png"
+  },
+  {
+    "seconds": 19.466666666666665,
+    "image": "video-20.png"
+  }
+]

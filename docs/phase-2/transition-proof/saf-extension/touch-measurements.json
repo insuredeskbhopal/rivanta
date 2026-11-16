@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "state": "detail",
+      "p": 0.64,
+      "y": 0
+    },
+    {
+      "state": "saf",
+      "p": 1.64,
+      "y": 0
+    }
+  ],
+  "nativeY": 235,
+  "limitation": "Real Chrome CDP touchscreen events in mobile emulation, not a physical handset test."
+}

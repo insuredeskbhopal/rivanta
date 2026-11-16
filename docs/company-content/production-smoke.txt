@@ -1,0 +1,5 @@
+async page=>{
+ await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:1440,height:900});const response=await page.goto('http://127.0.0.1:3002/');await page.waitForSelector('main[data-playback="overview"]');
+ const result=await page.evaluate(()=>({title:document.title,headline:document.querySelector('h1').innerText,description:document.querySelector('meta[name="description"]').content,body:document.body.innerText,images:document.querySelectorAll('[data-stage] img').length,review:document.querySelectorAll('#review,#alignment,[data-diagnostic]').length}));
+ if(response.status()!==200||result.images!==5||result.review!==0||/400[- ]?acre|acres?|Review the approach|Awaiting visual approval|Review-only proof|supplied|unverified/i.test(result.body+' '+result.description))throw new Error('Production content failure');await page.screenshot({path:'docs/company-content/production-hero.png'});delete result.body;return{status:response.status(),url:page.url(),...result};
+}

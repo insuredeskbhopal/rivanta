@@ -1,0 +1,74 @@
+[
+  {
+    "image": "video-00.png",
+    "seconds": 0
+  },
+  {
+    "image": "video-01.png",
+    "seconds": 0.6
+  },
+  {
+    "image": "video-02.png",
+    "seconds": 1
+  },
+  {
+    "image": "video-03.png",
+    "seconds": 1.4
+  },
+  {
+    "image": "video-04.png",
+    "seconds": 1.65
+  },
+  {
+    "image": "video-05.png",
+    "seconds": 2
+  },
+  {
+    "image": "video-06.png",
+    "seconds": 2.6
+  },
+  {
+    "image": "video-07.png",
+    "seconds": 3.4
+  },
+  {
+    "image": "video-08.png",
+    "seconds": 4.8
+  },
+  {
+    "image": "video-09.png",
+    "seconds": 5.4
+  },
+  {
+    "image": "video-10.png",
+    "seconds": 6.3
+  },
+  {
+    "image": "video-11.png",
+    "seconds": 7.6
+  },
+  {
+    "image": "video-12.png",
+    "seconds": 8.5
+  },
+  {
+    "image": "video-13.png",
+    "seconds": 9.7
+  },
+  {
+    "image": "video-14.png",
+    "seconds": 10.9
+  },
+  {
+    "image": "video-15.png",
+    "seconds": 12.299999999999999
+  },
+  {
+    "image": "video-16.png",
+    "seconds": 12.7
+  },
+  {
+    "image": "video-17.png",
+    "seconds": 13.0
+  }
+]

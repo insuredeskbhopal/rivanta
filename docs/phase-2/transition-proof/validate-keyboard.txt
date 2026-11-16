@@ -1,0 +1,19 @@
+async page => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.goto('http://127.0.0.1:3001/proof/cbg');
+  await page.waitForSelector('main[data-motion="ready"]');
+  await page.keyboard.press('Tab');
+  const first=await page.evaluate(()=>({text:document.activeElement.textContent,outline:getComputedStyle(document.activeElement).outlineStyle}));
+  if(first.text!=='Skip the animated study'||first.outline==='none')throw new Error('Skip link/focus not available');
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(()=>location.hash==='#review');
+  await page.getByRole('button',{name:'Inspect the detail',exact:true}).focus();
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(()=>Math.abs(Number(document.querySelector('main').dataset.progress)-.64)<.002);
+  await page.getByRole('slider').focus();
+  await page.keyboard.press('ArrowRight');
+  const blend=await page.locator('[data-diagnostic-detail]').evaluate(e=>Number(getComputedStyle(e).opacity));
+  if(blend!==.51)throw new Error('Keyboard slider failed');
+  return {skipLink:true,visibleFocus:true,keyboardDetailJump:true,keyboardBlend:true};
+}

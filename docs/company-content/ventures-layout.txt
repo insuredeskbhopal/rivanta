@@ -1,0 +1,11 @@
+async page=>{
+ const results=[];await page.emulateMedia({reducedMotion:'no-preference'});
+ for(const viewport of [{width:1440,height:900},{width:390,height:844},{width:320,height:568},{width:844,height:390}]){
+  await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');
+  for(const [id,name] of [['silicon','View Silicon'],['cbg','View CBG'],['saf','View SAF'],['energy','View Renewable Power']]){
+   await page.getByRole('button',{name,exact:true}).click();await page.keyboard.press('Escape');await page.waitForSelector(`main[data-playback="${id}"]`);
+   const state=await page.evaluate(id=>{const image=document.querySelector(`[data-plant="${id}"]`).getBoundingClientRect(),copy=document.querySelector(`[data-plant-copy="${id}"]`),c=copy.getBoundingClientRect(),badge=document.querySelector('[data-concept]').getBoundingClientRect(),header=document.querySelector('header').getBoundingClientRect();return{id,width:innerWidth,height:innerHeight,heading:copy.querySelector('h2').innerText,description:copy.querySelector('p').innerText,opacity:Number(getComputedStyle(copy).opacity),covered:image.left<=1&&image.top<=1&&image.right>=innerWidth-1&&image.bottom>=innerHeight-1,copyTop:c.top,headerBottom:header.bottom,captionGap:badge.top-c.bottom,label:document.querySelector('[data-concept]').textContent,overflow:document.documentElement.scrollWidth>innerWidth};},id);
+   if(!state.covered||state.opacity!==1||state.overflow||state.copyTop<state.headerBottom+8||state.captionGap<12||state.description.split(/\s+/).length<20||!state.label.startsWith('Proposed'))throw new Error('Venture content/layout failed '+JSON.stringify(state));results.push(state);if(viewport.width===390||viewport.width===844)await page.screenshot({path:`docs/company-content/${id}-${viewport.width}.png`});
+  }
+ }return results;
+}

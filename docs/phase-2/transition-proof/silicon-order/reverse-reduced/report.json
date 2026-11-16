@@ -1,0 +1,5685 @@
+{
+  "schemaVersion": 1,
+  "reducedMotion": true,
+  "viewport": {
+    "width": 1000,
+    "height": 760
+  },
+  "region": [
+    0,
+    0,
+    1000,
+    760
+  ],
+  "setup": [
+    {
+      "wait": 1200
+    },
+    {
+      "click": "header button:nth-of-type(3)"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "press": "Tab"
+    },
+    {
+      "wait": 300
+    }
+  ],
+  "interaction": [
+    {
+      "click": "header button"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 400
+    }
+  ],
+  "durationMs": 0,
+  "animations": [],
+  "baselineDurationMs": 0,
+  "frames": [
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            0,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            0,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            0,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 12,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2)",
+          "box": [
+            0,
+            0,
+            1000,
+            92
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            92
+          ],
+          "clipPath": "none",
+          "zIndex": "20",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            18,
+            19
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > a:nth-child(1)",
+          "box": [
+            50,
+            27.25,
+            130.578125,
+            37.5
+          ],
+          "opacity": 1,
+          "clip": [
+            50,
+            27.25,
+            130.578125,
+            37.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Rivanta ",
+          "children": [
+            20
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 20,
+          "ancestors": [
+            18,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > a:nth-child(1) > span:nth-child(1)",
+          "box": [
+            145.265625,
+            40.25,
+            35.3125,
+            20
+          ],
+          "opacity": 1,
+          "clip": [
+            145.265625,
+            40.25,
+            35.3125,
+            20
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Green",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 19,
+          "ancestors": [
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2)",
+          "box": [
+            682.140625,
+            24,
+            267.859375,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            682.140625,
+            24,
+            267.859375,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 21,
+          "ancestors": [
+            19,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(1)",
+          "box": [
+            682.140625,
+            24,
+            53.34375,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            682.140625,
+            24,
+            53.34375,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 22,
+          "ancestors": [
+            19,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(2)",
+          "box": [
+            763.484375,
+            24,
+            40.421875,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            763.484375,
+            24,
+            40.421875,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 23,
+          "ancestors": [
+            19,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(3)",
+          "box": [
+            831.90625,
+            24,
+            37.640625,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            831.90625,
+            24,
+            37.640625,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 24,
+          "ancestors": [
+            19,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > a:nth-child(4)",
+          "box": [
+            897.546875,
+            24,
+            52.453125,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            897.546875,
+            24,
+            52.453125,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 13,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#campus-study",
+          "box": [
+            0,
+            0,
+            1000,
+            3337.984375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            3337.984375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 25,
+          "ancestors": [
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(1)",
+          "box": [
+            0,
+            422.96875,
+            1000,
+            549.640625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            422.96875,
+            1000,
+            549.640625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            36,
+            37
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 36,
+          "ancestors": [
+            25,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(1) > img:nth-child(1)",
+          "box": [
+            0,
+            422.96875,
+            1000,
+            549.640625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            422.96875,
+            1000,
+            549.640625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-facility.0m2f8g9hevsj6.png&w=3840&q=90",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 30,
+          "ancestors": [
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(6)",
+          "box": [
+            0,
+            90,
+            1000,
+            332.96875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            90,
+            1000,
+            332.96875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            44,
+            45,
+            46
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 44,
+          "ancestors": [
+            30,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(6) > h1:nth-child(1)",
+          "box": [
+            24,
+            122,
+            952,
+            138.71875
+          ],
+          "opacity": 1,
+          "clip": [
+            24,
+            122,
+            952,
+            138.71875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "One vision.A closer look.",
+          "children": [
+            47
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 45,
+          "ancestors": [
+            30,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(6) > p:nth-child(2)",
+          "box": [
+            24,
+            286.71875,
+            350,
+            26.25
+          ],
+          "opacity": 1,
+          "clip": [
+            24,
+            286.71875,
+            350,
+            26.25
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore the proposed campus: Silicon, CBG and SAF.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 46,
+          "ancestors": [
+            30,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(6) > a:nth-child(3)",
+          "box": [
+            24,
+            342.96875,
+            177.828125,
+            48
+          ],
+          "opacity": 1,
+          "clip": [
+            24,
+            342.96875,
+            177.828125,
+            48
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore the transition ",
+          "children": [
+            48
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 48,
+          "ancestors": [
+            46,
+            30,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(6) > a:nth-child(3) > span:nth-child(1)",
+          "box": [
+            191.4375,
+            349.96875,
+            10.390625,
+            33
+          ],
+          "opacity": 1,
+          "clip": [
+            191.4375,
+            349.96875,
+            10.390625,
+            33
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "↓",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {
+        "12:13": 12,
+        "12:30": 12,
+        "18:13": 18,
+        "20:13": 20,
+        "19:13": 19,
+        "21:13": 21,
+        "22:13": 22,
+        "23:13": 23,
+        "24:13": 24
+      },
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        14,
+        58,
+        59,
+        15,
+        60,
+        61,
+        16,
+        62,
+        63,
+        17,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "index": 0,
+      "timeMs": 0.0,
+      "phase": "before",
+      "image": "frame-00.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 1,
+      "timeMs": 0.0,
+      "phase": "first",
+      "image": "frame-01.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 2,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-02.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 3,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-03.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 4,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-04.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 5,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-05.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 6,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-06.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 7,
+      "timeMs": 0.0,
+      "phase": "last",
+      "image": "frame-07.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -3338,
+            1000,
+            4605.9375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 14,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#silicon-description",
+          "box": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -0.015625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            58,
+            59,
+            116
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 58,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > h2:nth-child(1)",
+          "box": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            43.984375,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed silicon facility",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 59,
+          "ancestors": [
+            14,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(4) > p:nth-child(2)",
+          "box": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            100.984375,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied Silicon image is a user-designated concept for a proposed facility. Process identity, equipment and site position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 15,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#cbg-description",
+          "box": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            202.578125,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            60,
+            61
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 60,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > h2:nth-child(1)",
+          "box": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            246.578125,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed compressed biogas",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 61,
+          "ancestors": [
+            15,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(5) > p:nth-child(2)",
+          "box": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303.578125,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "These supplied images represent a conceptual campus and facility, with unverified layout and equipment. They do not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            405.171875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            62,
+            63,
+            117
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 62,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > h2:nth-child(1)",
+          "box": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            449.171875,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed sustainable aviation fuel",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 63,
+          "ancestors": [
+            16,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(6) > p:nth-child(2)",
+          "box": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            506.171875,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied SAF concept is the user-designated view of a proposed facility. Its equipment, process identity and campus position are unverified; it does not show an operational Rivanta plant.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            607.765625,
+            1000,
+            660.171875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            64,
+            67,
+            118,
+            68,
+            73,
+            90
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 64,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            65,
+            66
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 65,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            707.765625,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 66,
+          "ancestors": [
+            64,
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            728.015625,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        18,
+        20,
+        19,
+        21,
+        22,
+        23,
+        24,
+        13,
+        25,
+        36,
+        37,
+        26,
+        38,
+        39,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        30,
+        44,
+        45,
+        46,
+        48,
+        31,
+        49,
+        50,
+        32,
+        51,
+        52,
+        33,
+        53,
+        54,
+        34,
+        55,
+        56,
+        57,
+        35,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "scroll": [
+        0,
+        3338
+      ],
+      "index": 8,
+      "timeMs": 250.0,
+      "phase": "settled",
+      "image": "frame-08.png"
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Fixed viewport and region; sampled frames are evidence, not a proof of smoothness.",
+    "View Transition pseudo-element boxes are computed-style estimates; inspect the filmstrip for actual paint.",
+    "JavaScript timers are not scrubbed. Long-running and newly chained animations require a separate capture.",
+    "Clip paths, masks, canvas, cross-origin frames and closed shadow roots require visual review."
+  ]
+}

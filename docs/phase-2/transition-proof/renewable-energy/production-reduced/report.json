@@ -1,0 +1,8417 @@
+{
+  "schemaVersion": 1,
+  "reducedMotion": true,
+  "viewport": {
+    "width": 1000,
+    "height": 760
+  },
+  "region": [
+    0,
+    0,
+    1000,
+    760
+  ],
+  "setup": [
+    {
+      "wait": 1200
+    }
+  ],
+  "interaction": [
+    {
+      "click": "header button:nth-of-type(4)"
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    },
+    {
+      "wait": 2000
+    }
+  ],
+  "durationMs": 0,
+  "animations": [],
+  "baselineDurationMs": 0,
+  "frames": [
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            0,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            0,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            0,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 12,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2)",
+          "box": [
+            0,
+            0,
+            1000,
+            92
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            92
+          ],
+          "clipPath": "none",
+          "zIndex": "20",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            19,
+            20
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 19,
+          "ancestors": [
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > a:nth-child(1)",
+          "box": [
+            50,
+            27.25,
+            130.578125,
+            37.5
+          ],
+          "opacity": 1,
+          "clip": [
+            50,
+            27.25,
+            130.578125,
+            37.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Rivanta ",
+          "children": [
+            21
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 21,
+          "ancestors": [
+            19,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > a:nth-child(1) > span:nth-child(1)",
+          "box": [
+            145.265625,
+            40.25,
+            35.3125,
+            20
+          ],
+          "opacity": 1,
+          "clip": [
+            145.265625,
+            40.25,
+            35.3125,
+            20
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Green",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 20,
+          "ancestors": [
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2)",
+          "box": [
+            598.9375,
+            24,
+            351.0625,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            598.9375,
+            24,
+            351.0625,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 22,
+          "ancestors": [
+            20,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(1)",
+          "box": [
+            598.9375,
+            24,
+            53.34375,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            598.9375,
+            24,
+            53.34375,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 23,
+          "ancestors": [
+            20,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(2)",
+          "box": [
+            680.28125,
+            24,
+            40.421875,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            680.28125,
+            24,
+            40.421875,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 24,
+          "ancestors": [
+            20,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(3)",
+          "box": [
+            748.703125,
+            24,
+            37.640625,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            748.703125,
+            24,
+            37.640625,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 25,
+          "ancestors": [
+            20,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > button:nth-child(4)",
+          "box": [
+            814.34375,
+            24,
+            55.203125,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            814.34375,
+            24,
+            55.203125,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 26,
+          "ancestors": [
+            20,
+            12,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > header:nth-child(2) > nav:nth-child(2) > a:nth-child(5)",
+          "box": [
+            897.546875,
+            24,
+            52.453125,
+            44
+          ],
+          "opacity": 1,
+          "clip": [
+            897.546875,
+            24,
+            52.453125,
+            44
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 13,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#campus-study",
+          "box": [
+            0,
+            0,
+            1000,
+            4173.625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0,
+            1000,
+            4173.625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 27,
+          "ancestors": [
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(1)",
+          "box": [
+            0,
+            449.21875,
+            1000,
+            549.640625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            449.21875,
+            1000,
+            549.640625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            40,
+            41
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 40,
+          "ancestors": [
+            27,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(1) > img:nth-child(1)",
+          "box": [
+            0,
+            449.21875,
+            1000,
+            549.640625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            449.21875,
+            1000,
+            549.640625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-facility.0m2f8g9hevsj6.png&w=3840&q=90",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 33,
+          "ancestors": [
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(7)",
+          "box": [
+            0,
+            90,
+            1000,
+            359.21875
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            90,
+            1000,
+            359.21875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            50,
+            51,
+            52
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 50,
+          "ancestors": [
+            33,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(7) > h1:nth-child(1)",
+          "box": [
+            24,
+            122,
+            952,
+            138.71875
+          ],
+          "opacity": 1,
+          "clip": [
+            24,
+            122,
+            952,
+            138.71875
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "One vision.A closer look.",
+          "children": [
+            53
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 51,
+          "ancestors": [
+            33,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(7) > p:nth-child(2)",
+          "box": [
+            24,
+            286.71875,
+            350,
+            52.5
+          ],
+          "opacity": 1,
+          "clip": [
+            24,
+            286.71875,
+            350,
+            52.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore the proposed campus: Silicon, CBG, SAF and Renewable Energy.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 52,
+          "ancestors": [
+            33,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(7) > a:nth-child(3)",
+          "box": [
+            24,
+            369.21875,
+            177.828125,
+            48
+          ],
+          "opacity": 1,
+          "clip": [
+            24,
+            369.21875,
+            177.828125,
+            48
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore the transition ",
+          "children": [
+            54
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 54,
+          "ancestors": [
+            52,
+            33,
+            13,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(3) > div:nth-child(7) > a:nth-child(3) > span:nth-child(1)",
+          "box": [
+            191.4375,
+            376.21875,
+            10.390625,
+            33
+          ],
+          "opacity": 1,
+          "clip": [
+            191.4375,
+            376.21875,
+            10.390625,
+            33
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "↓",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {
+        "12:13": 12,
+        "12:33": 12,
+        "19:13": 19,
+        "21:13": 21,
+        "20:13": 20,
+        "22:13": 22,
+        "23:13": 23,
+        "24:13": 24,
+        "25:13": 25,
+        "26:13": 26
+      },
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        16,
+        70,
+        71,
+        17,
+        72,
+        73,
+        18,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        0
+      ],
+      "index": 0,
+      "timeMs": 0.0,
+      "phase": "before",
+      "image": "frame-00.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 1,
+      "timeMs": 0.0,
+      "phase": "first",
+      "image": "frame-01.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 2,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-02.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 3,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-03.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 4,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-04.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 5,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-05.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 6,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-06.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 7,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-07.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 8,
+      "timeMs": 0.0,
+      "phase": "middle",
+      "image": "frame-08.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 9,
+      "timeMs": 0.0,
+      "phase": "last",
+      "image": "frame-09.png"
+    },
+    {
+      "elements": [
+        {
+          "id": 1,
+          "ancestors": [],
+          "selector": "html:nth-child(1)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "root",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            2,
+            3
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 3,
+          "ancestors": [
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 5,
+          "ancestors": [
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2)",
+          "box": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -4781,
+            1000,
+            5744.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 16,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#saf-description",
+          "box": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            -202.1875,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            70,
+            71,
+            129
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 17,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#energy-description",
+          "box": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            0.40625,
+            850,
+            202.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            72,
+            73,
+            130
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 72,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > h2:nth-child(1)",
+          "box": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            44.40625,
+            710,
+            45
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Proposed renewable energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 73,
+          "ancestors": [
+            17,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(7) > p:nth-child(2)",
+          "box": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            101.40625,
+            710,
+            57.59375
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "The supplied concept shows solar panels and wind turbines. Equipment, scale and campus position remain unverified; it does not show an operational Rivanta facility.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 18,
+          "ancestors": [
+            5,
+            3,
+            1
+          ],
+          "selector": "#review",
+          "box": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "opacity": 1,
+          "clip": [
+            0,
+            203,
+            1000,
+            760.5625
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            74,
+            77,
+            131,
+            78,
+            84,
+            101
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 74,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1)",
+          "box": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            860,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            75,
+            76
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 75,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > h2:nth-child(1)",
+          "box": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            303,
+            347.734375,
+            60
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Review the approach.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 76,
+          "ancestors": [
+            74,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(1) > span:nth-child(2)",
+          "box": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "opacity": 1,
+          "clip": [
+            790.984375,
+            323.25,
+            139.015625,
+            19.5
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Awaiting visual approval",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 77,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > p:nth-child(2)",
+          "box": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            389,
+            580,
+            64.78125
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Explore Silicon, CBG, SAF and Renewable Energy. Pause at each view before continuing.",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 78,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4)",
+          "box": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            860,
+            122
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            79,
+            80,
+            81,
+            82,
+            83
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 79,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(1)",
+          "box": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            479.78125,
+            186.71875,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Replay the approach",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 80,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(2)",
+          "box": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            270.71875,
+            479.78125,
+            143.015625,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Silicon",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 81,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(3)",
+          "box": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            427.734375,
+            479.78125,
+            127.125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect CBG",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 82,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(4)",
+          "box": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            568.859375,
+            479.78125,
+            123.703125,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect SAF",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 83,
+          "ancestors": [
+            78,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > div:nth-child(4) > button:nth-child(5)",
+          "box": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            547.78125,
+            225.9375,
+            54
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Inspect Renewable Energy",
+          "children": [],
+          "clipped": 0
+        },
+        {
+          "id": 84,
+          "ancestors": [
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "#alignment",
+          "box": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            685.78125,
+            860,
+            98
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "",
+          "children": [
+            85,
+            86,
+            91,
+            97,
+            132
+          ],
+          "clipped": 0
+        },
+        {
+          "id": 85,
+          "ancestors": [
+            84,
+            18,
+            5,
+            3,
+            1
+          ],
+          "selector": "html:nth-child(1) > body:nth-child(2) > main:nth-child(2) > section:nth-child(8) > details:nth-child(5) > summary:nth-child(1)",
+          "box": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "opacity": 1,
+          "clip": [
+            70,
+            726.78125,
+            860,
+            57
+          ],
+          "clipPath": "none",
+          "zIndex": "auto",
+          "viewTransitionName": "none",
+          "boxShadow": "none",
+          "entranceReplay": false,
+          "content": "Compare the supplied CBG close-up",
+          "children": [],
+          "clipped": 0
+        }
+      ],
+      "paint": {},
+      "transitionGroups": [],
+      "transitionPaint": {},
+      "viewTransition": false,
+      "outsideIds": [
+        11,
+        12,
+        19,
+        21,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        13,
+        27,
+        40,
+        41,
+        28,
+        42,
+        43,
+        29,
+        44,
+        45,
+        30,
+        46,
+        47,
+        31,
+        48,
+        49,
+        33,
+        50,
+        51,
+        52,
+        54,
+        34,
+        55,
+        56,
+        35,
+        57,
+        58,
+        36,
+        59,
+        60,
+        37,
+        61,
+        62,
+        38,
+        63,
+        64,
+        65,
+        39,
+        14,
+        66,
+        67,
+        15,
+        68,
+        69,
+        70,
+        71,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "scroll": [
+        0,
+        4781
+      ],
+      "index": 10,
+      "timeMs": 250.0,
+      "phase": "settled",
+      "image": "frame-10.png"
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "Fixed viewport and region; sampled frames are evidence, not a proof of smoothness.",
+    "View Transition pseudo-element boxes are computed-style estimates; inspect the filmstrip for actual paint.",
+    "JavaScript timers are not scrubbed. Long-running and newly chained animations require a separate capture.",
+    "Clip paths, masks, canvas, cross-origin frames and closed shadow roots require visual review."
+  ]
+}

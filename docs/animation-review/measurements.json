@@ -1,0 +1,580 @@
+{
+  "desktop": [
+    {
+      "local": 0,
+      "y": 1520,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(1, 0, 0, 1, 0, 0)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.15,
+      "y": 1731,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(1.675, 0, 0, 1.675, 146.44, -43.06)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.36,
+      "y": 2026,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(3.15, 0, 0, 3.15, 839.1, -249.97)",
+      "infoOpacity": 0,
+      "detailOpacity": 0.181609,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.58,
+      "y": 2336,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(3.15, 0, 0, 3.15, 839.1, -249.98)",
+      "infoOpacity": 1,
+      "detailOpacity": 1,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.75,
+      "y": 2575,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(3.15, 0, 0, 3.15, 839.1, -249.98)",
+      "infoOpacity": 0.999991,
+      "detailOpacity": 1,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.9,
+      "y": 2786,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(1.8422, 0, 0, 1.8422, 199.25, -58.73)",
+      "infoOpacity": 0,
+      "detailOpacity": 0.138347,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.99,
+      "y": 2912,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(1, 0, 0, 1, 0, 0)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "block"
+    }
+  ],
+  "wind": [
+    {
+      "local": 0,
+      "y": 11364,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "wind",
+      "title": "WindEnergy",
+      "world": "matrix(1, 0, 0, 1, 0, 0)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.36,
+      "y": 11870,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": 0,
+      "stageBottom": 900,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "wind",
+      "title": "WindEnergy",
+      "world": "matrix(3.15, 0, 0, 3.15, 798.8, 472.95)",
+      "infoOpacity": 0,
+      "detailOpacity": 0.18257,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.58,
+      "y": 12179,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": -309,
+      "stageBottom": 591,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "wind",
+      "title": "WindEnergy",
+      "world": "matrix(3.15, 0, 0, 3.15, 798.8, 472.95)",
+      "infoOpacity": 1,
+      "detailOpacity": 1,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.78,
+      "y": 12461,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": -591,
+      "stageBottom": 309,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "wind",
+      "title": "WindEnergy",
+      "world": "matrix(3.15, 0, 0, 3.15, 798.79, 472.95)",
+      "infoOpacity": 0.862624,
+      "detailOpacity": 0.989499,
+      "disclaimerDisplay": "block"
+    },
+    {
+      "local": 0.99,
+      "y": 12756,
+      "journeyStart": 1520,
+      "journeyHeight": 11250,
+      "stageHeight": 900,
+      "stageTop": -886,
+      "stageBottom": 14,
+      "length": 11250,
+      "chapterHeights": [
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1395,
+        1485
+      ],
+      "chapter": "wind",
+      "title": "WindEnergy",
+      "world": "matrix(1, 0, 0, 1, 0, 0)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "block"
+    }
+  ],
+  "reduced": {
+    "y": 2336,
+    "journeyStart": 1520,
+    "journeyHeight": 11250,
+    "stageHeight": 900,
+    "stageTop": 0,
+    "stageBottom": 900,
+    "length": 11250,
+    "chapterHeights": [
+      1395,
+      1395,
+      1395,
+      1395,
+      1395,
+      1395,
+      1395,
+      1485
+    ],
+    "chapter": "cbg",
+    "title": "CompressedBiogas",
+    "world": "matrix(3.15, 0, 0, 3.15, 839.1, -249.98)",
+    "infoOpacity": 0,
+    "detailOpacity": 0,
+    "disclaimerDisplay": "block"
+  },
+  "mobile": {
+    "y": 2108,
+    "journeyStart": 1472,
+    "journeyHeight": 8778,
+    "stageHeight": 844,
+    "stageTop": 0,
+    "stageBottom": 844,
+    "length": 8778,
+    "chapterHeights": [
+      1055,
+      1055,
+      1055,
+      1055,
+      1055,
+      1055,
+      1055,
+      1393
+    ],
+    "chapter": "cbg",
+    "title": "CompressedBiogas",
+    "world": "matrix(2.9, 0, 0, 2.9, 698.84, -216.49)",
+    "infoOpacity": 1,
+    "detailOpacity": 1,
+    "disclaimerDisplay": "none"
+  },
+  "nav": [
+    {
+      "clicked": "cbg",
+      "y": 1472,
+      "journeyStart": 1472,
+      "journeyHeight": 8778,
+      "stageHeight": 844,
+      "stageTop": 0,
+      "stageBottom": 844,
+      "length": 8778,
+      "chapterHeights": [
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1393
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(1, 0, 0, 1, 0, 0)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "none"
+    },
+    {
+      "clicked": "biomass",
+      "y": 2527,
+      "journeyStart": 1472,
+      "journeyHeight": 8778,
+      "stageHeight": 844,
+      "stageTop": 0,
+      "stageBottom": 844,
+      "length": 8778,
+      "chapterHeights": [
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1393
+      ],
+      "chapter": "cbg",
+      "title": "CompressedBiogas",
+      "world": "matrix(1.0955, 0, 0, 1.0955, 13.64, -4.38)",
+      "infoOpacity": 0,
+      "detailOpacity": 0,
+      "disclaimerDisplay": "none"
+    },
+    {
+      "clicked": "wind",
+      "y": 8857,
+      "journeyStart": 1472,
+      "journeyHeight": 8778,
+      "stageHeight": 844,
+      "stageTop": 0,
+      "stageBottom": 844,
+      "length": 8778,
+      "chapterHeights": [
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1055,
+        1393
+      ],
+      "chapter": "solar",
+      "title": "SolarEnergy",
+      "world": "matrix(2.9, 0, 0, 2.9, 1468.61, 84.57)",
+      "infoOpacity": 1,
+      "detailOpacity": 1,
+      "disclaimerDisplay": "none"
+    }
+  ],
+  "resources": [
+    {
+      "src": "assets/campus-aerial.webp",
+      "width": 1672,
+      "height": 941,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/campus-aerial.webp",
+      "width": 1672,
+      "height": 941,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/cbg.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/biomass.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/power.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/silica.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/silicon.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/saf.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/solar.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/wind.webp",
+      "width": 960,
+      "height": 640,
+      "loading": "auto"
+    },
+    {
+      "src": "assets/ground-facilities.webp",
+      "width": 1672,
+      "height": 940,
+      "loading": "lazy"
+    }
+  ],
+  "targets": [
+    {
+      "id": "cbg",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Compressed biogas"
+    },
+    {
+      "id": "biomass",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Biomass reception"
+    },
+    {
+      "id": "power",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Captive power"
+    },
+    {
+      "id": "silica",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Bio-silica"
+    },
+    {
+      "id": "silicon",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Green silicon"
+    },
+    {
+      "id": "saf",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Sustainable aviation fuel"
+    },
+    {
+      "id": "solar",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Solar energy"
+    },
+    {
+      "id": "wind",
+      "width": 33,
+      "height": 2,
+      "name": null,
+      "title": "Wind energy"
+    }
+  ],
+  "nojs": {
+    "opacity": "0",
+    "chapterSections": 8,
+    "titleCount": 1
+  },
+  "scope": "Browser sampling and source review; no physical-device GPU or field-performance benchmark."
+}

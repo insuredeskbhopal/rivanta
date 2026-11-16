@@ -1,0 +1,10 @@
+async page => {
+  const results=[];await page.emulateMedia({reducedMotion:'no-preference'});
+  for(const viewport of [{width:320,height:568},{width:844,height:390}]){
+    await page.setViewportSize(viewport);await page.goto('http://localhost:3000/proof/cbg');await page.waitForSelector('main[data-playback="overview"]');await page.mouse.move(160,200);await page.mouse.wheel(0,120);await page.waitForFunction(()=>Number(document.querySelector('main').dataset.progress)>.93);
+    const state=await page.evaluate(()=>{const copy=document.querySelector('[data-silicon-copy]').getBoundingClientRect(),status=document.querySelector('[data-concept]').parentElement.getBoundingClientRect();return {width:innerWidth,height:innerHeight,copyBottom:copy.bottom,statusTop:status.top,gap:status.top-copy.bottom,playing:document.querySelector('main').dataset.playback};});results.push(state);
+    await page.screenshot({path:`docs/phase-2/transition-proof/silicon-order/playing-${viewport.width}.png`});
+  }
+  if(results.some(state=>state.gap<8))throw new Error('Caption overlaps the status controls: '+JSON.stringify(results));
+  return results;
+}
