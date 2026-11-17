@@ -1,0 +1,8 @@
+async page => {
+ for(const viewport of [{width:1440,height:900},{width:390,height:844}]) {
+  await page.setViewportSize(viewport);await page.goto('http://localhost:3000/?challenge-redesign='+viewport.width+'#india-challenges');await page.waitForSelector('main[data-tools=ready]');
+  const section=page.locator('#india-challenges');await section.evaluate(el=>scrollTo(0,el.offsetTop-88));await section.locator('img').first().evaluate(image=>image.decode());
+  await section.screenshot({path:'docs/india-challenges/redesign-'+viewport.width+'.png',style:'header,main > a[href="#company-overview"]{visibility:hidden !important}'});
+ }
+ return{captured:true};
+}

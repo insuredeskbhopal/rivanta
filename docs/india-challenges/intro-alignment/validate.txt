@@ -1,0 +1,11 @@
+async page => {
+ const layouts=[];
+ for(const width of [1863,1440,1024,768,390,320]){
+  await page.setViewportSize({width,height:900});await page.goto('http://localhost:3000/?intro-alignment='+width+'#india-challenges');await page.waitForSelector('main[data-tools=ready]');await page.evaluate(()=>document.fonts.ready);
+  const intro=page.locator('#india-challenges > div').first();
+  const result=await intro.evaluate(el=>{const heading=el.querySelector('h2').getBoundingClientRect(),copy=el.querySelector('p').getBoundingClientRect(),section=el.closest('section');return{width:innerWidth,height:el.getBoundingClientRect().height,headingTop:heading.top,copyTop:copy.top,overflow:document.documentElement.scrollWidth>innerWidth,topPadding:getComputedStyle(section).paddingTop};});
+  if(result.overflow||(width>850&&Math.abs(result.copyTop-result.headingTop)>8))throw new Error(JSON.stringify(result));
+  await intro.screenshot({path:'docs/india-challenges/intro-alignment/intro-'+width+'.png',style:'header,main > a[href="#company-overview"]{visibility:hidden !important}'});layouts.push(result);
+ }
+ return layouts;
+}

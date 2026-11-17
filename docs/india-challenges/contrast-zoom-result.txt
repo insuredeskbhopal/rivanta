@@ -1,0 +1,25 @@
+
+> rivanta-green-web@0.0.0 playwright
+> playwright-cli -s=india-challenges run-code --filename=docs/india-challenges/check-contrast-zoom.txt
+
+### Result
+{"minimumTextContrast":4.94335173232174,"cssZoom200":{"overflow":false,"inside":true}}
+### Ran Playwright code
+```js
+await (async page => {
+ await page.setViewportSize({width:1440,height:900});await page.goto('http://localhost:3000/?challenge-check=contrast#india-challenges');
+ const contrasts=await page.locator('#india-challenges').evaluate(section=>{
+  const luminance=color=>{const rgb=color.match(/[0-9.]+/g).slice(0,3).map(Number).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return rgb.reduce((total,v,i)=>total+v*[.2126,.7152,.0722][i],0);};
+  return [...section.querySelectorAll('h2,h2 em,h3,p,a,strong,strong span')].map(el=>{let bg=el;while(bg&&getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;const a=luminance(getComputedStyle(el).color),b=luminance(getComputedStyle(bg).backgroundColor);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05);});
+ });
+ if(Math.min(...contrasts)<4.5)throw new Error('Contrast '+Math.min(...contrasts));
+ await page.evaluate(()=>document.documentElement.style.zoom='2');const zoom=await page.locator('#india-challenges').evaluate(el=>{const box=el.getBoundingClientRect();return{overflow:document.documentElement.scrollWidth>innerWidth,inside:[...el.querySelectorAll('p,h2,h3,a')].every(item=>{const r=item.getBoundingClientRect();return r.left>=box.left-1&&r.right<=box.right+1;})};});await page.evaluate(()=>document.documentElement.style.zoom='');if(zoom.overflow||!zoom.inside)throw new Error('Zoom failure');
+ return{minimumTextContrast:Math.min(...contrasts),cssZoom200:zoom};
+}
+)(page);
+```
+### Page
+- Page URL: http://localhost:3000/?challenge-check=contrast#india-challenges
+- Page Title: Rivanta Green | Sustainable Industrial Innovation
+### Events
+- New console entries: .playwright-cli\console-2026-11-17T05-39-40-314Z.log#L117-L126

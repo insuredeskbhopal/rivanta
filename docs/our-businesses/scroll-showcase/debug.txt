@@ -1,0 +1,3 @@
+async page=>{
+ const r=await page.locator('#our-businesses article').first().evaluate(el=>{const a=el.querySelector('a'),r=a.getBoundingClientRect(),hit=document.elementFromPoint(r.left+10,r.top+r.height/2);return{link:{left:r.left,top:r.top,bottom:r.bottom,width:r.width,height:r.height},hit:hit?.outerHTML?.slice(0,500),active:document.activeElement?.outerHTML?.slice(0,200),cards:[...el.parentElement.children].map(card=>{const b=card.getBoundingClientRect();return{title:card.querySelector('h3').textContent,top:b.top,bottom:b.bottom,z:getComputedStyle(card).zIndex,offsetTop:card.offsetTop}})}});await page.screenshot({path:'docs/our-businesses/scroll-showcase/debug.png'});return r;
+}

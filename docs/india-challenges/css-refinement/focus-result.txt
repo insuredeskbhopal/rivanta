@@ -1,0 +1,23 @@
+
+> rivanta-green-web@0.0.0 playwright
+> playwright-cli -s=challenges-css run-code --filename=docs/india-challenges/css-refinement/focus.txt
+
+### Result
+{"top":649.625,"visible":true,"focused":true,"outline":"rgb(11, 24, 19)","outlineWidth":"2px"}
+### Ran Playwright code
+```js
+await (async page => {
+ await page.setViewportSize({width:1440,height:900});await page.goto('http://localhost:3000/?css-refinement=focus#india-challenges');await page.waitForSelector('main[data-tools=ready]');await page.evaluate(()=>document.fonts.ready);
+ const link=page.locator('#india-challenges a').nth(1);await link.evaluate(el=>{window.scrollTo({top:el.getBoundingClientRect().top+scrollY-650,behavior:'instant'});el.focus({preventScroll:true});});
+ await page.waitForTimeout(200);
+ const result=await link.evaluate(el=>{const r=el.getBoundingClientRect(),style=getComputedStyle(el);return{top:r.top,visible:el.checkVisibility(),focused:document.activeElement===el,outline:style.outlineColor,outlineWidth:style.outlineWidth};});
+ if(result.top<100||result.top>800||!result.focused||result.outlineWidth!=='2px')throw new Error(JSON.stringify(result));
+ await page.screenshot({path:'docs/india-challenges/css-refinement/focus.png'});return result;
+}
+)(page);
+```
+### Page
+- Page URL: http://localhost:3000/?css-refinement=focus#india-challenges
+- Page Title: Rivanta Green | Sustainable Industrial Innovation
+### Events
+- New console entries: .playwright-cli\console-2026-11-17T06-07-40-291Z.log#L76-L83

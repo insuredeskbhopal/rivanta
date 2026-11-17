@@ -1,0 +1,13 @@
+{
+  "checkedOn": "2026-11-17",
+  "company": "Rivanta Green Innovative Venture Private Limited",
+  "basis": "Company venture content already recorded in docs/company-content/venture-copy-2026-11-16.json, the user-approved next-section proposal and the latest white-powder / industrial-premises image corrections.",
+  "sources": [
+    {"area":"Silicon & Advanced Materials","url":"https://www.rivantagreen.com/bio-silica","intent":"Biogenic silica from rice husk; evaluation of silicon pathways. The white powder visual describes biogenic silica, not elemental silicon crystals."},
+    {"area":"Compressed Biogas","url":"https://www.rivantagreen.com/cbg","intent":"Agricultural-residue-based CBG and consideration of digestate recovery. User requires an industrial compound in the illustrative image."},
+    {"area":"Sustainable Aviation Fuel","url":"https://www.rivantagreen.com/saf","intent":"Evaluation of non-food biomass fuel pathways, feasibility and potential technology collaboration; no airline, certification or supply agreement asserted."},
+    {"area":"Renewable Energy","url":"https://www.rivantagreen.com/sustainability","intent":"Solar, wind, biomass energy, process efficiency and recovery as development areas; solar/wind visual direction also comes from the user's supplied concept and approved section proposal."}
+  ],
+  "verification": "Web-fetch service could not access these pages; direct HTTPS GET checks returned200 for all four, with matching company page titles. See source-check.json. Existing company-source records supply the detailed copy basis.",
+  "limits": "No operating plant, production capacity, achieved environmental performance, secured partner, commissioning date, product specification or regulatory approval is represented. All descriptions use developing, exploring, evaluating or considered intent."
+}

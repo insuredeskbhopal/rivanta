@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-17",
+  "source": "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md",
+  "files": ["src/components/india-challenges.tsx", "src/components/india-challenges.module.css"],
+  "review": "No material interface finding in final code: semantic section/articles and heading hierarchy, real named links, decorative SVG aria-hidden, meaningful alt descriptions, static server content, lazy images with intrinsic dimensions, scoped focus styles, no hidden challenge copy, no gesture-only control, reduced-motion hover fallback, no transition-all or layout-read render code.",
+  "limits": "Targeted code and Chromium review, not screen-reader or cross-engine certification. Global application behavior outside section not re-audited."
+}

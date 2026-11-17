@@ -1,0 +1,64 @@
+{
+  "checkedOn": "2026-11-17",
+  "companyIntent": {
+    "source": "User-supplied Challenges We Aim to Address brief and subsequent India's Challenges. Industrial Possibilities. draft attached in this conversation",
+    "latestDraft": "C:/Users/abhis/.codex/attachments/d2d891d7-3f22-46b0-ac88-bc9a28c1843c/Pasted text.txt",
+    "scope": "Eight challenges, biogenic silica/advanced-materials intent, CBG/SAF/biomass/solar/wind pathways, resource recovery, rural opportunities and conditional water recycling/ZLD evaluation.",
+    "status": "Company intention, not independent evidence of achieved outputs or operational facilities."
+  },
+  "nationalData": {
+    "url": "https://www.pib.gov.in/FactsheetDetails.aspx?Id=149232&lang=2&reg=3",
+    "title": "Powering Atmanirbhar Bharat",
+    "publisher": "Press Information Bureau, Government of India",
+    "publishedOn": "2025-08-15",
+    "study": "2020–21 assessment through Administrative Staff College of India commissioned by MNRE; report finalized in 2021",
+    "figures": { "estimatedAnnualSurplusBiomassMillionMetricTonnes": 228, "assessedBiomassPowerPotentialGW": 42 },
+    "caveats": "Historical national estimates, visibly dated in the section. Not all agricultural waste burned, all usable feedstock, secured supply, current measured availability, or Rivanta plant capacity. No percentage extrapolation or environmental reduction calculated."
+  },
+  "context": [
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2240644&lang=2&reg=48",
+      "publisher": "MoEFCC / PIB",
+      "publishedOn": "2026-03-16",
+      "supports": "Crop-residue burning can aggravate winter air pollution in North India; collection machinery and ex-situ use provide alternative management routes. No national pollution share or reduction metric asserted."
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2198748&lang=2&reg=3",
+      "publisher": "MoEFCC / PIB",
+      "publishedOn": "2025-12-04",
+      "supports": "Air pollution has multiple sources; stubble burning is episodic. Biomass utilization and alternative residue management are relevant pathways. No claim that Rivanta solves all air pollution."
+    },
+    {
+      "url": "https://biourja.mnre.gov.in/about-the-programme",
+      "publisher": "MNRE BioUrja",
+      "supports": "Energy-recovery pathways can use agricultural and industrial wastes/residues. Used for general technical context, not a statement of current scheme approval, funding, project eligibility or Rivanta assistance."
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1782295&lang=2&reg=3",
+      "publisher": "Ministry of Jal Shakti / PIB",
+      "publishedOn": "2021-12-16",
+      "supports": "Responsible industrial effluent management, reuse/recycling and ZLD where possible. No legal-compliance assurance or achieved performance asserted."
+    }
+  ],
+  "verifiedTrade": {
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2025/tradeflow/Imports/partner/ALL/product/280469",
+    "publisher": "World Bank WITS / UN Comtrade",
+    "year": 2025,
+    "category": "HS 280469 — Silicon containing by weight less than 99.99% silicon",
+    "supports": "China is India's largest supplier in this specific import category and year. No percentage or generalization to all silicon grades, advanced materials or clean-energy inputs is asserted."
+  },
+  "economicContext": {
+    "url": "https://www.pib.gov.in/FactsheetDetails.aspx?ModuleId=16&NoteId=150991&id=150991&lang=1&reg=42",
+    "title": "India's GDP Performance",
+    "publisher": "Press Information Bureau, Government of India",
+    "publishedOn": "2026-09-01",
+    "supports": "General national growth context only. No GDP figure, ranking or claim that Rivanta has produced economic results is rendered."
+  },
+  "editorialInferences": [
+    "Domestic industrial pathways may retain more value locally; no import substitution, market share or economic contribution achieved by Rivanta is claimed.",
+    "Resource recovery can retain otherwise underused heat/material/by-product value; actual feasibility remains project-specific.",
+    "Rural supply-chain opportunities are intentions rather than job or farmer-income results."
+  ],
+  "excluded": "Broader China concentration assertions beyond the verified HS 280469 category and year, current subsidy availability, company production capacities, achieved pollution/water savings, jobs delivered, acreage, certifications and approvals.",
+  "cta": { "url": "https://www.rivantagreen.com/projects", "method": "Direct public HTTPS HEAD", "status": 200 }
+}

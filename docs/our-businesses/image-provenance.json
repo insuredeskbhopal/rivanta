@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-17",
+  "tool": "Built-in image_gen",
+  "status": "Illustrative sector images, not evidence of Rivanta assets or outcomes.",
+  "images": [
+    {
+      "path": "image/businesses/biogenic-silica.webp",
+      "source": "C:\\Users\\abhis\\.codex\\generated_images\\01a1e7e2-6a6a-7350-aab2-bffa214f398e\\exec-53547cc8-977d-4942-bdeb-a766b30a6cc6.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: new editorial sector image for an Indian industrial company website; an illustrative scene, not evidence of an operating Rivanta facility. Natural documentary photography aesthetic, tactile believable materials, restrained earthy greens and warm daylight, no glossy CGI. Portrait 3:4 frame with the main subject within the central 70 percent so it also works as a landscape crop. No text, lettering, labels, logos, watermarks, borders or collage. Subject: a generous mound of very fine, pure white biogenic silica powder in a shallow unmarked matte stainless-steel industrial sampling tray on a practical materials-processing bench. A small scatter of pale golden rice husks sits separately beside the tray, suggesting agricultural origin without depicting a process. The powder is soft, opaque and chalk-white, with a delicate matte texture and gently disturbed surface. Softly blurred clean industrial laboratory/workshop background, warm natural side lighting. Close low three-quarter angle, powder is the dominant unmistakable subject. Absolutely no rocks, stones, silicon chunks, crystals, quartz, gemstones, transparent particles, blue gloves or sample vials. Do not show a company facility or claim a tested chemical result.",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 133616
+    },
+    {
+      "path": "image/businesses/industrial-cbg.webp",
+      "source": "C:\\Users\\abhis\\.codex\\generated_images\\01a1e7e2-6a6a-7350-aab2-bffa214f398e\\exec-b56ee910-1f09-4c2e-9d4d-35da465a46b8.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: new editorial sector image for an Indian industrial company website; an illustrative scene, not evidence of an operating Rivanta facility. Natural documentary photography aesthetic, tactile believable materials, restrained earthy greens and warm daylight, no glossy CGI. Portrait 3:4 frame with the main subject within the central 70 percent so it also works as a landscape crop. No text, lettering, labels, logos, watermarks, borders or collage. Subject: a credible modern compressed biogas plant INSIDE a well-organized Indian industrial premises, shown from a slightly elevated three-quarter view. Two large dark green domed anaerobic digestion tanks on substantial clean concrete bases, a coherent adjacent gas-upgrading skid of stainless-steel vessels and pipework, a low plain utility building, paved internal access road, metal safety rails and a perimeter boundary wall all belong to the SAME industrial compound. A modest amount of landscaping is outside the process area. The setting reads clearly as an industrial site, NOT farm digesters in an open field or a village. Plausible equipment relationships, modest scale and natural surface detail, soft warm morning daylight. No people, labels, branding, enormous futuristic campus, smokestacks, decorative machinery or impossible dense pipe tangles. This is a generic sector illustration, not an approved Rivanta layout.",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 276824
+    },
+    {
+      "path": "image/businesses/aviation-fuel.webp",
+      "source": "C:\\Users\\abhis\\.codex\\generated_images\\01a1e7e2-6a6a-7350-aab2-bffa214f398e\\exec-c6586da7-8ab8-4cf6-8852-fb208d1a7bc4.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: new editorial sector image for an Indian industrial company website; an illustrative scene, not evidence of an operating Rivanta facility. Natural documentary photography aesthetic, tactile believable materials, restrained earthy greens and warm daylight, no glossy CGI. Portrait 3:4 frame with the main subject within the central 70 percent so it also works as a landscape crop. No text, lettering, labels, logos, watermarks, borders or collage. Subject: unbranded white modern twin-engine passenger jet on a quiet airport apron in India, seen from a low three-quarter side view beside the wing; the clean nacelle, wing and rear fuselage are clearly recognizable, with subtle heat haze and distant flat terminal shapes out of focus. Soft warm morning light catches the white metal surfaces, pale blue-grey sky. A grounded real-scale airport scene, no imaginary aircraft technology, no turbines attached incorrectly, no fuel performance symbols, no text on the aircraft, no flags or airlines. Keep the wing root and engine centrally composed, aircraft extends naturally beyond frame. The image must not claim a specific aircraft uses Rivanta fuel.",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 101196
+    },
+    {
+      "path": "image/businesses/renewable-energy.webp",
+      "source": "C:\\Users\\abhis\\.codex\\generated_images\\01a1e7e2-6a6a-7350-aab2-bffa214f398e\\exec-c1cb1b6a-dfec-4588-8f2b-e68ec4861570.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial renewable-energy image for an Indian industrial company website. Create a NEW natural photograph-style LANDSCAPE 3:2 image of solar photovoltaic panels and a wind turbine in dry western Indian terrain. Composition is critical: one clearly recognizable white THREE-BLADE wind turbine stands on low ground directly behind a foreground row of blue solar panels, with its hub and all three blade tips fully INSIDE the CENTRAL vertical half of the picture, between 25% and 70% of image height. Show little sky above; distant low scrub hills. Panel surfaces and supporting frames occupy the lower half. Keep the main turbine in the central horizontal third so it survives portrait crops too. Camera looks slightly down from a nearby low service embankment across the panels, no dramatic low-angle sky. Authentic dry grass, dusty earth, practical mounting frames, subdued morning daylight, coherent perspective and realistic engineering scale. Quiet premium documentary aesthetic, no glossy CGI. No people, lettering, logos, symbols, watermarks, badges, borders or collage. This is an illustrative sector scene, not a Rivanta asset or an approved project site.",
+      "width": 1080,
+      "height": 720,
+      "bytes": 125362
+    }
+  ]
+}

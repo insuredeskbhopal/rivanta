@@ -7,112 +7,135 @@ import styles from "./india-challenges.module.css";
 const fieldChallenges = [
   {
     title: "Beyond Stubble Burning",
-    copy: "Short harvest-to-sowing windows and limited collection options can make residue disposal difficult. We aim to create industrial routes for suitable residues, giving farmers more alternatives to burning.",
+    copy: [
+      "Every harvest leaves straw and other crop residues. Tight sowing schedules, collection costs and limited access to buyers can make burning a quick way to clear fields.",
+      "Rivanta aims to develop industrial uses for suitable agricultural residues, creating additional alternatives to burning.",
+    ],
   },
   {
-    title: "The Cost Of Polluted Air",
-    copy: "Open residue burning adds to particulate pollution. Responsible biomass use and appropriately controlled industrial processes can offer alternatives; our aim is to reduce avoidable burning without shifting pollution elsewhere.",
+    title: "When The Air Becomes A Concern",
+    copy: [
+      "Winter air pollution in Delhi and northern India has many causes, including vehicles, industry, dust, weather conditions and seasonal crop burning.",
+      "Reducing agricultural burning is one part of the response. We are exploring responsible biomass processing alongside emissions controls and environmental protection.",
+    ],
   },
   {
-    title: "Value Lost After Harvest",
-    copy: "Without collection and reliable markets, agricultural residues can remain underused. We are exploring rice husk, rice straw, wheat residues and other suitable biomass as inputs for materials and renewable fuels.",
+    title: "Valuable Resources Left Behind",
+    copy: [
+      "Agricultural residues can retain value beyond the field. Yet collection, quality and reliable markets determine whether surplus biomass can support industrial use.",
+      "We are exploring rice husk, rice straw and other suitable residues as inputs for advanced materials, renewable fuels and energy.",
+    ],
   },
   {
-    title: "Stronger Rural Supply Chains",
-    copy: "Fragmented supply chains can limit rural earning opportunities. Our sourcing approach aims to connect farmers, aggregation businesses, logistics providers and skilled workers with industrial demand, creating routes to greater local value.",
+    title: "Better Opportunities For Farmers",
+    copy: [
+      "Crop residues can be an added responsibility rather than a dependable source of income. Collection, transport and access to buyers remain practical challenges.",
+      "Rivanta aims to connect farmers, local businesses and transport providers with industrial demand, opening routes to greater value across rural supply chains.",
+    ],
   },
 ];
 
 const industryChallenges = [
   {
-    title: "Less Exposure To Material Imports",
-    copy: "Overseas sourcing can expose industrial supply chains to external disruptions. Our biogenic silica and silicon pathway work aims to strengthen selected domestic capabilities, supporting the Make in India vision and a more diversified manufacturing base.",
+    title: "Making More In India",
+    copy: [
+      "India imports industrial materials, including some grades of silicon. In 2025, China was its largest supplier of silicon below 99.99% purity.",
+      "We are exploring biogenic silica and related advanced-material pathways to support domestic manufacturing and the Make in India vision.",
+    ],
   },
   {
-    title: "A Broader Energy Mix",
-    copy: "Fossil-fuel dependence makes diverse energy sources important. We are developing CBG and evaluating SAF, biomass energy, solar and wind pathways to contribute to India’s future fuel and power needs.",
+    title: "Growth That Creates Value At Home",
+    copy: [
+      "India’s growth brings demand for materials, reliable energy, infrastructure and skilled work. The opportunity is to retain more of the resulting industrial value within the country.",
+      "Our initiatives aim to connect agricultural resources with advanced manufacturing, strengthening local supply chains and future industrial opportunities.",
+    ],
   },
 ];
 
 const resourceChallenges = [
   {
-    title: "Recovering What Industry Loses",
-    copy: "Separate industrial processes can leave heat, materials and by-products underused. Our integrated approach considers recovery and reuse across processes, aiming to keep more resource value within the industrial system.",
+    title: "Cleaner Fuels For A Growing Nation",
+    copy: [
+      "India needs dependable energy for its industries, transport systems and wider economy. A more diverse fuel and power mix can help reduce exposure to conventional fossil fuels.",
+      "Rivanta is developing CBG initiatives and evaluating sustainable aviation fuel, biomass power, solar and wind energy.",
+    ],
   },
   {
-    title: "Water That Works Harder",
-    copy: "Industrial growth brings freshwater demand and wastewater responsibilities. We are evaluating water recycling and zero-liquid-discharge options where technically and economically suitable, aiming to conserve water and manage effluent responsibly.",
+    title: "Using Resources More Responsibly",
+    copy: [
+      "Industrial growth brings responsibilities for waste, water and air quality. Materials, heat, water and by-products may offer opportunities for recovery and reuse.",
+      "Our development approach considers resource recovery, water recycling, pollution controls and zero-liquid-discharge options where technically and economically suitable.",
+    ],
   },
 ];
 
-function ChallengeCopy({ title, copy }: { title: string; copy: string }) {
-  return (
-    <div className={styles.challenge}>
-      <h4>{title}</h4>
-      <p>{copy}</p>
-    </div>
-  );
+function Challenge({ title, copy }: { title: string; copy: readonly string[] }) {
+  return <div className={styles.challenge} data-challenge><h3>{title}</h3>{copy.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>;
 }
 
 export function IndiaChallenges() {
   return (
     <section id="india-challenges" className={styles.section} aria-labelledby="india-challenges-heading">
       <div className={styles.introduction}>
-        <h2 id="india-challenges-heading">India’s Challenges.<br /><em>Resources For Change.</em></h2>
-        <p>Agriculture, industry and energy face connected challenges. Rivanta aims to link the resources India already has with the materials, fuels and infrastructure its future needs.</p>
+        <h2 id="india-challenges-heading">India’s Challenges.<br /><em>Industrial Possibilities.</em></h2>
+        <div className={styles.introCopy}><p>India is growing, but connected challenges remain: crop-residue burning, polluted air and dependence on imported industrial materials.</p><p>At Rivanta Green, we see an opportunity to use India’s resources more effectively, strengthen domestic industry and create more value within the country.</p></div>
       </div>
 
-      <article className={styles.field} aria-labelledby="field-challenges-heading">
-        <div className={styles.fieldOpening}>
-          <div className={`${styles.media} ${styles.fieldImage}`}>
-            <div className={styles.imageInner}>
-              <Image src={residues} alt="Illustrative AI-generated scene of a harvested Indian field with burnt stubble and drifting smoke; not a specific incident or Rivanta property" sizes="(max-width: 760px) 100vw, 54vw" placeholder="blur" />
-            </div>
+      <div className={styles.editorialGrid}>
+        <article className={styles.agriculture} aria-label="Crop residue burning and air pollution">
+          <div className={styles.fieldPhoto}>
+            <Image src={residues} alt="Illustrative AI-generated scene of a harvested Indian field with burnt stubble and drifting smoke; not a specific incident or Rivanta property" sizes="(max-width: 850px) 100vw, 43vw" quality={90} placeholder="blur" />
           </div>
-          <div className={styles.fieldStatement}>
-            <h3 id="field-challenges-heading">Value Begins<br /><em>In The Field.</em></h3>
-            <p>A different route for agricultural residues starts with collection, viable markets and a dependable connection to industry.</p>
-            <span className={styles.connector} aria-hidden="true">
-              <svg width="70" height="25" viewBox="0 0 70 25" fill="none" stroke="currentColor" strokeWidth="1.2"><path d="M1 12.5h65M55 2l11 10.5L55 23" /></svg>
-            </span>
+          <div className={styles.pairedCopy}>
+            {fieldChallenges.slice(0, 2).map(challenge => <Challenge key={challenge.title} {...challenge} />)}
           </div>
-        </div>
-        <div className={styles.fieldChallenges}>
-          {fieldChallenges.map(challenge => <ChallengeCopy key={challenge.title} {...challenge} />)}
-        </div>
-      </article>
+        </article>
 
-      <article className={`${styles.chapter} ${styles.industry}`} aria-labelledby="industry-challenges-heading">
-        <div className={styles.chapterCopy}>
-          <h3 id="industry-challenges-heading">More Made<br /><em>In India.</em></h3>
-          <div className={styles.challengeList}>
-            {industryChallenges.map(challenge => <ChallengeCopy key={challenge.title} {...challenge} />)}
+        <article className={styles.resourcePanel} aria-label="India’s biomass opportunity and rural supply chains">
+          <div className={styles.dataColumn}>
+            <dl className={styles.nationalData} aria-label="National biomass estimates from a 2021 study commissioned by MNRE">
+              <div><dt>Estimated Surplus Biomass In India</dt><dd><strong>228</strong><span>Million Tonnes / Year</span></dd></div>
+              <div><dt>Assessed Biomass Power Potential</dt><dd><strong>42</strong><span>GW</span></dd></div>
+            </dl>
+            <a className={styles.dataSource} href="https://www.pib.gov.in/FactsheetDetails.aspx?Id=149232&amp;lang=2&amp;reg=3"><span>2021 MNRE-Commissioned Study<br />Cited By PIB, 2025</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg></a>
           </div>
-        </div>
-        <div className={`${styles.media} ${styles.materialsImage}`}>
-          <Image src={materials} alt="AI-generated illustration of rice husk and a white material sample on a laboratory bench; not a Rivanta laboratory or proof of a production process" sizes="(max-width: 760px) 100vw, 42vw" placeholder="blur" />
-        </div>
-      </article>
+          <div className={styles.resourceCopy}>
+            {fieldChallenges.slice(2).map(challenge => <Challenge key={challenge.title} {...challenge} />)}
+          </div>
+        </article>
 
-      <article className={`${styles.chapter} ${styles.resources}`} aria-labelledby="resource-challenges-heading">
-        <div className={`${styles.media} ${styles.waterImage}`}>
-          <Image src={water} alt="AI-generated illustration of industrial water-circulation pipes and treatment equipment; not a Rivanta facility or evidence of achieved water performance" sizes="(max-width: 760px) 100vw, 42vw" placeholder="blur" />
-        </div>
-        <div className={styles.chapterCopy}>
-          <h3 id="resource-challenges-heading">Keep Resources<br /><em>In Circulation.</em></h3>
-          <div className={styles.challengeList}>
-            {resourceChallenges.map(challenge => <ChallengeCopy key={challenge.title} {...challenge} />)}
+        <article className={styles.industry} aria-label="Domestic materials and economic opportunity">
+          <div className={styles.supportPhoto}>
+            <Image src={materials} alt="AI-generated illustration of rice husk and a white material sample on a laboratory bench; not a Rivanta laboratory or proof of a production process" sizes="(max-width: 760px) 100vw, 43vw" quality={90} placeholder="blur" />
           </div>
-        </div>
-      </article>
+          <div className={styles.pairedCopy}>
+            {industryChallenges.map(challenge => <Challenge key={challenge.title} {...challenge} />)}
+          </div>
+        </article>
+
+        <article className={styles.resources} aria-label="Cleaner energy and responsible resource use">
+          <div className={styles.supportPhoto}>
+            <Image src={water} alt="AI-generated illustration of industrial water-circulation pipes and treatment equipment; not a Rivanta facility or evidence of achieved water performance" sizes="(max-width: 760px) 100vw, 43vw" quality={90} placeholder="blur" />
+          </div>
+          <div className={styles.pairedCopy}>
+            {resourceChallenges.map(challenge => <Challenge key={challenge.title} {...challenge} />)}
+          </div>
+        </article>
+      </div>
 
       <div className={styles.closing}>
-        <p>From Agricultural Residues<br /><em>To Industrial Possibility.</em></p>
+        <div className={styles.closingCopy}><p className={styles.closingTitle}>India’s Resources.<br /><em>India’s Opportunity.</em></p><p className={styles.closingText}>Stronger industries can begin with the resources around us. By connecting agriculture, advanced materials, renewable fuels and responsible manufacturing, we aim to contribute to cleaner environments, stronger domestic supply chains and long-term economic opportunity.</p></div>
         <a className={styles.visionLink} href="https://www.rivantagreen.com/projects">
           Explore Our Industrial Vision
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg>
         </a>
       </div>
+      <p className={styles.developmentNote}>Our initiatives remain subject to technical feasibility, engineering, commercial assessment and applicable regulatory approvals.</p>
+      <nav className={styles.contextSources} aria-label="Sources For National Context">
+        <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2198748&amp;lang=2&amp;reg=3">Air Quality Context</a>
+        <a href="https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2025/tradeflow/Imports/partner/ALL/product/280469">Silicon Imports · 2025</a>
+        <a href="https://www.pib.gov.in/FactsheetDetails.aspx?ModuleId=16&amp;NoteId=150991&amp;id=150991&amp;lang=1&amp;reg=42">India’s Economic Context</a>
+      </nav>
     </section>
   );
 }

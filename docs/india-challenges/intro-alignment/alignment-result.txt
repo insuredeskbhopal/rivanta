@@ -1,0 +1,26 @@
+
+> rivanta-green-web@0.0.0 playwright
+> playwright-cli -s=challenges-css run-code --filename=docs/india-challenges/intro-alignment/validate.txt
+
+### Result
+[{"width":1863,"height":203.5625,"headingTop":-688.21875,"copyTop":-684.21875,"overflow":false,"topPadding":"80px"},{"width":1440,"height":155.9375,"headingTop":-674.703125,"copyTop":-670.703125,"overflow":false,"topPadding":"64.8px"},{"width":1024,"height":183.125,"headingTop":-675.546875,"copyTop":-671.546875,"overflow":false,"topPadding":"64px"},{"width":768,"height":306.9375,"headingTop":-674.890625,"copyTop":-557.296875,"overflow":false,"topPadding":"64px"},{"width":390,"height":314.9375,"headingTop":-929.4375,"copyTop":-820.8125,"overflow":false,"topPadding":"64px"},{"width":320,"height":449.9375,"headingTop":-1118.59375,"copyTop":-929.34375,"overflow":false,"topPadding":"64px"}]
+### Ran Playwright code
+```js
+await (async page => {
+ const layouts=[];
+ for(const width of [1863,1440,1024,768,390,320]){
+  await page.setViewportSize({width,height:900});await page.goto('http://localhost:3000/?intro-alignment='+width+'#india-challenges');await page.waitForSelector('main[data-tools=ready]');await page.evaluate(()=>document.fonts.ready);
+  const intro=page.locator('#india-challenges > div').first();
+  const result=await intro.evaluate(el=>{const heading=el.querySelector('h2').getBoundingClientRect(),copy=el.querySelector('p').getBoundingClientRect(),section=el.closest('section');return{width:innerWidth,height:el.getBoundingClientRect().height,headingTop:heading.top,copyTop:copy.top,overflow:document.documentElement.scrollWidth>innerWidth,topPadding:getComputedStyle(section).paddingTop};});
+  if(result.overflow||(width>850&&Math.abs(result.copyTop-result.headingTop)>8))throw new Error(JSON.stringify(result));
+  await intro.screenshot({path:'docs/india-challenges/intro-alignment/intro-'+width+'.png',style:'header,main > a[href="#company-overview"]{visibility:hidden !important}'});layouts.push(result);
+ }
+ return layouts;
+}
+)(page);
+```
+### Page
+- Page URL: http://localhost:3000/?intro-alignment=320#india-challenges
+- Page Title: Rivanta Green | Sustainable Industrial Innovation
+### Events
+- New console entries: .playwright-cli\console-2026-11-17T06-07-40-291Z.log#L110-L139

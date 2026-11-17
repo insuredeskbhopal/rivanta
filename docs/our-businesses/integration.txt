@@ -1,0 +1,10 @@
+async page => {
+ const assert=(ok,message)=>{if(!ok)throw new Error(message);};
+ await page.setViewportSize({width:1440,height:900});await page.goto('http://localhost:3000/?business-check=link#our-businesses');await page.waitForSelector('main[data-tools=ready]');
+ await page.locator('#our-businesses a').nth(1).click();await page.waitForURL('https://www.rivantagreen.com/cbg');const targetTitle=await page.title();assert(targetTitle.includes('Compressed Biogas'),'CBG link title');
+ await page.goto('http://localhost:3000/?business-check=journey');await page.waitForSelector('main[data-playback=overview]');const chapters=[];
+ for(const chapter of ['silicon','cbg','saf','energy']){await page.mouse.move(850,400);await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="'+chapter+'"]');assert(await page.evaluate(()=>scrollY)===0,'Journey escaped '+chapter);chapters.push(chapter);await page.waitForTimeout(220);}
+ await page.mouse.wheel(0,900);await page.waitForTimeout(250);assert(await page.evaluate(()=>scrollY)>600,'Journey release');
+ assert(await page.locator('#our-businesses article').count()===4,'New section missing after journey');
+ return{cbgLinkNavigation:true,targetTitle,chapters,journeyRelease:true,newSectionPresent:true};
+}
