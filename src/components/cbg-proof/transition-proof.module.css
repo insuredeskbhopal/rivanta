@@ -4,8 +4,6 @@
 .stage { position: relative; height: 100svh; overflow: hidden; background: var(--proof-deep); }
 .plate { position: relative; width: 100%; }
 .plate img { display: block; width: 100%; height: auto; }
-.fallbackLabel { position: absolute; bottom: 12px; left: 20px; padding: 10px; background: var(--proof-deep); font-size: 12px; }
-.proof[data-motion="ready"] .fallbackLabel { display: none; }
 .shade { position: absolute; inset: 0; background: linear-gradient(180deg, #0b181373 0 48%, #0b181300 72%), linear-gradient(0deg, #06150ee8, transparent 45%), linear-gradient(90deg, #081a137a, transparent 75%); pointer-events: none; }
 .intro { position: absolute; left: 7vw; top: 24%; width: min(1050px, 86vw); }
 .intro h1, .copy h2 { font-family: var(--proof-serif); font-weight: 400; letter-spacing: -.04em; text-wrap: balance; }
@@ -16,8 +14,7 @@
 .copy { display: none; }
 .copy h2 { font-size: clamp(34px, 3.6vw, 52px); line-height: 1.1; margin: 0 0 16px; }
 .copy p { max-width: 340px; font-size: 14px; line-height: 1.75; }
-.status { position: absolute; inset: auto 5vw 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 12px; }
-.concept { background: var(--proof-deep); padding: 10px 13px; }
+.status { position: absolute; inset: auto 5vw 32px; display: flex; align-items: center; justify-content: flex-end; gap: 16px; font-size: 12px; }
 .phase { color: var(--proof-ink); text-shadow: 0 1px 6px var(--proof-deep); }
 .motionControls { display: flex; align-items: center; gap: 20px; }
 .skipMotion { min-height: 44px; padding: 8px 12px; border: 1px solid var(--proof-line); background: var(--proof-deep); color: var(--proof-ink); cursor: pointer; font-size: 12px; }
@@ -35,7 +32,6 @@
 .stage .saf { display: none; }
 .stage .silicon { display: none; }
 .stage .energy { display: none; }
-.stage .fallbackLabel { display: none; }
 .proof[data-motion="ready"] .stage { display: block; height: 100svh; }
 .proof[data-motion="ready"] .intro { position: absolute; left: 7vw; top: 24%; padding: 0; width: min(1050px, 86vw); }
 .proof[data-motion="ready"] .plate { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
@@ -66,10 +62,8 @@ button:disabled { opacity: .45; cursor: default; }
   .copy h2 { font-size: clamp(32px, 8.5vw, 40px); }
   .copy p { font-size: 14px; max-width: 310px; }
   .status { inset: auto 20px 24px; flex-wrap: wrap; font-size: 10px; }
-  .concept { padding: 9px; }
   .phase { font-size: 11px; flex: 1; min-width: 0; }
   .motionControls { width: 100%; gap: 8px; justify-content: space-between; }
-  .concept { max-width: 100%; }
   .footer { align-items: flex-start; flex-direction: column; min-height: 180px; padding: 32px 24px; gap: 16px; }
 
 }
@@ -89,7 +83,6 @@ button:disabled { opacity: .45; cursor: default; }
   .proof .stage .saf { display: block; width: 100%; height: auto; }
   .proof .stage .silicon { display: block; width: 100%; height: auto; }
   .proof .stage .energy { display: block; width: 100%; height: auto; }
-  .proof .stage .fallbackLabel { display: block; }
   .proof .intro { position: relative; order: -1; left: auto; top: auto; width: auto; padding: 32px 24px; }
   .proof .copy { display: block; padding: 32px 24px 110px; }
   .proof .shade { display: none; }

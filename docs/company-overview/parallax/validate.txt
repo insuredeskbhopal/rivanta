@@ -1,0 +1,101 @@
+async page => {
+  const check = (ok, message) => { if (!ok) throw new Error(message); };
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  const layouts = [];
+  const section = page.locator('#company-overview');
+  for (const viewport of [{width:1440,height:900},{width:1920,height:1080},{width:1024,height:768},{width:768,height:1024},{width:390,height:844},{width:320,height:568}]) {
+    await page.setViewportSize(viewport);
+    await page.emulateMedia({reducedMotion:'no-preference'});
+    await page.goto('http://localhost:3000/?overview-validation=' + Date.now() + '#company-overview');
+    await page.waitForSelector('main[data-playback="overview"]');
+    await section.evaluate(el => el.scrollIntoView({block:'start'}));
+    await section.locator('img').evaluateAll(images => Promise.all(images.map(image=>image.decode())));
+    await page.waitForTimeout(120);
+    const measure = await section.evaluate(el => {
+      const box=el.getBoundingClientRect();
+      const header=document.querySelector('header').getBoundingClientRect();
+      const texts=[...el.querySelectorAll('h2,h3,p,a,dt,dd,figcaption')];
+      return {width:innerWidth,height:innerHeight,sectionHeight:box.height,headingTop:el.querySelector('h2').getBoundingClientRect().top,headerBottom:header.bottom,overflow:document.documentElement.scrollWidth>innerWidth,inside:texts.every(item=>{const r=item.getBoundingClientRect();return r.left>=box.left&&r.right<=box.right&&r.top>=box.top&&r.bottom<=box.bottom}),images:[...el.querySelectorAll('img')].map(image=>({loaded:image.complete&&image.naturalWidth>0,width:image.getBoundingClientRect().width,alt:image.alt,loading:image.loading})),linkHeight:el.querySelector('a').getBoundingClientRect().height,labels:[...el.querySelectorAll('figcaption')].map(item=>item.textContent),text:el.textContent};
+    });
+    check(!measure.overflow&&measure.inside, 'Overflow '+JSON.stringify(measure));
+    check(measure.headingTop>measure.headerBottom&&measure.linkHeight>=44, 'Header clearance or tap target '+JSON.stringify(measure));
+    check(measure.images.every(image=>image.loaded&&image.width>0&&/AI-generated illustration/i.test(image.alt)&&image.loading==='lazy'),'Image failure');
+    check(measure.labels.length===2&&measure.labels.every(label=>/AI.*illustration/i.test(label)),'Illustration label failure');
+    check(await section.locator('img').evaluateAll(images=>new Set(images.map(image=>image.src)).size===2&&images.every(image=>!document.querySelector('[data-stage] img[src="'+image.getAttribute('src')+'"]'))),'Repeated image failure');
+    check(!/acre|commissioned|operational plant|certified/i.test(measure.text),'Unsupported claim');
+    delete measure.text;
+    layouts.push(measure);
+    await page.evaluate(()=>document.activeElement?.blur());
+    await section.screenshot({path:`docs/company-overview/parallax/section-${viewport.width}.png`});
+    await page.screenshot({path:`docs/company-overview/parallax/viewport-${viewport.width}.png`});
+  }
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('http://localhost:3000/?overview-validation=' + Date.now() + '#company-overview');
+  await page.waitForSelector('main[data-tools=ready]'); await section.evaluate(el=>scrollTo({top:el.offsetTop-88,behavior:'instant'}));
+  await page.waitForTimeout(120);
+  const transforms = () => section.evaluate(el=>[getComputedStyle(el.querySelector('figure > div')).transform,getComputedStyle(el.querySelectorAll('figure')[1]).transform]);
+  const start = await transforms();
+  const scrollStart = await page.evaluate(()=>scrollY);
+  await page.mouse.move(900,600);
+  await page.mouse.wheel(0,240);
+  await page.waitForTimeout(150);
+  const end = await transforms();
+  const scrollEnd = await page.evaluate(()=>scrollY);
+  check(start[0]!==end[0]&&start[1]!==end[1]&&scrollEnd>scrollStart,'Parallax or native scroll failed '+JSON.stringify({start,end,scrollStart,scrollEnd}));
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.waitForTimeout(150);
+  const reduced = await transforms();
+  check(reduced.every(transform=>transform==='none'),'Reduced motion does not disable parallax');
+  await section.locator('a').hover();
+  check(await section.locator('a svg').evaluate(el=>getComputedStyle(el).transform)==='none','Reduced-motion hover');
+  await page.screenshot({path:'docs/company-overview/parallax/reduced-motion.png'});
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.waitForTimeout(100);
+  check((await transforms()).every(transform=>transform!=='none'),'Motion preference change not restored');
+
+  await page.goto('http://localhost:3000/?overview-validation=' + Date.now());
+  await page.waitForSelector('main[data-playback="overview"]');
+  await page.keyboard.press('Tab');
+  check(await page.evaluate(()=>document.activeElement.getAttribute('href'))==='#company-overview','Skip focus failed');
+  await page.keyboard.press('Enter');
+  check(await page.evaluate(()=>document.activeElement.id)==='company-overview','Skip landing failed');
+  await page.keyboard.press('Tab');
+  check(await section.locator('a').evaluate(el=>document.activeElement===el&&el.matches(':focus-visible')),'Profile focus failed');
+  await page.screenshot({path:'docs/company-overview/parallax/keyboard.png'});
+  await page.getByRole('link',{name:'Rivanta Green home',exact:true}).click();
+  await page.waitForSelector('main[data-playback="overview"]');
+  for(const chapter of ['silicon','cbg','saf','energy']) {
+    await page.mouse.move(800,400);
+    await page.mouse.wheel(0,120);
+    await page.waitForSelector(`main[data-playback="${chapter}"]`);
+    check(await page.evaluate(()=>scrollY)===0,'Journey stage escaped '+chapter);
+    await page.waitForTimeout(230);
+  }
+  await page.mouse.wheel(0,900);
+  await page.waitForTimeout(180);
+  check(await page.evaluate(()=>scrollY)>600,'Journey did not release scroll');
+
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('http://localhost:3000/?overview-validation=' + Date.now() + '#company-overview');
+  await page.waitForSelector('main[data-tools=ready]'); await page.getByRole('button',{name:/menu/i}).click(); await page.waitForFunction(()=>document.querySelector('details').open);
+  check(await page.getByRole('button',{name:/menu/i}).evaluate(el=>el.parentElement.open),'Mobile menu failed');
+  await page.keyboard.press('Escape');
+  check(await page.getByRole('button',{name:/menu/i}).evaluate(el=>!el.parentElement.open),'Mobile Escape failed');
+
+  const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+  const nojs=await context.newPage();
+  const cdp=await context.newCDPSession(nojs);
+  await cdp.send('Network.enable');
+  await cdp.send('Network.emulateNetworkConditions',{offline:false,latency:200,downloadThroughput:750000,uploadThroughput:250000});
+  const response=await nojs.goto('http://localhost:3000/#company-overview');
+  check(response.status()===200&&await nojs.locator('#company-overview').isVisible(),'No-JS failed');
+  await nojs.locator('#company-overview').scrollIntoViewIfNeeded();
+  await nojs.locator('#company-overview img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+  check(await nojs.locator('#company-overview a').getAttribute('href')==='https://www.rivantagreen.com/about','No-JS profile link');
+  await context.close();
+  check(errors.length===0,'Page errors '+JSON.stringify(errors));
+  return {layouts,parallax:{start,end,scrollStart,scrollEnd},reducedMotion:reduced,livePreferenceChange:true,keyboard:true,journey:['silicon','cbg','saf','energy'],nativeScroll:true,mobileMenu:true,noJavaScript:true,throttledImageLoad:true,errors};
+}
+
+

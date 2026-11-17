@@ -1,0 +1,33 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};
+  const errors=[];page.on('pageerror',error=>errors.push(error.message));const layouts=[];
+  for(const viewport of [{width:1440,height:900},{width:1920,height:1080},{width:1024,height:768},{width:768,height:1024},{width:390,height:844},{width:320,height:568}]){
+    await page.setViewportSize(viewport);
+    await page.goto('http://localhost:3000/?copy-check='+viewport.width+'#company-overview');
+    await page.waitForSelector('main[data-tools=ready]');
+    const section=page.locator('#company-overview');
+    await section.evaluate(el=>scrollTo({top:el.offsetTop-88,behavior:'instant'}));
+    await section.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+    await page.waitForTimeout(100);
+    const result=await section.evaluate(el=>{const box=el.getBoundingClientRect();const copy=[...el.querySelectorAll('h2,h3,p,dt,dd,figcaption,a')];return{width:innerWidth,height:box.height,overflow:document.documentElement.scrollWidth>innerWidth,inside:copy.every(item=>{const r=item.getBoundingClientRect();return r.left>=box.left-1&&r.right<=box.right+1&&r.top>=box.top-1&&r.bottom<=box.bottom+1}),headingClear:el.querySelector('h2').getBoundingClientRect().top>document.querySelector('header').getBoundingClientRect().bottom,priorities:[...el.querySelectorAll('dt')].map(item=>item.textContent),text:el.textContent};});
+    check(!result.overflow&&result.inside&&result.headingClear,'Layout failure '+JSON.stringify(result));
+    check(result.priorities.join('|')==='Begin with the resource.|Connect the possibilities.|Build for India’s future.','Priority headings mismatch');
+    check(result.text.includes('rice husk, rice straw')&&result.text.includes('Make in India vision')&&result.text.includes('subject to feasibility, engineering and applicable regulatory approvals.'),'Required copy missing');
+    check(!/acres?|commissioned|certified|approved facility/i.test(result.text),'Unsupported claim');
+    delete result.text;layouts.push(result);
+    await page.evaluate(()=>document.activeElement?.blur());
+    await section.screenshot({path:'docs/company-overview/content-update/section-'+viewport.width+'.png'});
+  }
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto('http://localhost:3000/?copy-check=keyboard');
+  await page.keyboard.press('Tab');await page.keyboard.press('Enter');await page.keyboard.press('Tab');
+  check(await page.locator('#company-overview a').evaluate(el=>document.activeElement===el&&el.matches(':focus-visible')),'Keyboard failed');
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(100);
+  check(await page.locator('#company-overview figure > div').first().evaluate(el=>getComputedStyle(el).transform)==='none','Reduced motion failed');
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const nojs=await context.newPage();
+  await nojs.goto('http://localhost:3000/#company-overview');
+  check((await nojs.locator('#company-overview').textContent()).includes('Make in India vision'),'No-JS copy missing');await context.close();
+  check(errors.length===0,'Page errors '+JSON.stringify(errors));
+  return{layouts,keyboard:true,reducedMotion:true,noJavaScript:true,errors};
+}

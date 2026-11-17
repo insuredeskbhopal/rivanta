@@ -1,0 +1,21 @@
+async page => {
+  const check=(ok,message)=>{if(!ok)throw new Error(message);};const errors=[];page.on('pageerror',e=>errors.push(e.message));const layouts=[];
+  const unwanted=/\bproposed\b|\bplanned\b|\bplanning\b|AI.?generated|AI illustration|concept visualization|development stage/i;
+  for(const viewport of [{width:1920,height:1080},{width:1440,height:900},{width:1024,height:768},{width:768,height:1024},{width:390,height:844},{width:320,height:568}]){
+    await page.setViewportSize(viewport);await page.emulateMedia({reducedMotion:'no-preference'});
+    await page.goto('http://localhost:3000/?label-check='+viewport.width+'#company-overview');await page.waitForSelector('main[data-tools=ready]');
+    const section=page.locator('#company-overview');await section.evaluate(el=>scrollTo({top:el.offsetTop-88,behavior:'instant'}));
+    await section.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));await page.waitForTimeout(100);
+    const result=await section.evaluate(el=>{const box=el.getBoundingClientRect();return{width:innerWidth,overflow:document.documentElement.scrollWidth>innerWidth,inside:[...el.querySelectorAll('h2,h3,p,a,dt,dd,img')].every(item=>{const r=item.getBoundingClientRect();return r.left>=box.left-1&&r.right<=box.right+1;}),captions:el.querySelectorAll('figcaption').length,images:[...el.querySelectorAll('img')].every(image=>image.complete&&image.naturalWidth>0),text:el.innerText};});
+    check(!result.overflow&&result.inside&&result.captions===0&&result.images&&!unwanted.test(result.text),'Overview cleanup failed '+JSON.stringify(result));delete result.text;layouts.push(result);
+    if(viewport.width===1440||viewport.width===390){await page.evaluate(()=>document.activeElement?.blur());await section.screenshot({path:'docs/company-overview/label-cleanup/overview-'+viewport.width+'.png',style:'header, main > a[href="#company-overview"] { visibility: hidden !important; }'});}
+  }
+  await page.setViewportSize({width:1440,height:900});await page.goto('http://localhost:3000/?label-check=journey');await page.waitForSelector('main[data-playback=overview]');
+  check(await page.locator('[data-concept]').count()===0,'Journey label remains');await page.screenshot({path:'docs/company-overview/label-cleanup/hero.png'});
+  for(const chapter of ['silicon','cbg','saf','energy']){await page.mouse.move(850,400);await page.mouse.wheel(0,120);await page.waitForSelector('main[data-playback="'+chapter+'"]');check(await page.evaluate(()=>scrollY)===0,'Journey escaped '+chapter);check(!unwanted.test(await page.locator('[data-stage]').innerText()),'Unwanted journey wording '+chapter);await page.waitForTimeout(220);}
+  await page.screenshot({path:'docs/company-overview/label-cleanup/energy.png'});await page.mouse.wheel(0,900);await page.waitForTimeout(150);check(await page.evaluate(()=>scrollY)>600,'Native scroll release failed');
+  await page.goto('http://localhost:3000/?label-check=keyboard');await page.keyboard.press('Tab');await page.keyboard.press('Enter');await page.keyboard.press('Tab');check(await page.locator('#company-overview a').evaluate(el=>document.activeElement===el&&el.matches(':focus-visible')),'Keyboard navigation failed');
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>!document.querySelector('main').dataset.motion);check(!unwanted.test(await page.locator('main').innerText()),'Reduced-motion visible wording remains');check(await page.locator('#company-overview figure > div').first().evaluate(el=>getComputedStyle(el).transform)==='none','Reduced motion failed');
+  const context=await page.context().browser().newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const nojs=await context.newPage();await nojs.goto('http://localhost:3000/');check(!unwanted.test(await nojs.locator('main').innerText()),'No-JS visible wording remains');check(await nojs.locator('#company-overview a').getAttribute('href')==='https://www.rivantagreen.com/about','No-JS profile link missing');await context.close();
+  check(errors.length===0,'Page errors '+JSON.stringify(errors));return{layouts,journey:['silicon','cbg','saf','energy'],nativeScroll:true,keyboard:true,reducedMotion:true,noJavaScript:true,errors};
+}

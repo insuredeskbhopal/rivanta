@@ -42,7 +42,6 @@ export function TransitionProof({ children }: { children?: ReactNode }) {
     const master = root.querySelector<HTMLElement>("[data-master]")!;
     const layers = plantOrder.map(id => ({ id, image: root.querySelector<HTMLElement>(`[data-plant="${id}"]`)!, copy: root.querySelector<HTMLElement>(`[data-plant-copy="${id}"]`)! }));
     const intro = root.querySelector<HTMLElement>("[data-intro]")!;
-    const concept = root.querySelector<HTMLElement>("[data-concept]")!;
     const progress = root.querySelector<HTMLElement>("[data-progress]")!;
     const phase = root.querySelector<HTMLElement>("[data-phase]")!;
     const error = root.querySelector<HTMLElement>("[data-error]")!;
@@ -86,8 +85,6 @@ export function TransitionProof({ children }: { children?: ReactNode }) {
             const label = Math.abs(p - Math.round(p)) > .001 || direction < 0 ? "" :
               p < .001 ? "Scroll to explore" : next ? `Scroll for ${plantLabels[next]}` : "Scroll to continue";
             if (label !== lastPhase) { phase.textContent = label; lastPhase = label; }
-            const conceptLabel = frame.concept;
-            if (concept.textContent !== conceptLabel) concept.textContent = conceptLabel;
             root.dataset.progress = p.toFixed(4);
           };
           const journey = createGestureJourney({ gsap, root, stage, render, skip });
@@ -117,7 +114,6 @@ export function TransitionProof({ children }: { children?: ReactNode }) {
             intro.style.opacity = "";
             intro.style.pointerEvents = "";
             intro.inert = false;
-            concept.textContent = "Proposed campus · Concept visualization";
             jumpRef.current = staticNavigate;
             homeRef.current = () => undefined;
           };
@@ -141,48 +137,42 @@ export function TransitionProof({ children }: { children?: ReactNode }) {
       <section id="campus-study" className={styles.stage} data-stage tabIndex={-1} aria-label="Rivanta Green proposed industrial campus and ventures">
         <div className={`${styles.plate} ${styles.master}`} data-master>
           <Image src={campus} alt="Concept visualization of Rivanta Green's proposed industrial campus, with facilities, solar panels and wind turbines" sizes="1692px" quality={90} loading="eager" fetchPriority="high" />
-          <span className={styles.fallbackLabel}>Proposed campus · Concept visualization</span>
         </div>
         <div className={`${styles.plate} ${styles.silicon}`} data-silicon data-plant="silicon">
           <Image src={silicon} alt="Concept visualization of a proposed silicon facility at golden hour" sizes="1672px" quality={90} loading="eager" />
-          <span className={styles.fallbackLabel}>Proposed Silicon · Concept visualization</span>
         </div>
         <div className={`${styles.plate} ${styles.detail}`} data-detail data-plant="cbg">
           <Image src={cbg} alt="Concept visualization of a proposed compressed biogas facility at golden hour" sizes="1774px" quality={90} loading="eager" />
-          <span className={styles.fallbackLabel}>Proposed CBG · Concept visualization</span>
         </div>
         <div className={`${styles.plate} ${styles.saf}`} data-saf data-plant="saf">
           <Image src={saf} alt="Concept visualization of a proposed sustainable aviation fuel facility at golden hour" sizes="1672px" quality={90} loading="eager" />
-          <span className={styles.fallbackLabel}>Proposed SAF · Concept visualization</span>
         </div>
         <div className={`${styles.plate} ${styles.energy}`} data-energy data-plant="energy">
           <Image src={energy} alt="Concept visualization of proposed renewable energy infrastructure with solar panels and wind turbines" sizes="1672px" quality={90} loading="eager" />
-          <span className={styles.fallbackLabel}>Proposed Renewable Power · Concept visualization</span>
         </div>
         <div className={styles.shade} aria-hidden="true" />
         <div className={styles.intro} data-intro>
-          <h1>Building industrial value.<br />From India’s resources.</h1>
+          <h1>Building Industrial Value.<br />From India’s Resources.</h1>
           <p>Developing integrated industrial initiatives across advanced materials, renewable fuels and circular manufacturing in India.</p>
           <a href="#silicon-description" onClick={exploreVentures}>Explore our ventures <span aria-hidden="true">↓</span></a>
         </div>
         <div className={styles.copy} data-silicon-copy data-plant-copy="silicon">
-          <h2>Bio-silica & silicon.</h2>
+          <h2>Bio-Silica & Silicon.</h2>
           <p>Developing biogenic silica from rice husk for rubber, concrete and industrial applications. We are evaluating green silicon pathways to support India’s materials supply chains.</p>
         </div>
         <div className={styles.copy} data-copy data-plant-copy="cbg">
-          <h2>Compressed biogas.</h2>
-          <p>Developing compressed biogas from agricultural residues for transport, industry and city gas networks. Planned digestate recovery adds a circular route for returning nutrients to farmland.</p>
+          <h2>Compressed Biogas.</h2>
+          <p>Developing compressed biogas from agricultural residues for transport, industry and city gas networks. Our approach also considers digestate recovery as a route for returning nutrients to farmland.</p>
         </div>
         <div className={styles.copy} data-saf-copy data-plant-copy="saf">
-          <h2>Sustainable aviation fuel.</h2>
-          <p>Evaluating aviation fuel pathways from non-food biomass. Feasibility studies, feedstock planning and potential technology collaboration guide this future development area.</p>
+          <h2>Sustainable Aviation Fuel.</h2>
+          <p>Evaluating aviation fuel pathways from non-food biomass. Feedstock assessment, engineering and potential technology collaboration guide our approach.</p>
         </div>
         <div className={styles.copy} data-energy-copy data-plant-copy="energy">
-          <h2>Renewable power.</h2>
-          <p>Planning solar and wind power to support future industrial energy needs. Our wider development approach also considers process efficiency and waste-heat recovery.</p>
+          <h2>Renewable Power.</h2>
+          <p>Developing solar and wind power initiatives to support industrial energy needs. Our approach also considers process efficiency and waste-heat recovery.</p>
         </div>
         <div className={styles.status}>
-          <span className={styles.concept} data-concept>Proposed campus · Concept visualization</span>
           <div className={styles.motionControls}>
             <span className={styles.phase} data-phase />
             <button type="button" className={styles.skipMotion} data-skip-motion hidden>Skip animation</button>
@@ -191,28 +181,28 @@ export function TransitionProof({ children }: { children?: ReactNode }) {
         <div className={styles.track} aria-hidden="true"><span data-progress /></div>
       </section>
 
-      <p data-error hidden role="status" className={styles.error}>You can explore our proposed ventures below.</p>
+      <p data-error hidden role="status" className={styles.error}>You can explore our ventures below.</p>
 
       <section id="silicon-description" className={styles.staticDescription}>
-        <h2>Proposed bio-silica and silicon</h2>
+        <h2>Bio-Silica And Silicon</h2>
         <p>Developing biogenic silica from rice husk for rubber, concrete and industrial applications. We are evaluating green silicon pathways to support India’s materials supply chains.</p>
-        <noscript><p><a href={silicon.src}>View the proposed Silicon concept.</a></p></noscript>
+        <noscript><p><a href={silicon.src}>View Silicon imagery.</a></p></noscript>
       </section>
       <section id="cbg-description" className={styles.staticDescription}>
-        <h2>Proposed compressed biogas</h2>
-        <p>Developing compressed biogas from agricultural residues for transport, industry and city gas networks. Planned digestate recovery adds a circular route for returning nutrients to farmland.</p>
-        <noscript><p><a href={cbg.src}>View the proposed CBG concept.</a></p></noscript>
+        <h2>Compressed Biogas</h2>
+        <p>Developing compressed biogas from agricultural residues for transport, industry and city gas networks. Our approach also considers digestate recovery as a route for returning nutrients to farmland.</p>
+        <noscript><p><a href={cbg.src}>View CBG imagery.</a></p></noscript>
       </section>
       <section id="saf-description" className={styles.staticDescription}>
-        <h2>Proposed sustainable aviation fuel</h2>
-        <p>Evaluating aviation fuel pathways from non-food biomass. Feasibility studies, feedstock planning and potential technology collaboration guide this future development area.</p>
-        <noscript><p><a href={saf.src}>View the proposed SAF concept.</a></p></noscript>
+        <h2>Sustainable Aviation Fuel</h2>
+        <p>Evaluating aviation fuel pathways from non-food biomass. Feedstock assessment, engineering and potential technology collaboration guide our approach.</p>
+        <noscript><p><a href={saf.src}>View SAF imagery.</a></p></noscript>
       </section>
 
       <section id="energy-description" className={styles.staticDescription}>
-        <h2>Proposed renewable power</h2>
-        <p>Planning solar and wind power to support future industrial energy needs. Our wider development approach also considers process efficiency and waste-heat recovery.</p>
-        <noscript><p><a href={energy.src}>View the proposed Power concept.</a></p></noscript>
+        <h2>Renewable Power</h2>
+        <p>Developing solar and wind power initiatives to support industrial energy needs. Our approach also considers process efficiency and waste-heat recovery.</p>
+        <noscript><p><a href={energy.src}>View Power imagery.</a></p></noscript>
       </section>
 
       {children}

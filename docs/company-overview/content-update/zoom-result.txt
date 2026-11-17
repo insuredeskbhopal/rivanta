@@ -1,0 +1,15 @@
+
+> rivanta-green-web@0.0.0 playwright
+> playwright-cli -s=overview-copy run-code async page => { await page.setViewportSize({width:1440,height:900}); await page.goto('http://localhost:3000/?copy-check=zoom#company-overview'); await page.evaluate(()=>document.documentElement.style.zoom='2'); await page.locator('#company-overview').scrollIntoViewIfNeeded(); const result=await page.locator('#company-overview').evaluate(el=>{const box=el.getBoundingClientRect();return{zoom:getComputedStyle(document.documentElement).zoom,overflow:document.documentElement.scrollWidth>innerWidth,inside:[...el.querySelectorAll('h2,h3,p,a,dd,dt')].every(item=>{const r=item.getBoundingClientRect();return r.left>=box.left-1&&r.right<=box.right+1;})};}); await page.evaluate(()=>document.documentElement.style.zoom=''); if(result.overflow||!result.inside)throw new Error(JSON.stringify(result)); return result;}
+
+### Result
+{"zoom":"2","overflow":false,"inside":true}
+### Ran Playwright code
+```js
+await (async page => { await page.setViewportSize({width:1440,height:900}); await page.goto('http://localhost:3000/?copy-check=zoom#company-overview'); await page.evaluate(()=>document.documentElement.style.zoom='2'); await page.locator('#company-overview').scrollIntoViewIfNeeded(); const result=await page.locator('#company-overview').evaluate(el=>{const box=el.getBoundingClientRect();return{zoom:getComputedStyle(document.documentElement).zoom,overflow:document.documentElement.scrollWidth>innerWidth,inside:[...el.querySelectorAll('h2,h3,p,a,dd,dt')].every(item=>{const r=item.getBoundingClientRect();return r.left>=box.left-1&&r.right<=box.right+1;})};}); await page.evaluate(()=>document.documentElement.style.zoom=''); if(result.overflow||!result.inside)throw new Error(JSON.stringify(result)); return result;})(page);
+```
+### Page
+- Page URL: http://localhost:3000/?copy-check=zoom#company-overview
+- Page Title: Rivanta Green | Sustainable Industrial Innovation
+### Events
+- New console entries: .playwright-cli\console-2026-11-17T05-19-04-800Z.log#L54-L59

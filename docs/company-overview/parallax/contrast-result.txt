@@ -1,0 +1,15 @@
+
+> rivanta-green-web@0.0.0 playwright
+> playwright-cli -s=overview-redesign run-code async page => { await page.setViewportSize({width:1440,height:900}); await page.goto('http://localhost:3000/#company-overview'); return await page.locator('#company-overview').evaluate(section=>{ const lum=rgb=>rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0); const rgb=color=>(color.match(/[0-9.]+/g)||[]).slice(0,3).map(Number); return [...section.querySelectorAll('h2,h2 em,h3,h3 em,p,dt,dd,figcaption,figcaption span,a')].map(el=>{let bg=el;while(bg&&getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;const fg=lum(rgb(getComputedStyle(el).color)),back=lum(rgb(getComputedStyle(bg).backgroundColor));return {tag:el.tagName,contrast:(Math.max(fg,back)+.05)/(Math.min(fg,back)+.05)};}); }); }
+
+### Result
+[{"tag":"H2","contrast":16.087595608108956},{"tag":"EM","contrast":5.351859366862767},{"tag":"P","contrast":16.087595608108956},{"tag":"A","contrast":16.087595608108956},{"tag":"FIGCAPTION","contrast":16.087595608108956},{"tag":"FIGCAPTION","contrast":16.087595608108956},{"tag":"SPAN","contrast":11.139946150438988},{"tag":"P","contrast":6.2067464871404265},{"tag":"H3","contrast":14.18514671751718},{"tag":"EM","contrast":9.237313553689662},{"tag":"P","contrast":9.822584705545859},{"tag":"DT","contrast":14.18514671751718},{"tag":"DD","contrast":9.822584705545859},{"tag":"DT","contrast":14.18514671751718},{"tag":"DD","contrast":9.822584705545859},{"tag":"DT","contrast":14.18514671751718},{"tag":"DD","contrast":9.822584705545859},{"tag":"P","contrast":9.237313553689662}]
+### Ran Playwright code
+```js
+await (async page => { await page.setViewportSize({width:1440,height:900}); await page.goto('http://localhost:3000/#company-overview'); return await page.locator('#company-overview').evaluate(section=>{ const lum=rgb=>rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0); const rgb=color=>(color.match(/[0-9.]+/g)||[]).slice(0,3).map(Number); return [...section.querySelectorAll('h2,h2 em,h3,h3 em,p,dt,dd,figcaption,figcaption span,a')].map(el=>{let bg=el;while(bg&&getComputedStyle(bg).backgroundColor==='rgba(0, 0, 0, 0)')bg=bg.parentElement;const fg=lum(rgb(getComputedStyle(el).color)),back=lum(rgb(getComputedStyle(bg).backgroundColor));return {tag:el.tagName,contrast:(Math.max(fg,back)+.05)/(Math.min(fg,back)+.05)};}); }); })(page);
+```
+### Page
+- Page URL: http://localhost:3000/#company-overview
+- Page Title: Rivanta Green | Sustainable Industrial Innovation
+### Events
+- New console entries: .playwright-cli\console-2026-11-17T05-14-22-698Z.log#L26-L31

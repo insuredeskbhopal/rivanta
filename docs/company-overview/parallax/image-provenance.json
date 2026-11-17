@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-17",
+  "tool": "Built-in image_gen",
+  "status": "AI-generated editorial illustrations; no actual farm, company property or sourcing relationship is represented.",
+  "rights": "Generated for this project at the user's request; no third-party photographic source.",
+  "images": [
+    {
+      "path": "image/overview/indian-paddy-fields.webp",
+      "subject": "Illustrative Indian rice-growing landscape",
+      "prompt": "Use case: photorealistic-natural. Asset type: large editorial image for Rivanta Green's Indian agriculture and industrial development company overview. Create a new photorealistic illustrative landscape, not an actual company property. Scene: a believable rural Indian rice-growing landscape after monsoon, seen from a moderately elevated field-edge viewpoint. Productive green and ripening ochre paddy plots divided by narrow earthen bunds, a gently curving dirt farm access path, one modest irrigation channel, distant neem trees and a few coconut palms, hazy flat countryside. No mountains or industrial buildings. Lush fields occupy the foreground and middle distance, sky only the upper fifth. A few harvested patches with short rice stubble suggest agricultural feedstock, with realistic irregular smallholder field geometry. Style: exceptional understated documentary editorial photography, tactile leaves and soil, natural late-afternoon light, muted deep greens, straw gold and warm earthy tones; authentic contemporary Indian countryside, not a golf course. Composition: landscape 3:2 aspect, layered depth, keep the strongest detail across the central lower two-thirds so a vertical website crop remains useful. No people close up, no text, no logos, no watermarks, no collage, no frames. Avoid neon green, theatrical sun rays, orange sky, CGI perfection, impossible scale, decorative machinery or Western barns. The image will be labeled AI-generated agricultural illustration in the UI.",
+      "source": "C:/Users/abhis/.codex/generated_images/01a1e7e2-6a6a-7350-aab2-bffa214f398e/exec-5c66221e-4a37-4427-9745-52a12d8a31a3.png"
+    },
+    {
+      "path": "image/overview/indian-rice-harvest.webp",
+      "subject": "Illustrative hand-tied rice harvest sheaves",
+      "prompt": "Use case: photorealistic-natural. Asset type: close editorial inset image for Rivanta Green's agricultural resource planning overview; illustrative, not actual sourcing or a company asset. Create a new photograph-like image of a harvest scene in rural India: a few clearly hand-tied sheaves of dry harvested rice straw resting on earthy ground at the edge of a paddy field, short cut stubble behind them, subtle green paddy and a distant tree softly out of focus. Show convincing straw fibers, intact seed heads on a few stems, coarse natural jute ties, brown soil and small scattered plant fragments. The composition should explain the physical agricultural residue resource, not merely be a generic landscape. Camera at waist height, close, 50mm documentary photography feel, soft warm side lighting, natural muted straw gold and olive-green palette, editorial clarity, realistic imperfect arrangement. Landscape 4:3 aspect with straw sheaves prominent in the center; allow a portrait crop without losing the subject. No people, hands, tractors, large round Western hay bales, factory, rice packaging, text, logo, watermark, borders or collage. Avoid oversaturated, overly polished or synthetic-looking surfaces. Image will be visibly labeled AI-generated crop-residue illustration in the UI.",
+      "source": "C:/Users/abhis/.codex/generated_images/01a1e7e2-6a6a-7350-aab2-bffa214f398e/exec-8d0bc238-3abb-4edc-ac24-3f6283e40236.png"
+    }
+  ]
+}
