@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { TransitionProof } from "@/components/cbg-proof/transition-proof";
 import { CompanyOverview } from "@/components/company-overview";
+import { IndiaChallenges } from "@/components/india-challenges";
 
 export const metadata: Metadata = {
   title: "Rivanta Green | Sustainable Industrial Innovation",
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <TransitionProof><CompanyOverview /></TransitionProof>;
+  return <TransitionProof><CompanyOverview /><IndiaChallenges /></TransitionProof>;
 }
